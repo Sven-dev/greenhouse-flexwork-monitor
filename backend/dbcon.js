@@ -8,3 +8,10 @@ var config = {
     messagingSenderId: "394804551221"
 };
 firebase.initializeApp(config);
+
+//Fills a field with database-data resulting from the query 
+function getData(field, Query)
+{
+    var dbRef = firebase.database().ref().child(Query);
+    dbRef.on('value', snap => field.innerText = snap.val());
+}

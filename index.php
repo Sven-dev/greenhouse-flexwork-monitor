@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1 id="bigOne"></h1>
+    <h2 id="bigTwo"></h2>
     
     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     <script src="backend/dbcon.js"></script>
     <script>
-    var bigOne = document.getElementById('bigOne');
-    var dbRef = firebase.database().ref().child('text');
-    dbRef.on('value', snap => bigOne.innerText = snap.val());
+        getData(document.getElementById('bigOne'), 'text');
+        getData(document.getElementById('bigTwo'), 'otherThing');
     </script>
 </body>
 </html>
