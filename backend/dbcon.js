@@ -8,19 +8,46 @@ var config = {
     messagingSenderId: "394804551221"
 };
 firebase.initializeApp(config);
+var root = firebase.database().ref();
 
-//Fills field with database-data resulting from query
-function linkData(field, query)
-{
-    var dbRef = firebase.database().ref().child(query);
-    dbRef.on('value', snap => field.innerText = snap.val());
-    dbRef.on('value', snap => console.log(snap.val()));
+function getData(field, query)
+{ 
+    root.child(query).on('value', snap => field.innerText = snap.val());
 }
 
-function changeData(query, data) 
+function changeData(query, text) 
 {
-    var dbRef = firebase.database().ref().child(query);
-    dbRef.set({
-      Value: data
+    root.child(query).set({
+      User: text
     });
 }
+
+function addUser(email, password, firstName, lastName, craft, proposition)
+{
+    //maak user aan
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) 
+    {
+        console.log(error.code + error.message);
+    });
+
+    //haal user ID
+    
+
+    //Maak profiel aan, link het met user
+    root.child('Users').push().set(
+    { 
+        First_Name: firstName,
+        Last_Name: lastName,
+        Craft: craft,
+        Proposition: proposition,
+        Current_Zone: null,
+        Score: 0,
+        Achievements: {
+            Achievement_1: 0,
+            Achievement_2: 0,
+            Achievement_3: 0 }
+    })
+    ;
+}
+
+//var getClass = document.getElementsByClassName('bigOne');
