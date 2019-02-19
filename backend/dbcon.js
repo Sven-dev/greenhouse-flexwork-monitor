@@ -9,9 +9,18 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//Fills a field with database-data resulting from the query 
-function getData(field, Query)
+//Fills field with database-data resulting from query
+function linkData(field, query)
 {
-    var dbRef = firebase.database().ref().child(Query);
+    var dbRef = firebase.database().ref().child(query);
     dbRef.on('value', snap => field.innerText = snap.val());
+    dbRef.on('value', snap => console.log(snap.val()));
+}
+
+function changeData(query, data) 
+{
+    var dbRef = firebase.database().ref().child(query);
+    dbRef.set({
+      Value: data
+    });
 }
