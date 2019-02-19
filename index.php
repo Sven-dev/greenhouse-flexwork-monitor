@@ -7,7 +7,7 @@
         <h2 id="bigTwo"></h2>
         <button class="btn btn-primary" onclick="changeData('Beacon/Users', 'Sven Janssen')">Add user 1</button>
         <button class="btn btn-primary" onclick="changeData('Beacon/Users', 'Sharona Steevens')">Add user 2</button>
-        <button class="btn btn-primary" onclick="addUser('Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
+        <button class="btn btn-primary" onclick="addUser('svenjanssen12321@gmail.com', 'password',  'Sven', 'Janssen', 'Media', 'Smart Services')">Nieuwe user</button>
 </div>
 
     <div class="container">

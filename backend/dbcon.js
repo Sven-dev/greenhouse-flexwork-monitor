@@ -24,14 +24,12 @@ function changeData(query, text)
 
 function addUser(email, password, firstName, lastName, craft, proposition)
 {
+
     //maak user aan
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) 
     {
         console.log(error.code + error.message);
     });
-
-    //haal user ID
-    
 
     //Maak profiel aan, link het met user
     root.child('Users').push().set(
