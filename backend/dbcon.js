@@ -14,4 +14,4 @@ function getData(field, Query)
 {
     var dbRef = firebase.database().ref().child(Query);
     dbRef.on('value', snap => field.innerText = snap.val());
-}
+}               

@@ -13,8 +13,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     <script src="backend/dbcon.js"></script>
     <script>
-        getData(document.getElementById('bigOne'), 'text');
-        getData(document.getElementById('bigTwo'), 'otherThing');
+        getData(document.getElementById('bigOne'), 'User/FirstName');
+        getData(document.getElementById('bigTwo'), 'User/LastName');
     </script>
 </body>
 </html>
