@@ -34,6 +34,7 @@ function changeData(query, text)
 //Maakt een account aan
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
+    console.log('DFSDFSDFSd');
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) 
     {
         console.log(error.code + ": " +  error.message);
@@ -67,6 +68,7 @@ firebase.auth().onAuthStateChanged(function(user)
             if (profile == null)
             {
                 createProfile(currentUser, _firstName, _lastName, _craft, _proposition);
+                window.location.href = "/test.php";
             }
 
             console.log(profile);

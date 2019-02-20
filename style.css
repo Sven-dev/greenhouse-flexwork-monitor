@@ -5,6 +5,11 @@ h1, h2 {
     margin: 0 auto;
 }
 
+.form-wrap{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
 .btn-primary {
     background-color: red !important;
     border: 0px !important;
@@ -13,4 +18,13 @@ h1, h2 {
 .jumbotron {
     background-image: url('https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     height: 40vh;
+}
+
+input, select{
+	display: block;
+	margin: 0 auto !important;
+}
+
+#account-btn{
+	margin-top: 15px;
 }
