@@ -52,8 +52,6 @@ function logIn(email, password)
     {
         console.log(error.code + ": " +  error.message);
     });
-
-   
 }
 
 //Check of er een user is ingelogd
@@ -100,7 +98,12 @@ function createProfile(user, firstName, lastName, craft, proposition)
             Achievement_3: 0 }
     });
 
-    //profile = 
+    return root.child('Profiles/' + user.uid).once('value').then(function(snapshot)
+    {
+        profile = snapshot.val();    
+        console.log(profile);
+        console.log("Account is created");     
+    });
 }
 
 
