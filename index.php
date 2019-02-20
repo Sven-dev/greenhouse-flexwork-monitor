@@ -5,9 +5,13 @@
 <div class="jumbotron text-center">
         <h1 id="bigOne"></h1>
         <h2 id="bigTwo"></h2>
-        <button class="btn btn-primary" onclick="changeData('Beacon/Users', 'Sven Janssen')">Add user 1</button>
+        <button class="btn btn-primary" onclick="changeData('Beacon/Users/-LZ54nR12AjXfCZI1yIP', 'Sven Janssen')">Add user 1</button>
         <button class="btn btn-primary" onclick="changeData('Beacon/Users', 'Sharona Steevens')">Add user 2</button>
-        <button class="btn btn-primary" onclick="addUser('svenjanssen12321@gmail.com', 'password',  'Sven', 'Janssen', 'Media', 'Smart Services')">Nieuwe user</button>
+
+        <button class="btn btn-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
+        <button class="btn btn-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
+        <button class="btn btn-primary" onclick="logOut()">Log out</button>
+        
 </div>
 
     <div class="container">
