@@ -1,7 +1,3 @@
-//Fields
-var user;
-var profile;
-
 //creates an account
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
@@ -24,42 +20,6 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
     });
 }
 
-//Log in as a user
-function logIn(email, password)
-{
-    //Sign in
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function()
-    {
-        //Redirect to home
-        window.location.href = "home.php";        
-    })    
-    .catch(function(error)
-    {
-        console.log(error.code + ": " +  error.message);
-    });
-}
-
-//Checks if a user is logged in
-function logInCheck()
-{
-    //link to the currently logged in user
-    firebase.auth().onAuthStateChanged(function(user) 
-    {
-        // User is signed in.          
-        if (user) 
-        {
-            //Get the users profile
-            profile = get('Profiles/' + user.uid);
-        } 
-        // No user is signed in.        
-        else 
-        {
-            window.location.href = "login.php";
-        }
-    });
-}
-
 //Creates a new profile in the database, and links it to the user
 function createProfile(user, firstName, lastName, craft, proposition)
 {
@@ -79,16 +39,18 @@ function createProfile(user, firstName, lastName, craft, proposition)
     });
 }
 
-//Logs the user out, and returns to the login-page
-function logOut()
+//Log in as a user
+function logIn(email, password)
 {
-    firebase.auth().signOut().then(function()
+    //Sign in
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function()
     {
-        console.log("Signed out");
-    }, function(error) 
+        //Redirect to home
+        window.location.href = "home.php";        
+    })    
+    .catch(function(error)
     {
         console.log(error.code + ": " +  error.message);
     });
 }
-
-//var getClass = document.getElementsByClassName('bigOne');
