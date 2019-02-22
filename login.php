@@ -1,6 +1,4 @@
-<?php
-    include 'header.php';
-?> 
+<?php include 'header.php'; ?> 
 
 <body>
 	<div class="container">
@@ -21,7 +19,7 @@
 
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     <script src="backend/db.js"></script>
-	<script src="backend/dbcon.js"></script>
+	<script src="backend/login.js"></script>
 	<script>
         var email = document.getElementById('e-mail');
         var password = document.getElementById('password');
