@@ -1,5 +1,5 @@
 //Fields
-//var currentUser;
+var user;
 var profile;
 
 var _firstName;
@@ -7,34 +7,9 @@ var _lastName;
 var _craft;
 var _proposition;
 
-
-// Initialize Firebase
-firebase.initializeApp({
-    apiKey: "AIzaSyAFpQy1ZMeGA4XFtxIHWHI2A_EAAEGRs2E",
-    authDomain: "greenhouse-flexwork-monitor.firebaseapp.com",
-    databaseURL: "https://greenhouse-flexwork-monitor.firebaseio.com",
-    projectId: "greenhouse-flexwork-monitor",
-    storageBucket: "greenhouse-flexwork-monitor.appspot.com",
-    messagingSenderId: "394804551221"
-});
-root = firebase.database().ref();
-
-function getData(field, query)
-{ 
-    root.child(query).on('value', snap => field.innerText = snap.val());
-}
-
-function changeData(query, text) 
-{
-    root.child(query).set({
-      User: text
-    });
-}
-
-//Maakt een account aan
+//Create a user
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
-    console.log('DFSDFSDFSd');
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) 
     {
         console.log(error.code + ": " +  error.message);
@@ -46,50 +21,89 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
     _proposition = proposition;
 }
 
-//Log in op een account
+//Log in as a user
 function logIn(email, password)
 {
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error)
     {
         console.log(error.code + ": " +  error.message);
     });
+
+    console.log("User is logged in.");    
+}
+
+function getUser()
+{
+    firebase.auth().currentUser;
+}
+
+//Check if a user is logged in
+function logInCheck()
+{
+    getUser().then(function(user) 
+    {
+        //If the user is logged in
+        if (user != null) 
+        {
+            //Get the user profile        
+            console.log("User is logged in.");        
+            profile = get('Profiles/' + user.uid);
+        } 
+        //If the iser is not logged in
+        else
+        {
+            //Return to the login page
+            console.log("User is not logged in");        
+        }
+
+        console.log(user);
+    });
 }
 
 //Check of er een user is ingelogd
 firebase.auth().onAuthStateChanged(function(user)
-{
-    //get user data
+{   
+    //console.log("User: " + user);
+    /*    
+    //If user is logged in
     if (user)
     {
-        var currentUser = firebase.auth().currentUser;      
-        return root.child('Profiles/' + currentUser.uid).once('value').then(function(snapshot)
-        {
-            profile = snapshot.val();            
+        profile = get('Profiles/' + user.uid)
+
+            //If the user doesn't have a profile yet        
             if (profile == null)
             {
-                createProfile(currentUser, _firstName, _lastName, _craft, _proposition);
+                //Create a profile
+                createProfile(user, _firstName, _lastName, _craft, _proposition);
+                //Redirect to homepage
                 window.location.href = "/test.php";
             }
+            else
+            {
+                console.log(profile);
+                console.log("User is logged in.");
 
-            console.log(profile);
-            console.log("User is logged in.");     
-        });
+                window.location.href = "/test2.php";
+            }  
     }
+    //If user is not logged in
     else
     {
-        currentUser = null;
+        //Redirect to login page
         console.log("User is not logged in.");
     }
+*/   
 });
 
+
+//Creates a new profile in the database, and links it to the user
 function createProfile(user, firstName, lastName, craft, proposition)
 {
     user.displayName = firstName + " " + lastName;
     //foto
 
     //Maak profiel aan, link het met user
-    root.child('Profiles/' + user.uid).set(
-    {
+    set('Profiles/' + user.uid, {
         Craft: craft,
         Proposition: proposition,
         Current_Zone: null,
@@ -97,26 +111,26 @@ function createProfile(user, firstName, lastName, craft, proposition)
         Achievements: {
             Achievement_1: 0,
             Achievement_2: 0,
-            Achievement_3: 0 }
-    });
-
-    return root.child('Profiles/' + user.uid).once('value').then(function(snapshot)
-    {
-        profile = snapshot.val();    
-        console.log(profile);
-        console.log("Account is created");     
-    });
+            Achievement_3: 0 
+        }});
 }
 
+//Gets the profile of the user parameter
+function getProfile(user)
+{
+    profile = get('Profiles/' + user.uid);
+}
 
-
+//Logs the user out, and returns to the login-page
 function logOut()
 {
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(function()
+    {
         console.log("Signed out");
-       }, function(error) {
-        console.log("Sign out: ???");
-       });
+    }, function(error) 
+    {
+        console.log(error.code + ": " +  error.message);
+    });
 }
 
 //var getClass = document.getElementsByClassName('bigOne');

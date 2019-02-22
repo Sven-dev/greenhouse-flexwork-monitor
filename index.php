@@ -2,15 +2,17 @@
     include 'header.php';
 ?>    
 
-<div class="jumbotron text-center">
-        <!-- <h1 id="bigOne"></h1>
-        <h2 id="bigTwo"></h2> -->
+<body>
+    <div class="jumbotron text-center">
+            <button class="btn btn-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
+            <button class="btn btn-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
+            <button class="btn btn-primary" onclick="logOut()">Log out</button>
+            
+    </div>
 
-        <button class="btn btn-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
-        <button class="btn btn-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
-        <button class="btn btn-primary" onclick="logOut()">Log out</button>
-        
-</div>
+    <?php
+    echo exec('getmac');
+    ?>
 
     <div class="container form-wrap">
         <div class="row">
@@ -31,6 +33,9 @@
                     <label for="lastname">Last name</label>
                     <input type="text" id="lastname" name="lastname" placeholder="Enter last name">
                     
+                    <label for="phonenumber">Phone number</label>
+                    <input type="number" id="phone" name="phone" required>
+
                     <label for="craft">Select your craft:</label>                     
                       <select id="craft">                     
                         <option>Creative</option>
@@ -65,6 +70,7 @@
     </div>
     
     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script src="backend/db.js"></script>
     <script src="backend/dbcon.js"></script>
     <script>
         // getData(document.getElementById('bigOne'), 'text');
