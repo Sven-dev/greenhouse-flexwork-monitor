@@ -17,7 +17,7 @@ h1, h2 {
 
 .jumbotron {
     background-image: url('https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    height: 40vh;
+    height: 450px;
 }
 
 input, select{
