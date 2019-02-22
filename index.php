@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h1>Hello</h1>
-                <button class="btn btn-primary" onclick="logOut()">Log out</button>
+                <button class="btns-primary" onclick="logOut()">Log out</button>
 			</div>
 		</div>		
 	</div>
