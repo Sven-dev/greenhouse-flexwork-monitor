@@ -12,7 +12,7 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
         createProfile(user, firstName, lastName, craft, proposition);
 
         //Go to the homepage
-        window.location.href = "home.php";
+        window.location.href = "index.php";
     })
     .catch(function(error) 
     {
