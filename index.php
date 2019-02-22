@@ -6,15 +6,16 @@
         <!-- <h1 id="bigOne"></h1>
         <h2 id="bigTwo"></h2> -->
 
-        <button class="btn btn-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
-        <button class="btn btn-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
-        <button class="btn btn-primary" onclick="logOut()">Log out</button>
+        <button class="btns-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
+        <button class="btns-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
+        <button class="btns-primary" onclick="logOut()">Log out</button>
         
 </div>
 
     <div class="container form-wrap">
         <div class="row">
             <div class="col-md-12 text-center">
+                <h1>TEST</h1>
                 <form>
                     <label for="email">Email address</label>
                     <input type="text" id="e-mail" name="mail" placeholder="Enter email">
@@ -45,7 +46,7 @@
                         <option>Smart services</option>
                       </select>
 
-                    <button type="button" class="btn btn-primary" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Submit</button>
+                    <button type="button" class="btns-primary" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Submit</button>
                 </form>
         <!-- <form>
             <div class="form-group">
