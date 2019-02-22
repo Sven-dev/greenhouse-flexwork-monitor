@@ -2,9 +2,9 @@
 
 <body>
     <div class="jumbotron text-center">
-        <button class="btn btn-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
-        <button class="btn btn-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
-        <button class="btn btn-primary" onclick="logOut()">Log out</button>    
+        <button class="btns-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
+        <button class="btns-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
+        <button class="btns-primary" onclick="logOut()">Log out</button>    
     </div>
     <div class="container form-wrap">
         <div class="row">
@@ -42,7 +42,7 @@
                         <option>Smart services</option>
                       </select>
 
-                    <button type="button" class="btn btn-primary" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Submit</button>
+                    <button type="button" class="btns-primary" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Submit</button>
                 </form>
             </div>
         </div>

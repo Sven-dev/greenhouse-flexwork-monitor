@@ -11,7 +11,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Password">
 
-                    <button type="button" class="btn btn-primary" id="account-btn" onclick="logIn(email.value, password.value);">Log in</button>
+                    <button type="button" class="btns-primary" id="account-btn" onclick="logIn(email.value, password.value);">Log in</button>
 				</form>
 			</div>
 		</div>		
