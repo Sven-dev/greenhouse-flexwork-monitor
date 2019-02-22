@@ -47,7 +47,7 @@ function logIn(email, password)
     .then(function()
     {
         //Redirect to home
-        window.location.href = "home.php";        
+        window.location.href = "index.php";        
     })    
     .catch(function(error)
     {
