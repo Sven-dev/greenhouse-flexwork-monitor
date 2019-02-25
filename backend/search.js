@@ -25,22 +25,33 @@ function getColleagues()
 window.setInterval(function() 
 {
   var search = search_bar.value;
-  if (search != "" && search != previousQuery)
+  if (search == "")
   {
-    filter(search);
-    previousQuery = search;  
+    search_results.innerHTML = "";
   }
+  else if (search != previousQuery)
+  {
+    search_results.innerHTML = "";
+    filter(search);
+  }
+
+  previousQuery = search;
 }, 500);
 
 //Filters the colleagues by name with the search term
 function filter(search)
 {
+  search_results.innerHTML += "<ul>";
   colleagues.forEach(function(profile)
   {
-    if (profile.Name.includes(search))
+    var lname = profile.Name.toLowerCase();
+    var lsearch = search.toLowerCase();
+    if (lname.includes(lsearch))
     {
-      //profile picture
-      console.log(profile.Name + ", " + profile.Craft);
+      //profile picture  
+      search_results.innerHTML += "<li>" + profile.Name + ", " + profile.Craft + "</li>";
     }
   });
+
+  search_results.innerHTML += "</ul>"
 }

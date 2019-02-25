@@ -8,7 +8,7 @@
 					<input type="search" id="search_bar" class="search_bar" placeholder="Naam van collega..."  onchange="filter()"/>
 					<button class="search_btn">Zoek</button>
 				</div>
-				<div class="collega">
+				<div class="colleague" id="search_results">
 
 				</div>
                 <button class="btns-primary" onclick="logOut()">Log out</button>
@@ -23,6 +23,7 @@
 	<script src="backend/search.js"></script>
 	<script>
 		var search_bar = document.getElementById('search_bar');
+		var search_results = document.getElementById('search_results');
 	</script>
 </body>
 </html>
