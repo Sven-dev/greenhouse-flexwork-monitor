@@ -42,22 +42,20 @@ input, select{
     } 
 }
 
-select.input-lg {
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+select.input-lg {  
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    -o-appearance: none;
+    appearance: none;
+    background: url(https://image.flaticon.com/icons/png/512/60/60995.png) 96% / 3% no-repeat #eee;
     /* no standardized syntax available, no ie-friendly solution available */
-  }
-  select + i.fa {
-    float: right;
-    margin-top: -30px;
-    margin-right: 5px;
-    /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
-    pointer-events: none;
-    /* everything after this is just to cover up the original arrow */
-    /* (for browsers that don't support the syntax used above) */
-    background-color: #fff;
-    padding-right: 5px;
   }
 
 label {
@@ -70,7 +68,7 @@ label {
 
 
 .bg-createaccount{
-    overflow: hidden;
+    // overflow: hidden;
     &:before{
         content: "";
         position: absolute;
@@ -113,5 +111,9 @@ label {
         input{
             width: 100%;
         }
+    }
+    .fa-caret-down { 
+        color: #000; 
+        font-size: 30px;
     }
 }

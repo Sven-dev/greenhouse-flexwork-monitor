@@ -1,16 +1,15 @@
 <?php include 'header_nologin.php'; ?>
-
     <div class="container form-wrap">
       <div class="bg-light p-5">
         <div class="row">
-          <img src="image/logo.png" class="greenhouse-logo float-left" alt="Greenhouse logo">
-            <div class="col-md-12 text-center">
-                <form>  
+          <img src="image/logo.png" class="greenhouse-logo float-left offset-1" alt="Greenhouse logo">
+            <div class="col-md-12 p-5 text-center">
+              <form>  
                 <div class="form-row">
                   <div class="form-group offset-md-3 col-md-3 offset-xs-0 col-xs-12">
                     <label for="firstname">First name</label>
                       <input type="text" id="firstname" name="firstname" placeholder="Enter first name">
-                  </div>
+                    </div>
 
                   <div class="form-group col-md-3">
                     <label for="lastname">Last name</label>
@@ -37,7 +36,7 @@
                 
                     <div class="styledSelect"> 
                       <label for="phonenumber">Phone number</label>
-                      <input class="fullwidth-input" type="number" id="phone" name="phone" required>
+                      <input class="fullwidth-input input-lg" type="number" placeholder="Ex. 0612345678" id="phone" name="phone" required>
                     </div>
 
                     <div class="styledSelect"> 
@@ -50,15 +49,18 @@
                           </select>
                     </div>
 
+                    <span class="fas fa-caret-down"></span>
+
                     <div class="styledSelect"> 
                       <label for="propositie">Select your proposition:</label>
-                          <select class="input-lg" name="fullwidth" id="propositie">                     
+                          <select class="input-lg" data-style="btn-primary" id="propositie">                     
                               <option>Consultancy</option>
                               <option>Smart services</option>
                           </select>
+                          <span class="fa fa-sort-desc"></span>
                     </div>
 
-                    <button type="button" class="btns-primary" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Sign up account</button>
+                    <button type="button" class="btns-primary mt-5" id="account-btn" onclick="createAccount(email.value, password.value, firstname.value, lastname.value, craft.value, propositie.value);">Sign up account</button>
                   </form>
               </div>
           </div>
