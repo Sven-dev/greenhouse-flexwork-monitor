@@ -36,3 +36,63 @@ input, select {
 
 #account-btn {
   margin-top: 15px; }
+
+.navigation-bar {
+  background-color: #F8F8F8;
+  max-height: 90px;
+  width: 100%;
+  float: left; }
+  .navigation-bar ul {
+    list-style-type: none;
+    margin: 0px; }
+    .navigation-bar ul li {
+      display: inline-block;
+      padding: 10px;
+      margin: 0px 15px 0px 15px;
+      line-height: 70px; }
+      .navigation-bar ul li a {
+        color: #707070;
+        display: block; }
+        .navigation-bar ul li a:hover {
+          text-decoration: none;
+          border-bottom: 2px solid #6300A7; }
+
+.profile-bar {
+  background-color: #6300A7;
+  width: 20%;
+  max-height: 90px;
+  position: absolute; }
+  .profile-bar .dropdown-toggle {
+    list-style-type: none;
+    margin: 0px;
+    line-height: 90px;
+    margin-left: 20%;
+    font-size: 18px;
+    font-weight: 300;
+    color: #FFF;
+    text-decoration: none; }
+  .profile-bar .dropdown-menu {
+    list-style-type: none;
+    min-width: 100%;
+    width: 336px;
+    background-color: #F8F8F8;
+    z-index: 100; }
+    .profile-bar .dropdown-menu li {
+      width: 100%;
+      padding: 20px 0px 20px 75px;
+      position: relative; }
+      .profile-bar .dropdown-menu li .border-bottom {
+        border-bottom: 2px solid #C2C2C2; }
+      .profile-bar .dropdown-menu li a {
+        color: #707070;
+        text-decoration: none; }
+        .profile-bar .dropdown-menu li a:hover {
+          text-decoration: none;
+          color: #6300A7; }
+    .profile-bar .dropdown-menu .list-unstyled {
+      margin-bottom: 0px; }
+  .profile-bar .show {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    position: relative !important; }
