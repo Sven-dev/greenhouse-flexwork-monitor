@@ -1,10 +1,4 @@
-<?php include 'header_nologin.php'; ?>    
-
-    <div class="jumbotron text-center">
-        <button class="btns-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
-        <button class="btns-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
-        <button class="btns-primary" onclick="logOut()">Log out</button>    
-    </div>
+<?php include 'header_nologin.php'; ?>
     <div class="container form-wrap">
         <div class="row">
             <div class="col-md-12 text-center">
