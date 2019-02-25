@@ -1,3 +1,8 @@
+/* REQUIRES 
+backend/firebase_base.js
+firebase_databasebackend/firebase_database.js
+*/
+
 //Fields
 var user;
 var profile;

@@ -1,3 +1,8 @@
+/* REQUIRES 
+backend/firebase_base.js
+firebase_databasebackend/firebase_database.js
+*/
+
 //creates an account
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
@@ -20,6 +25,8 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
     });
 }
 
+
+//REQUIRES firebase_database!
 //Creates a new profile in the database, and links it to the user
 function createProfile(user, firstName, lastName, craft, proposition)
 {
