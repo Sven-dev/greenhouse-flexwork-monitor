@@ -14,3 +14,15 @@
     
     <title>header</title>
 </head>
+
+<body onLoad="logInCheck()">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<ul>Home</ul>
+				<ul>Home</ul>
+				<ul>Home</ul>
+				<ul>Home</ul>
+			</div>
+		</div>	
+	</div>

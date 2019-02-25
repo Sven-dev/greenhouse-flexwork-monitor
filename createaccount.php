@@ -1,6 +1,5 @@
-<?php include 'header.php'; ?>    
+<?php include 'header_nologin.php'; ?>    
 
-<body>
     <div class="jumbotron text-center">
         <button class="btns-primary" onclick="createAccount('SharonaSteevens@gmail.com', 'password',  'Sharona', 'Steevens', 'Media', 'Smart Services')">Nieuwe user</button>
         <button class="btns-primary" onclick="logIn('svenjanssen12321@gmail.com', 'password')">Log in</button>
