@@ -43,3 +43,91 @@ input, select{
 #account-btn{
 	margin-top: 15px; 
 }
+
+.navigation-bar{
+    background-color: #F8F8F8;
+    max-height: 90px;
+    width: 100%;
+    float: left;
+        ul{
+            list-style-type: none;
+             margin: 0px;
+
+            li{
+                display: inline-block;
+                padding: 10px;
+                margin: 0px 15px 0px 15px;
+                line-height: 70px;
+
+                a{
+                    color: #707070;
+                    display: block;
+                    &:hover
+                    {
+                        text-decoration: none;
+                        border-bottom: 2px solid $primary;
+                    }
+                }
+            }
+        }
+
+}
+
+.profile-bar{
+    background-color: $primary;
+    width: 20%;
+    max-height: 90px;
+    position: absolute;
+
+    .dropdown-toggle{
+        list-style-type: none;
+        margin: 0px;
+        line-height: 90px;
+        margin-left: 20%;
+        font-size: 18px;
+        font-weight: 300;
+        color: $white;
+        text-decoration: none;
+        
+    }
+
+    .dropdown-menu{
+        list-style-type: none;
+        min-width: 100%;
+        width: 336px;
+        background-color: #F8F8F8;
+        z-index: 100;
+
+        li{
+                width: 100%;
+                padding: 20px 0px 20px 75px;
+                position: relative;
+
+                .border-bottom{
+                    border-bottom: 2px solid #C2C2C2;
+                }
+
+                a{
+                    color: #707070;
+                    text-decoration: none;
+
+                    &:hover
+                    {
+                        text-decoration: none;
+                        color: $primary;
+                    }
+                }
+
+            }
+        .list-unstyled
+        {
+            margin-bottom: 0px;
+        }
+    }
+
+    .show{
+            transform: none !important;
+            position: relative !important;
+    }
+}
+
