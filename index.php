@@ -3,6 +3,8 @@
 	<div class="container search-wrap">
 		<div class="row">
 			<div class="col-md-12 text-center">
+			<img src="image/logo.png" class="greenhouse-logo float-left offset-1" alt="Greenhouse logo">
+
 				<h1>Who are you looking for?</h1>
 				<hr>
 				<form>
