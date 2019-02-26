@@ -20,6 +20,18 @@
 <body onLoad="logInCheck()">
 
 	<div class="navigation-bar">
+		<div class="profile-bar offset-10">
+
+			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
+
+			<div class="dropdown-menu">
+				<ul class="list-unstyled">
+			        <li class="dropdown-item border-bottom"><a href="profile.php">Edit Profile</a></li>
+			        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
+			        <li class="dropdown-item" onclick="logOut()"><a href="#">Log Out</a></li>
+			    </ul>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -33,17 +45,7 @@
 				</div>
 			</div>	
 		</div>
+
 	</div>
 
-	<div class="profile-bar offset-10">
-
-		<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
-
-		<div class="dropdown-menu">
-			<ul class="list-unstyled">
-		        <li class="dropdown-item border-bottom"><a href="#">Edit Profile</a></li>
-		        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
-		        <li class="dropdown-item"><a href="#">Log Out</a></li>
-		    </ul>
-		</div>
-	</div>
+	
