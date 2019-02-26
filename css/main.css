@@ -173,3 +173,93 @@ input, select {
     -ms-transform: none !important;
     transform: none !important;
     position: relative !important; }
+
+.popup-button {
+  display: block; }
+
+.game-button {
+  background-color: #6300A7;
+  margin-top: 10%;
+  color: #FFF;
+  padding: 3em 4em;
+  border: 3px solid #6300A7;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px 60px 60px 0px; }
+  .game-button:hover {
+    background-color: #CC77CF;
+    color: #FFF;
+    -webkit-transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+    transition: ease 0.5s;
+    border: 3px solid #CC77CF; }
+
+.modal-wrap .modal-colomn {
+  background-color: #E1E1E1;
+  border-radius: 30px;
+  padding: 0px;
+  margin-top: -40px; }
+  .modal-wrap .modal-colomn .modal-header {
+    background-color: #6300A7;
+    border-radius: 30px 30px 00px 00px;
+    height: 50px; }
+    .modal-wrap .modal-colomn .modal-header h4 {
+      color: #FFF;
+      padding-right: 50px; }
+    .modal-wrap .modal-colomn .modal-header .tab {
+      height: 34px;
+      width: 150px;
+      margin-right: 10px;
+      margin-left: 2px;
+      display: inline-block; }
+    .modal-wrap .modal-colomn .modal-header .tab-1 {
+      background-color: #FFF; }
+  .modal-wrap .modal-colomn .modal-inner {
+    background-color: #FFF;
+    height: 430px;
+    margin: 0 auto;
+    border-radius: 0px 0px 30px 30px;
+    max-width: 725px;
+    overflow: auto;
+    margin-bottom: 20px; }
+    .modal-wrap .modal-colomn .modal-inner .modal-progression {
+      height: 150px;
+      border-radius: 25px;
+      margin: 30px 30px 0px 30px;
+      background-image: url("../image/achieve-bg.jpg");
+      background-size: cover; }
+      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg {
+        height: 130px;
+        -webkit-transform: translate(28%, 8%);
+        -ms-transform: translate(28%, 8%);
+        transform: translate(28%, 8%);
+        border-radius: 25px;
+        margin: 0px 130px 10px 130px;
+        margin-top: 30px;
+        background-color: #FFF; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg p {
+          margin-bottom: -25px;
+          -webkit-transform: translate(9%, 70%);
+          -ms-transform: translate(9%, 70%);
+          transform: translate(9%, 70%);
+          color: #707070; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-bar {
+          height: 30px;
+          -webkit-transform: translate(10%, 160%);
+          -ms-transform: translate(10%, 160%);
+          transform: translate(10%, 160%);
+          border-radius: 30px;
+          background-color: #707070;
+          margin: 0px 120px 10px 0px; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle {
+          width: 110px;
+          -webkit-transform: translate(230%, -25%);
+          -ms-transform: translate(230%, -25%);
+          transform: translate(230%, -25%);
+          height: 110px;
+          border-radius: 50%;
+          background-color: #707070; }
+          .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle img {
+            -webkit-transform: translate(60%, 60%);
+            -ms-transform: translate(60%, 60%);
+            transform: translate(60%, 60%); }
