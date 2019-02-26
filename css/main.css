@@ -74,8 +74,8 @@ input, select {
     background-color: gray;
     margin: -40% auto 20px; }
   .bg-profilepage .profiel .status {
-    width: 12%;
-    padding-bottom: 12%;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     overflow: hidden;
     background-color: red;
@@ -84,8 +84,8 @@ input, select {
     right: 22%;
     top: 17%; }
   .bg-profilepage .profiel .uploadPicture {
-    width: 12%;
-    padding-bottom: 12%;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #6300A7;
@@ -94,6 +94,15 @@ input, select {
     z-index: 7666;
     color: white;
     font-size: 30px; }
+    .bg-profilepage .profiel .uploadPicture:after {
+      content: "+";
+      position: absolute;
+      z-index: 100000;
+      top: -5px;
+      left: 9px; }
+    .bg-profilepage .profiel .uploadPicture:hover {
+      background-color: #490776;
+      text-decoration: none; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
@@ -111,7 +120,12 @@ input, select {
       line-height: 35px; }
       .bg-profilepage .profiel .subSettings ul li .testIcon {
         float: left;
-        padding-right: 10px; }
+        padding-right: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        border: 1.5px solid #6300A7;
+        margin: 6px 7px 0 0; }
       .bg-profilepage .profiel .subSettings ul li p {
         word-break: break-all;
         margin-bottom: 0; }

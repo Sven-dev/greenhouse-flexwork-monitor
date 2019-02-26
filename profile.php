@@ -6,7 +6,6 @@
                     <div class="status">
                     </div>
                     <div class="uploadPicture">
-                        
                     </div>
                     <div class="profilePicture">
                         <!--img here -->
@@ -19,8 +18,8 @@
                     </div>
                     <div class="subSettings">
                         <ul>
-                            <li><div class="testIcon">X</div><p>alies@greenhouse.com</p></li>
-                            <li><div class="testIcon">X</div><p>064566798</p></li>
+                            <li><div class="testIcon"></div><p>alies@greenhouse.com</p></li>
+                            <li><div class="testIcon"></div><p>064566798</p></li>
                         </ul>
                     </div>
                     <a href="#" class="button">Change password</a>

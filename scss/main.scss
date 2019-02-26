@@ -83,8 +83,8 @@ input, select{
         margin: -40% auto 20px;
     }
     .status{
-        width:12%;
-        padding-bottom:12%;
+        width:35px;
+        height: 35px;
         border-radius:50%;
         overflow:hidden;
         background-color: red;
@@ -92,12 +92,10 @@ input, select{
         z-index: 666;
         right: 22%;
         top: 17%;
-
-
     }
     .uploadPicture{
-        width:12%;
-        padding-bottom:12%;
+        width:35px;
+        height: 35px;
         border-radius:50%;
         overflow:hidden;
         background-color: #6300A7;
@@ -106,6 +104,17 @@ input, select{
         z-index: 7666;
         color: white;
         font-size: 30px;
+        &:after{
+            content: "+"; 
+            position:absolute; 
+            z-index:100000; 
+            top: -5px;
+            left: 9px;
+        }
+        &:hover{
+           background-color: #490776;
+           text-decoration: none;
+        }
     }
     .name{
         text-align: center;
@@ -127,9 +136,14 @@ input, select{
             li{
                 line-height: 35px;
                 .testIcon{
-                float: left;
-                padding-right: 10px;
-            }
+                    float: left;
+                    padding-right: 10px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50px;
+                    border: 1.5px solid #6300A7;
+                    margin: 6px 7px 0 0
+                }
                 p{
                     word-break: break-all; 
                     margin-bottom: 0;
