@@ -73,14 +73,48 @@ input, select {
     overflow: hidden;
     background-color: gray;
     margin: -40% auto 20px; }
+  .bg-profilepage .profiel .status {
+    width: 12%;
+    padding-bottom: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
+    position: absolute;
+    z-index: 666;
+    right: 22%;
+    top: 17%; }
+  .bg-profilepage .profiel .uploadPicture {
+    width: 12%;
+    padding-bottom: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #6300A7;
+    position: absolute;
+    right: 27%;
+    z-index: 7666;
+    color: white;
+    font-size: 30px; }
   .bg-profilepage .profiel .name {
-    text-align: center; }
+    text-align: center;
+    word-break: break-all; }
     .bg-profilepage .profiel .name h2 {
       font-weight: lighter;
       color: #707070;
       font-size: 30px; }
     .bg-profilepage .profiel .name span {
       color: #9F9F9F; }
+  .bg-profilepage .profiel .subSettings ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0; }
+    .bg-profilepage .profiel .subSettings ul li {
+      line-height: 35px; }
+      .bg-profilepage .profiel .subSettings ul li .testIcon {
+        float: left;
+        padding-right: 10px; }
+      .bg-profilepage .profiel .subSettings ul li p {
+        word-break: break-all;
+        margin-bottom: 0; }
   .bg-profilepage .profiel a {
     width: 100%;
     border-radius: 30px;
@@ -89,13 +123,17 @@ input, select {
     padding: 8px 10px;
     text-align: center;
     color: white; }
+    .bg-profilepage .profiel a:hover {
+      background-color: #490776;
+      text-decoration: none; }
   .bg-profilepage .profiel .subSettings {
     margin: 30px 0 40px; }
 
 .bg-profilepage .editProfile {
   width: 100%;
   margin-top: 50px;
-  background-color: white; }
+  background-color: white;
+  padding: 0 30px; }
   .bg-profilepage .editProfile h2 {
     font-weight: lighter;
     color: #707070;
@@ -112,3 +150,28 @@ input, select {
     line-height: 100px;
     vertical-align: center;
     font-size: 25px; }
+    .bg-profilepage .editProfile .crafts:hover {
+      background-color: #490776;
+      text-decoration: none; }
+  .bg-profilepage .editProfile select {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    margin: 20px 0 10px !important;
+    border-radius: 0; }
+  .bg-profilepage .editProfile .changeButtons a {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #6300A7;
+    display: inline-block;
+    padding: 12px 10px;
+    text-align: center;
+    color: white;
+    margin: 20px 0 30px; }
+    .bg-profilepage .editProfile .changeButtons a.cancel_button {
+      background-color: #B93FB9; }
+      .bg-profilepage .editProfile .changeButtons a.cancel_button:hover {
+        background-color: #8C1E8C;
+        text-decoration: none; }
+    .bg-profilepage .editProfile .changeButtons a:hover {
+      background-color: #490776;
+      text-decoration: none; }

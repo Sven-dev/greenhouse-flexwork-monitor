@@ -3,17 +3,24 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="profiel">
+                    <div class="status">
+                    </div>
+                    <div class="uploadPicture">
+                        
+                    </div>
                     <div class="profilePicture">
                         <!--img here -->
+
                     </div>
+                    
                     <div class="name">
                         <h2>Alies van Hout</h2>
                         <span>Media Design</span>
                     </div>
                     <div class="subSettings">
                         <ul>
-                            <li>alies@greenhouse.com</li>
-                            <li>064566798</li>
+                            <li><div class="testIcon">X</div><p>alies@greenhouse.com</p></li>
+                            <li><div class="testIcon">X</div><p>064566798</p></li>
                         </ul>
                     </div>
                     <a href="#" class="button">Change password</a>
@@ -37,7 +44,22 @@
                     </div>
 
                 </div>
-                <h2>Propositions</h2>
+                <h2>Propositions</h2>                   
+                <select id="propositions">                     
+                    <option>Consultancy</option>
+                    <option>Smart Services</option>
+                    <option>Full Service marketing</option>
+                    <option>Tech Support</option>
+                </select>
+                <div class="changeButtons row">
+                    <div class="col-md-6">
+                        <a href="#" class="cancel_button">Cancel</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">Save changes</a>
+                    </div>
+                </div>
+
 
             </div>
         </div>
@@ -47,12 +69,6 @@
     <script src="backend/db.js"></script>
     <script src="backend/dbcon.js"></script>
     <script>
-        var email = document.getElementById('e-mail');
-        var password = document.getElementById('password1');
-        var firstname = document.getElementById('firstname');
-        var lastname = document.getElementById('lastname');
-        var craft = document.getElementById('craft');
-        var propositie = document.getElementById('propositie');
         document.body.classList.add("bg-profilepage");
     </script>
 </body>
