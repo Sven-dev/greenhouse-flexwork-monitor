@@ -207,7 +207,6 @@ label {
     background-color: #F8F8F8;
     max-height: 90px;
     width: 100%;
-    float: left;
         ul{
             list-style-type: none;
              margin: 0px;
@@ -237,6 +236,9 @@ label {
     width: 20%;
     max-height: 90px;
     position: absolute;
+    right: 0;
+    margin: 0;
+    min-width: 200px;
 
     .dropdown-toggle{
         list-style-type: none;

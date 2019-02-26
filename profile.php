@@ -1,4 +1,4 @@
-<?php include 'header_nologin.php'; ?>
+<?php include 'header.php'; ?>
     <div class="container form-wrap">
         <div class="row">
             <div class="col-md-3">
@@ -9,7 +9,6 @@
                     </div>
                     <div class="profilePicture">
                         <!--img here -->
-
                     </div>
                     
                     <div class="name">
