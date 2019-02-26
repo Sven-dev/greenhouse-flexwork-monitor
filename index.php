@@ -10,8 +10,7 @@
 						<input id="search-colleague" type="text" name="search" placeholder="Search...">
 					</div>
 					<!-- <button class="btns-primary" type="button" name="find-colleague">Find</button> -->
-					<div id="search-results">
-					</div>
+					<div id="search-results"></div>
 				</form>
 			</div>
 		</div>		
