@@ -51,14 +51,24 @@ function createProfile(user, firstName, lastName, craft, proposition)
 function logIn(email, password)
 {
     //Sign in
-    firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function()
-    {
-        //Redirect to home
-        window.location.href = "index.php";        
-    })    
+    firebase.auth().signInWithEmailAndPassword(email, password)   
     .catch(function(error)
     {
         console.log(error.code + ": " +  error.message);
+    });
+}
+
+//Checks if the user is aready logged in
+function logInCheck()
+{
+    //Link to the currently logged in user
+    firebase.auth().onAuthStateChanged(function(user) 
+    {
+        //User is signed in.          
+        if (user) 
+        {
+            //Navigate to the index page
+            window.location.href = "index.php";
+        }
     });
 }
