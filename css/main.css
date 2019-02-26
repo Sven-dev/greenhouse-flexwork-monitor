@@ -182,8 +182,8 @@ label {
     .navigation-bar ul li {
       display: inline-block;
       padding: 10px;
-      margin: 0px 15px 0px 15px;
-      line-height: 70px; }
+      line-height: 70px;
+      overflow: auto; }
       .navigation-bar ul li a {
         color: #707070;
         display: block; }
@@ -197,8 +197,7 @@ label {
   max-height: 90px;
   position: absolute;
   right: 0;
-  margin: 0;
-  min-width: 200px; }
+  margin: 0; }
   .profile-bar .dropdown-toggle {
     list-style-type: none;
     margin: 0px;
@@ -211,18 +210,20 @@ label {
   .profile-bar .dropdown-menu {
     list-style-type: none;
     min-width: 100%;
-    width: 336px;
     background-color: #F8F8F8;
-    z-index: 100; }
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    border-radius: 0; }
     .profile-bar .dropdown-menu li {
       width: 100%;
-      padding: 20px 0px 20px 75px;
       position: relative; }
       .profile-bar .dropdown-menu li .border-bottom {
         border-bottom: 2px solid #C2C2C2; }
       .profile-bar .dropdown-menu li a {
         color: #707070;
-        text-decoration: none; }
+        text-decoration: none;
+        padding: 0 30px; }
         .profile-bar .dropdown-menu li a:hover {
           text-decoration: none;
           color: #6300A7; }
@@ -315,6 +316,7 @@ label {
 .bg-profilepage:before {
   content: "";
   position: fixed;
+  background-image: url(../image/bg-4.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -356,7 +358,7 @@ label {
     position: absolute;
     z-index: 666;
     right: 22%;
-    top: 17%; }
+    top: 16%; }
   .bg-profilepage .profiel .uploadPicture {
     width: 35px;
     height: 35px;
