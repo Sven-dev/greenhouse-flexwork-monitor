@@ -20,7 +20,7 @@ function logInCheck()
             //Get the users profile
             currentUser = user;
             profile = get('Profiles/' + user.uid);
-            previewFile();           
+            showProfilePicture(preview);           
         } 
         // No user is signed in.        
         else 
@@ -43,36 +43,32 @@ function logOut()
 }
 
 //
-function uploadProfilePicture()
-{
-    var input = document.querySelector("input[type=file]"); 
-    //Queryselector gets the first element it can find, might break if new forms get added
-    
+function uploadProfilePicture(input, imgElement)
+{  
     //Turn the input into a blob
     var blob = input.files[0].slice(0, input.files[0].size, 'image/png'); 
-    var newFile = new File([blob], currentUser.uid + '.png', {type: 'image/png'});
+    var newFile = new File([blob], input.files[0].name, {type: 'image/png'});
+    var imgPath = "Images/" + currentUser.uid + "/" + newFile.name;
 
     //Upload the blob to the database
-    var test = uploadFile("Images/" + newFile.name, newFile);
-
-    console.log(test);
-    //Sets the location of the profilepicture in the database
-    set("Profiles/" + currentUser.uid + "/ProfilePicture", "Images/" + currentUser.uid + ".png");
+    storageroot.child(imgPath).put(newFile).then(function()
+    {
+        set("Profiles/" + currentUser.uid + "/ProfilePicture", imgPath);
+    });
 }
 
-function previewFile()
+function showProfilePicture(imgElement)
 {
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => temp(snap.val(), preview));
-    
+    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => displayImage(snap.val(), imgElement));   
 }
 
-function temp(imageUrl, imgElement)
+function displayImage(imageUrl, imgElement)
 {
     storageroot.child(imageUrl).getDownloadURL().then(function(url)
     {
-        // `url` is the download URL for 'images/stars.jpg'
         imgElement.src = url;
-    }).catch(function(error) {
-        // Handle any errors
+    }).catch(function(error) 
+    {
+        console.log(error.code + ": " +  error.message);
     });
 }

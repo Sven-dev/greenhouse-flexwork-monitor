@@ -6,7 +6,7 @@
                     <div class="status">
                     </div>
                     <div class="uploadPicture">
-                    <input type="file" onchange="uploadProfilePicture()"><br>
+                    <input type="file" onchange="uploadProfilePicture(input, preview)"><br>
 
                     </div>
                     <div class="profilePicture">
@@ -71,6 +71,7 @@
     <script src="backend/firebase_storage.js"></script>
     <script src="backend/user.js"></script>
     <script>
+        var input = document.querySelector("input[type=file]"); 
         var preview = document.getElementById("profilepicture"); 
         document.body.classList.add("bg-profilepage");
     </script>
