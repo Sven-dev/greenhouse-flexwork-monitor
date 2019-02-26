@@ -2,10 +2,13 @@
 
 <div class="login-card">
 	<div class="bg-light">
+		
 		<div class="container">
+			
 			<div class="row">
-				<div class="offset-md-3 col-md-9 test">
-					<h3>Sign in</h3>
+				
+				<div class="offset-md-2 offset-xs-1 col-md-10 col-xs-11 card-white">
+				<h3>Sign in</h3>
 						<form>
 							<div class="text-center">
 								<label for="email">Email address</label>
@@ -25,15 +28,21 @@
 								</div>		
 
 								<hr class="login">
-
-								<a class="forgotPassword" href="#">Forgot password?</a>
+								<div class="align-middle">
+									<ul class="list-unstyled">
+										<li><a class="forgotPassword" href="#">Forgot password?</a></li>
+										<li><a class="createAccount" href="createaccount.php">Create account</a></li>
+									</ul>
+								</div>
+											
 							</div>
-						</form>
-					</div>
-				</div>		
-			</div>
+						</form>						
+					<img src="image/logo.png" class="greenhouse-logo float-left" alt="Greenhouse logo">	
+				</div>
+			</div>		
 		</div>
 	</div>
+</div>
 
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
     <script src="backend/firebase_base.js"></script>

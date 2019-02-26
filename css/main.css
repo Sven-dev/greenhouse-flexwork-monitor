@@ -374,6 +374,9 @@ ul {
     left: 0px;
     top: 0px;
     z-index: -1; }
+  .bg-loginpage .greenhouse-logo {
+    margin-top: 150px;
+    height: 50px; }
   .bg-loginpage .login-card {
     height: 100vh; }
     .bg-loginpage .login-card .bg-light {
@@ -384,19 +387,26 @@ ul {
         font-size: 1.5em;
         font-weight: 300;
         margin-top: 2em;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         padding: 10px; }
       .bg-loginpage .login-card .bg-light label {
         margin-top: 35px; }
-      .bg-loginpage .login-card .bg-light .test {
+      .bg-loginpage .login-card .bg-light .card-white {
         background-color: #FFF;
         height: 100vh; }
       .bg-loginpage .login-card .bg-light form {
         padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li {
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li a:hover {
+        text-decoration: none;
+        color: #000; }
   .bg-loginpage hr.login {
     margin: 4em; }
   .bg-loginpage .forgotPassword {
-    color: #A8A8A8; }
+    color: #797878; }
+  .bg-loginpage .createAccount {
+    color: #6300A7; }
   .bg-loginpage .vertical-center {
     margin: 0;
     position: relative;
@@ -410,10 +420,6 @@ ul {
     text-align: center; }
     .bg-loginpage .styledSelect button {
       width: 100%; }
-  .bg-loginpage input[type="checkbox"] {
-    -webkit-transform: scale(2, 2);
-    -ms-transform: scale(2, 2);
-    transform: scale(2, 2); }
   .bg-loginpage .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #6300A7;
     border: none; }

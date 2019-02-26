@@ -193,8 +193,8 @@ label {
                     display: none;           
                 }
             }
-        }        
 }
+        }        
 
 .explosion-img{
     position: fixed;
@@ -440,6 +440,10 @@ ul{
         top: 0px;
         z-index: -1;
     } 
+    .greenhouse-logo{
+        margin-top: 150px;
+        height: 50px;
+    }
     .login-card{ 
         height: 100vh;
         .bg-light{
@@ -467,27 +471,40 @@ ul{
                 font-size: 1.5em;
                 font-weight: 300;
                 margin-top: 2em;
-                margin-bottom: 2em;
+                margin-bottom: 1em;
                 padding: 10px;
             }  
             label{
                 margin-top: 35px;
             } 
-            .test{
+            .card-white{
                 background-color: $white;
                 height: 100vh;
             } 
             form{
                 padding: 10px;
             } 
-        }  
+            ul li {
+                padding: 10px;
+                
+            }
+            ul li  a:hover{
+                text-decoration: none;
+                color: $black;  
+            }
+            
+          
     }  
+}  
 
     hr.login {
         margin: 4em;
     }
     .forgotPassword{
-        color: #A8A8A8;
+        color: #797878;
+    }         
+    .createAccount{
+        color: $primary;
     }         
     .vertical-center {
         margin: 0;
@@ -504,10 +521,6 @@ ul{
         }
     }
 
-    input[type="checkbox"] {
-        transform:scale(2, 2);
-      }
-
     /* When I remove background the icon goes back to that default size */
     .custom-control-input:checked ~ .custom-control-label::before {
     background-color: $primary;
@@ -518,6 +531,7 @@ ul{
     box-shadow:none !important;
     }
 }
+
 .bg-profilepage{
     &:before{
        content: "";
