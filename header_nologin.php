@@ -15,4 +15,4 @@
     <title>header</title>
 </head>
 
-<body>
+<body onLoad="logInCheck()">

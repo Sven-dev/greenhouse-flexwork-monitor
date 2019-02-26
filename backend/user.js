@@ -1,3 +1,8 @@
+/* REQUIRES 
+backend/firebase_base.js
+firebase_databasebackend/firebase_database.js
+*/
+
 //Fields
 var user;
 var profile;
@@ -5,7 +10,7 @@ var profile;
 //Checks if a user is logged in
 function logInCheck()
 {
-    //link to the currently logged in user
+    //Link to the currently logged in user
     firebase.auth().onAuthStateChanged(function(user) 
     {
         // User is signed in.          

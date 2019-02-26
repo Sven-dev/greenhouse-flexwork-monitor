@@ -2,6 +2,23 @@
 var user;
 var profile;
 
+function getUsers(searchbarvalue)
+{
+    var ref = root.child("Profiles");    
+    ref.orderByKey().startAt(searchbarvalue).once('value').then(function(snapshot)
+    {
+        console.log(snapshot.val());
+    });
+
+    /*
+    // Find all dinosaurs whose height is exactly 25 meters.    
+    var ref = firebase.database().ref("dinosaurs");
+    ref.orderByChild("height").equalTo(25).on("child_added", function(snapshot) {
+    console.log(snapshot.key);
+    });
+    */
+}
+
 //creates an account
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
