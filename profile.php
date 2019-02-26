@@ -6,11 +6,10 @@
                     <div class="status">
                     </div>
                     <div class="uploadPicture">
-                    <input type="file" onchange="uploadProfilePicture(input, preview)"><br>
-
+                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input, preview)">
                     </div>
                     <div class="profilePicture">
-                        <img src="" id="profilepicture" height="200" alt="Image preview...">
+                        <img src="" id="profilepicture">
                     </div>
                     
                     <div class="name">
