@@ -53,16 +53,26 @@ function uploadProfilePicture()
     var newFile = new File([blob], currentUser.uid + '.png', {type: 'image/png'});
 
     //Upload the blob to the database
-    uploadFile("Images/" + newFile.name, newFile);
+    var test = uploadFile("Images/" + newFile.name, newFile);
 
+    console.log(test);
     //Sets the location of the profilepicture in the database
     set("Profiles/" + currentUser.uid + "/ProfilePicture", "Images/" + currentUser.uid + ".png");
 }
 
 function previewFile()
 {
-    var preview = document.getElementById("profilepicture"); 
-    //var 
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => preview.src = snap.val());
-    storageroot.child("users/me/profile.png").getDownloadUrl().getResult(); 
+    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => temp(snap.val(), preview));
+    
+}
+
+function temp(imageUrl, imgElement)
+{
+    storageroot.child(imageUrl).getDownloadURL().then(function(url)
+    {
+        // `url` is the download URL for 'images/stars.jpg'
+        imgElement.src = url;
+    }).catch(function(error) {
+        // Handle any errors
+    });
 }

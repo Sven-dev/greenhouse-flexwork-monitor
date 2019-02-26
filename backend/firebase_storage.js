@@ -9,10 +9,5 @@ var storageroot = firebase.storage().ref();
 function uploadFile(path, file)
 {
     var ref = storageroot.child(path);
-    ref.put(file).then(function(snapshot)
-    {
-      console.log(ref.name);
-      console.log(ref.fullPath);
-      //return ref.fullPath;
-    });
+    ref.put(file);
 }
