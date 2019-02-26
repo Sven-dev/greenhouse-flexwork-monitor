@@ -1,10 +1,11 @@
 /* REQUIRES 
 backend/firebase_base.js
-firebase_databasebackend/firebase_database.js
+backend/firebase_database.js
+backend/firebase_storage.js
 */
 
 //Fields
-var user;
+var currentUser;
 var profile;
 
 //Checks if a user is logged in
@@ -17,7 +18,9 @@ function logInCheck()
         if (user) 
         {
             //Get the users profile
+            currentUser = user;
             profile = get('Profiles/' + user.uid);
+            previewFile();           
         } 
         // No user is signed in.        
         else 
@@ -37,4 +40,29 @@ function logOut()
     {
         console.log(error.code + ": " +  error.message);
     });
+}
+
+//
+function uploadProfilePicture()
+{
+    var input = document.querySelector("input[type=file]"); 
+    //Queryselector gets the first element it can find, might break if new forms get added
+    
+    //Turn the input into a blob
+    var blob = input.files[0].slice(0, input.files[0].size, 'image/png'); 
+    var newFile = new File([blob], currentUser.uid + '.png', {type: 'image/png'});
+
+    //Upload the blob to the database
+    uploadFile("Images/" + newFile.name, newFile);
+
+    //Sets the location of the profilepicture in the database
+    set("Profiles/" + currentUser.uid + "/ProfilePicture", "Images/" + currentUser.uid + ".png");
+}
+
+function previewFile()
+{
+    var preview = document.getElementById("profilepicture"); 
+    //var 
+    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => preview.src = snap.val());
+    storageroot.child("users/me/profile.png").getDownloadUrl().getResult(); 
 }

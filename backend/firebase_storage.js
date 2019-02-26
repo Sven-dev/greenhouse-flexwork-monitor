@@ -6,11 +6,13 @@ backend/firebase_base.js
 var storageroot = firebase.storage().ref();
 
 //Uploads an image to Firebase storage. Returns the image path
-function uploadImage(image)
+function uploadFile(path, file)
 {
-    var ref = storageroot.child("Images/");
-    var file = "" // use the Blob or File API
-    ref.put(file).then(function(snapshot) {
-      return ref.fullPath;
+    var ref = storageroot.child(path);
+    ref.put(file).then(function(snapshot)
+    {
+      console.log(ref.name);
+      console.log(ref.fullPath);
+      //return ref.fullPath;
     });
 }
