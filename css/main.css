@@ -24,12 +24,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: ease 0.5s; }
 
 input, select {
+  padding: 0.7em;
   width: 100%;
   margin: 0 auto;
   border-radius: 20px;
   border: 1px solid #E6E6E6;
-  margin-left: 15px;
-  padding: 5px;
+  padding-left: 10px;
   background-color: #E6E6E6;
   color: #000; }
   input:focus, select:focus {
@@ -231,3 +231,75 @@ label {
     -ms-transform: none !important;
     transform: none !important;
     position: relative !important; }
+
+.bg-loginpage {
+  overflow: hidden;
+  /* When I remove background the icon goes back to that default size */ }
+  .bg-loginpage:before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/bg-login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2; }
+  .bg-loginpage:after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1; }
+  .bg-loginpage .login-card {
+    height: 100vh; }
+    .bg-loginpage .login-card .bg-light {
+      width: 800px;
+      min-height: 100%;
+      background-color: #6300A7 !important; }
+      .bg-loginpage .login-card .bg-light h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light label {
+        margin-top: 35px; }
+      .bg-loginpage .login-card .bg-light .test {
+        background-color: #FFF;
+        height: 100vh; }
+      .bg-loginpage .login-card .bg-light form {
+        padding: 10px; }
+  .bg-loginpage hr.login {
+    margin: 4em; }
+  .bg-loginpage .forgotPassword {
+    color: #A8A8A8; }
+  .bg-loginpage .vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-trans: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .bg-loginpage .styledSelect {
+    width: 100%;
+    text-align: center; }
+    .bg-loginpage .styledSelect button {
+      width: 100%; }
+  .bg-loginpage input[type="checkbox"] {
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2); }
+  .bg-loginpage .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #6300A7;
+    border: none; }
+  .bg-loginpage .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
