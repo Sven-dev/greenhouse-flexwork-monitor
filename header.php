@@ -43,7 +43,7 @@
 			<ul class="list-unstyled">
 		        <li class="dropdown-item border-bottom"><a href="#">Edit Profile</a></li>
 		        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
-		        <li class="dropdown-item"><a href="#">Log Out</a></li>
+		        <li class="dropdown-item" onclick="logOut()">Log Out</a></li>
 		    </ul>
 		</div>
 	</div>
