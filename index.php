@@ -10,6 +10,8 @@
 						<input id="search-colleague" type="text" name="search" placeholder="Search...">
 					</div>
 					<!-- <button class="btns-primary" type="button" name="find-colleague">Find</button> -->
+					<div id="search-results">
+					</div>
 				</form>
 			</div>
 		</div>		
@@ -40,8 +42,8 @@
 	<script src="backend/search.js"></script>
 	<script>
 		document.body.classList.add("bg-index");
-		var search_bar = document.getElementById('search_bar');
-		var search_results = document.getElementById('search_results');
+		var search_bar = document.getElementById('search-colleague');
+		var search_results = document.getElementById('search-results');
 	</script>
 </body>
 </html>
