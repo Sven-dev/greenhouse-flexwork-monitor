@@ -224,7 +224,6 @@ ul {
 .bg-searchresults .history-wrap, .bg-searchresults .results-wrap {
   padding-top: 120px; }
   .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
-    width: 80%;
     height: 200px;
     background: #E6E6E6;
     background-clip: content-box;
@@ -233,7 +232,7 @@ ul {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25)); }
     @media only screen and (max-width: 1199px) {
       .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
-        margin-bottom: 15px; } }
+        margin-bottom: 30px; } }
     .bg-searchresults .history-wrap .history-block .profile-pn, .bg-searchresults .results-wrap .history-block .profile-pn {
       padding: 30px;
       -webkit-transform: translate(0%, 12%);
@@ -278,7 +277,7 @@ ul {
 
 .bg-searchresults .results-wrap {
   padding-top: 60px;
-  padding-bottom: 30px; }
+  padding-bottom: 60px; }
 
 .bg-searchresults input {
   background: #FFF;

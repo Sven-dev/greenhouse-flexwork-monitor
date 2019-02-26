@@ -146,9 +146,6 @@ label {
         @media only screen and(max-width: 1199px){
             padding-top: 180px;           
         }
-        #search-results{
-            
-        }
         #search-colleague{
             position: relative;
             width: 50%;           
@@ -264,14 +261,13 @@ ul{
     .history-wrap, .results-wrap{
         padding-top: 120px;
         .history-block{ 
-            width: 80%;
             height: 200px;
             background: $secondary;  
             background-clip: content-box; 
             white-space: nowrap; 
             filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
             @media only screen and(max-width: 1199px){
-                margin-bottom: 15px;          
+                margin-bottom: 30px;          
             }
             .profile-pn{
                 padding: 30px;
@@ -316,7 +312,7 @@ ul{
     }  
     .results-wrap{
         padding-top: 60px;
-        padding-bottom: 30px;
+        padding-bottom: 60px;
     }
     input{
         background: $white;
