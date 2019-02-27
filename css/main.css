@@ -24,12 +24,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: ease 0.5s; }
 
 input, select {
+  padding: 0.7em;
   width: 100%;
   margin: 0 auto;
   border-radius: 20px;
   border: 1px solid #E6E6E6;
-  margin-left: 15px;
-  padding: 5px;
+  padding-left: 10px;
   background-color: #E6E6E6;
   color: #000; }
   input:focus, select:focus {
@@ -120,7 +120,10 @@ label {
     top: 0px;
     z-index: -1; }
   .bg-index .search-wrap {
-    padding-top: 120px; }
+    padding-top: 220px; }
+    @media only screen and (max-width: 1199px) {
+      .bg-index .search-wrap {
+        padding-top: 180px; } }
     .bg-index .search-wrap #search-colleague {
       position: relative;
       width: 50%;
@@ -172,22 +175,134 @@ label {
     .explosion-img {
       display: none; } }
 
+ul {
+  display: inline-block; }
+
+.bg-searchresults .banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  top: 0px;
+  left: 0px;
+  background-image: url(../image/bg-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; }
+
+.bg-searchresults #search-colleague {
+  position: relative;
+  width: 50%;
+  margin-top: 60px;
+  height: 35px; }
+
+.bg-searchresults form:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: inherit;
+  position: absolute;
+  right: 305px;
+  bottom: 4px;
+  font-size: 18px;
+  z-index: 15px; }
+  @media only screen and (max-width: 1199px) {
+    .bg-searchresults form:after {
+      right: 260px; } }
+  @media only screen and (max-width: 991px) {
+    .bg-searchresults form:after {
+      right: 200px; } }
+  @media only screen and (max-width: 768px) {
+    .bg-searchresults form:after {
+      right: 155px; } }
+  @media only screen and (max-width: 550px) {
+    .bg-searchresults form:after {
+      display: none; } }
+
+.bg-searchresults .history-wrap, .bg-searchresults .results-wrap {
+  padding-top: 120px; }
+  .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
+    height: 200px;
+    background: #E6E6E6;
+    background-clip: content-box;
+    white-space: nowrap;
+    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25)); }
+    @media only screen and (max-width: 1199px) {
+      .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
+        margin-bottom: 30px; } }
+    .bg-searchresults .history-wrap .history-block .profile-pn, .bg-searchresults .results-wrap .history-block .profile-pn {
+      padding: 30px;
+      -webkit-transform: translate(0%, 12%);
+      -ms-transform: translate(0%, 12%);
+      transform: translate(0%, 12%); }
+      .bg-searchresults .history-wrap .history-block .profile-pn .profile-pic, .bg-searchresults .results-wrap .history-block .profile-pn .profile-pic {
+        display: inline-block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; }
+      .bg-searchresults .history-wrap .history-block .profile-pn .profile-name, .bg-searchresults .results-wrap .history-block .profile-pn .profile-name {
+        padding-left: 15px;
+        display: inline-block;
+        margin-bottom: 0px;
+        -webkit-transform: translate(0%, 30%);
+        -ms-transform: translate(0%, 30%);
+        transform: translate(0%, 30%);
+        width: 150px;
+        word-break: break-all;
+        white-space: normal; }
+      .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+        position: absolute;
+        right: 30px;
+        -webkit-transform: translate(0%, 260%);
+        -ms-transform: translate(0%, 260%);
+        transform: translate(0%, 260%);
+        color: #6300A7;
+        font-size: 18px; }
+        @media only screen and (max-width: 380px) {
+          .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+            padding-left: 30px; } }
+        @media only screen and (max-width: 340px) {
+          .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+            padding-left: 15px; } }
+  .bg-searchresults .history-wrap hr, .bg-searchresults .results-wrap hr {
+    margin-left: 0px;
+    height: 1px;
+    width: 31.5%;
+    background: #6300A7; }
+
+.bg-searchresults .results-wrap {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.bg-searchresults input {
+  background: #FFF;
+  border: none;
+  -webkit-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75); }
+
 .navigation-bar {
   background-color: #F8F8F8;
   max-height: 90px;
   width: 100%;
-  float: left; }
+  position: relative; }
   .navigation-bar ul {
     list-style-type: none;
     margin: 0px; }
     .navigation-bar ul li {
       display: inline-block;
       padding: 10px;
-      margin: 0px 15px 0px 15px;
-      line-height: 70px; }
+      line-height: 50px;
+      overflow: auto; }
       .navigation-bar ul li a {
         color: #707070;
-        display: block; }
+        display: block;
+        border-bottom: 2px solid transparent; }
         .navigation-bar ul li a:hover {
           text-decoration: none;
           border-bottom: 2px solid #6300A7; }
@@ -196,11 +311,13 @@ label {
   background-color: #6300A7;
   width: 20%;
   max-height: 90px;
-  position: absolute; }
+  position: absolute;
+  right: 0;
+  margin: 0; }
   .profile-bar .dropdown-toggle {
     list-style-type: none;
     margin: 0px;
-    line-height: 90px;
+    line-height: 78px;
     margin-left: 20%;
     font-size: 18px;
     font-weight: 300;
@@ -209,21 +326,26 @@ label {
   .profile-bar .dropdown-menu {
     list-style-type: none;
     min-width: 100%;
-    width: 336px;
     background-color: #F8F8F8;
-    z-index: 100; }
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    border-radius: 0; }
     .profile-bar .dropdown-menu li {
       width: 100%;
-      padding: 20px 0px 20px 75px;
-      position: relative; }
+      position: relative;
+      padding: 0;
+      margin: 0; }
       .profile-bar .dropdown-menu li .border-bottom {
         border-bottom: 2px solid #C2C2C2; }
       .profile-bar .dropdown-menu li a {
         color: #707070;
-        text-decoration: none; }
+        text-decoration: none;
+        padding: 0 30px; }
         .profile-bar .dropdown-menu li a:hover {
           text-decoration: none;
-          color: #6300A7; }
+          color: #6300A7;
+          border-bottom: 2px solid transparent; }
     .profile-bar .dropdown-menu .list-unstyled {
       margin-bottom: 0px; }
   .profile-bar .show {
@@ -231,3 +353,234 @@ label {
     -ms-transform: none !important;
     transform: none !important;
     position: relative !important; }
+
+.bg-loginpage {
+  overflow: hidden;
+  /* When I remove background the icon goes back to that default size */ }
+  .bg-loginpage:before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/bg-login.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2; }
+  .bg-loginpage:after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1; }
+  .bg-loginpage .greenhouse-logo {
+    margin-top: 150px;
+    height: 50px; }
+  .bg-loginpage .login-card {
+    height: 100vh; }
+    .bg-loginpage .login-card .bg-light {
+      width: 800px;
+      min-height: 100%;
+      background-color: #6300A7 !important; }
+      .bg-loginpage .login-card .bg-light h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light label {
+        margin-top: 35px; }
+      .bg-loginpage .login-card .bg-light .card-white {
+        background-color: #FFF;
+        height: 100vh; }
+      .bg-loginpage .login-card .bg-light form {
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li {
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li a:hover {
+        text-decoration: none;
+        color: #000; }
+  .bg-loginpage hr.login {
+    margin: 4em; }
+  .bg-loginpage .forgotPassword {
+    color: #797878; }
+  .bg-loginpage .createAccount {
+    color: #6300A7; }
+  .bg-loginpage .vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-trans: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .bg-loginpage .styledSelect {
+    width: 100%;
+    text-align: center; }
+    .bg-loginpage .styledSelect button {
+      width: 100%; }
+  .bg-loginpage .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #6300A7;
+    border: none; }
+  .bg-loginpage .custom-control-input:focus ~ .custom-control-label::before {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+
+.bg-profilepage:before {
+  content: "";
+  position: fixed;
+  background-image: url(../image/bg-4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -2; }
+
+.bg-profilepage:after {
+  content: "";
+  position: fixed;
+  background-color: #000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1; }
+
+.bg-profilepage .profiel {
+  background-color: white;
+  margin-top: 120px;
+  padding: 20px 20px 30px; }
+  .bg-profilepage .profiel .profilePicture {
+    position: relative;
+    width: 60%;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: gray;
+    margin: -40% auto 20px; }
+  .bg-profilepage .profiel .status {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
+    position: absolute;
+    z-index: 666;
+    right: 22%;
+    top: 16%; }
+  .bg-profilepage .profiel .uploadPicture {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #6300A7;
+    position: absolute;
+    right: 27%;
+    z-index: 7666;
+    color: white;
+    font-size: 30px; }
+    .bg-profilepage .profiel .uploadPicture:after {
+      content: "+";
+      position: absolute;
+      z-index: 100000;
+      top: -5px;
+      left: 9px; }
+    .bg-profilepage .profiel .uploadPicture:hover {
+      background-color: #490776;
+      text-decoration: none; }
+  .bg-profilepage .profiel .name {
+    text-align: center;
+    word-break: break-all; }
+    .bg-profilepage .profiel .name h2 {
+      font-weight: lighter;
+      color: #707070;
+      font-size: 30px; }
+    .bg-profilepage .profiel .name span {
+      color: #9F9F9F; }
+  .bg-profilepage .profiel .subSettings ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0; }
+    .bg-profilepage .profiel .subSettings ul li {
+      line-height: 35px; }
+      .bg-profilepage .profiel .subSettings ul li .testIcon {
+        float: left;
+        padding-right: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        border: 1.5px solid #6300A7;
+        margin: 6px 7px 0 0; }
+      .bg-profilepage .profiel .subSettings ul li p {
+        word-break: break-all;
+        margin-bottom: 0; }
+  .bg-profilepage .profiel a {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #6300A7;
+    display: inline-block;
+    padding: 8px 10px;
+    text-align: center;
+    color: white; }
+    .bg-profilepage .profiel a:hover {
+      background-color: #490776;
+      text-decoration: none; }
+  .bg-profilepage .profiel .subSettings {
+    margin: 30px 0 40px; }
+
+.bg-profilepage .editProfile {
+  width: 100%;
+  margin-top: 50px;
+  background-color: white;
+  padding: 0 30px; }
+  .bg-profilepage .editProfile h2 {
+    font-weight: lighter;
+    color: #707070;
+    font-size: 30px;
+    padding: 20px 0 10px;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px; }
+  .bg-profilepage .editProfile .crafts {
+    padding: 10px 20px;
+    background-color: #6300A7;
+    color: white;
+    text-align: center;
+    background-clip: content-box;
+    line-height: 100px;
+    vertical-align: center;
+    font-size: 25px; }
+    .bg-profilepage .editProfile .crafts:hover {
+      background-color: #490776;
+      text-decoration: none; }
+  .bg-profilepage .editProfile select {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    margin: 20px 0 10px !important;
+    border-radius: 0; }
+  .bg-profilepage .editProfile .changeButtons a {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #6300A7;
+    display: inline-block;
+    padding: 12px 10px;
+    text-align: center;
+    color: white;
+    margin: 20px 0 30px; }
+    .bg-profilepage .editProfile .changeButtons a.cancel_button {
+      background-color: #B93FB9; }
+      .bg-profilepage .editProfile .changeButtons a.cancel_button:hover {
+        background-color: #8C1E8C;
+        text-decoration: none; }
+    .bg-profilepage .editProfile .changeButtons a:hover {
+      background-color: #490776;
+      text-decoration: none; }

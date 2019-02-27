@@ -41,18 +41,19 @@ window.setInterval(function()
 //Filters the colleagues by name with the search term
 function filter(search)
 {
-  search_results.innerHTML += "<ul>";
-  colleagues.forEach(function(profile)
-  {
-    var lname = profile.Name.toLowerCase();
-    var lsearch = search.toLowerCase();
-    if (lname.includes(lsearch))
+  if (colleagues.length != 0)
+  {  
+    colleagues.forEach(function(profile)
     {
-      console.log(profile);
-      //profile picture  
-      search_results.innerHTML += "<li>" + profile.Name + ", " + profile.Craft + "</li>";
-    }
-  });
+      var lname = profile.Name.toLowerCase();
+      var lsearch = search.toLowerCase();
+      if (lname.includes(lsearch))
+      {
+        //profile picture  
+        search_results.innerHTML += "<div>" + profile.Name + ", " + profile.Craft + "</div>";
+      }
+    });
 
-  search_results.innerHTML += "</ul>"
+    //search_results.innerHTML += "</ul>";
+  }
 }
