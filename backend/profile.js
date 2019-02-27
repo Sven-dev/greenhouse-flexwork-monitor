@@ -46,7 +46,10 @@ function uploadProfilePicture()
     //Upload the blob to the database
     storageroot.child(imgPath).put(newFile).then(function()
     {
-        set("Profiles/" + currentUser.uid + "/ProfilePicture", imgPath);
+        dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").set(imgPath).then(function(){
+            profile.ProfilePicture = imgPath;
+            displayImage(profile.ProfilePicture);
+        });
     });
 }
 
