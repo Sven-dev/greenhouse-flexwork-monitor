@@ -33,7 +33,7 @@
                     <div class="crafts col-md-6">
                         Data
                     </div>
-                    <div class="crafts col-md-6">
+                    <div class="crafts selected col-md-6">
                         Creative
                     </div>
                     <div class="crafts col-md-6">
