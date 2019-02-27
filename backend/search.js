@@ -3,9 +3,15 @@ backend/firebase_base.js
 basebackend/firebase_database.js
 */
 
+//Fields
 var previousQuery = "";
 var colleagues = [];
 
+//Elements
+var search_bar = document.getElementById('search-colleague');
+var search_results = document.getElementById('search-results');
+
+//Start
 getColleagues();
 
 //Gets all colleagues whose name starts with the given search term

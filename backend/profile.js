@@ -1,6 +1,7 @@
 /* REQUIRES 
 backend/firebase_base.js
 backend/firebase_database.js
+backend/firebase_stoarge.js
 */
 
 //Fields
@@ -8,18 +9,17 @@ var currentUser;
 var profile;
 
 //Elements
-var headerName = document.getElementById("dropdownMenuButton");
+var input = document.querySelector("input[type=file]"); 
+var pictureFrame = document.getElementById("profilepicture");
 
 //Start
-logInCheck();
+getUser();
 
-//Checks if a user is logged in
-function logInCheck()
+function getUser()
 {
     //Link to the currently logged in user
     firebase.auth().onAuthStateChanged(function(user) 
-    {
-        // User is signed in.          
+    {        
         if (user) 
         {
             //Get the users profile
@@ -28,30 +28,20 @@ function logInCheck()
             dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
             {
                 profile = snapshot.val();
-                showHeaderData();
+
+                displayImage(profile.ProfilePicture);
             });
-        }
-        // No user is signed in.        
-        else 
-        {
-            window.location.href = "login.php";
         }
     });
 }
 
-//Logs the user out, and returns to the login-page
-function logOut()
+function displayImage(imageUrl)
 {
-    firebase.auth().signOut().then(function()
+    storageroot.child(imageUrl).getDownloadURL().then(function(url)
     {
-        console.log("Signed out");
-    }, function(error) 
+        pictureFrame.src = url;
+    }).catch(function(error) 
     {
         console.log(error.code + ": " +  error.message);
     });
-}
-
-function showHeaderData()
-{
-    headerName.innerHTML = "Welcome " + profile.Name;
 }
