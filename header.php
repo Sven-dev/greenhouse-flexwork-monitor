@@ -18,14 +18,26 @@
     <title>header</title>
 </head>
 
-<body onLoad="logInCheck()">
+<body>
 
 	<div class="navigation-bar">
-		<div class="profile-bar offset-10">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul>
+						<li class="active"><a href="index.php">Home</a></li>
+						<li><a href="#">Map</a></li>
+						<li><img src="image/logo-small.png" alt="Greenhouse Logo" width="50px" height="50px"></li>
+						<li><a href="#">Game</a></li>
+						<li><a href="searchresults.php">People</a></li>
+					</ul>
+				</div>
+			<div class="profile-bar offset-10" onclick="myFunction()">
 
-			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
+			<a class="dropdown-toggle" href="#">Welcome Alies</a>
 
-			<div class="dropdown-menu">
+			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
 			        <li class="dropdown-item border-bottom"><a href="profile.php">Edit Profile</a></li>
 			        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
@@ -33,20 +45,38 @@
 			    </ul>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<ul>
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Map</a></li>
-						<li><img src="image/logo-small.png" alt="Greenhouse Logo" width="50px" height="50px"></li>
-						<li><a href="#">Game</a></li>
-						<li><a href="#">People</a></li>
-					</ul>
-				</div>
-			</div>	
+</div>	
 		</div>
-
 	</div>
 
-	
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script src="backend/firebase_base.js"></script>
+	<script src="backend/firebase_database.js"></script>
+	<script src="backend/firebase_storage.js"></script>
+	<script src="backend/user.js"></script>
+	<script>
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction()
+{
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+	if (!event.target.matches('.profile-bar'))
+	{
+    var dropdowns = document.getElementsByClassName("list-unstyled");
+    var i;
+		for (i = 0; i < dropdowns.length; i++)
+		{
+      var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show'))
+			{
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

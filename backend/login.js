@@ -3,6 +3,32 @@ backend/firebase_base.js
 firebase_databasebackend/firebase_database.js
 */
 
+//Fields
+
+
+//Elements
+var email = document.getElementById('e-mail');
+var password = document.getElementById('password');
+
+//Start
+logInCheck();
+
+
+//Checks if the user is aready logged in
+function logInCheck()
+{
+    //Link to the currently logged in user
+    firebase.auth().onAuthStateChanged(function(user) 
+    {
+        //User is signed in.          
+        if (user) 
+        {
+            //Navigate to the index page
+            window.location.href = "index.php";
+        }
+    });
+}
+
 //creates an account
 function createAccount(email, password, firstName, lastName, craft, proposition)
 {
@@ -25,8 +51,6 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
     });
 }
 
-
-//REQUIRES firebase_database!
 //Creates a new profile in the database, and links it to the user
 function createProfile(user, firstName, lastName, craft, proposition)
 {
@@ -55,20 +79,5 @@ function logIn(email, password)
     .catch(function(error)
     {
         console.log(error.code + ": " +  error.message);
-    });
-}
-
-//Checks if the user is aready logged in
-function logInCheck()
-{
-    //Link to the currently logged in user
-    firebase.auth().onAuthStateChanged(function(user) 
-    {
-        //User is signed in.          
-        if (user) 
-        {
-            //Navigate to the index page
-            window.location.href = "index.php";
-        }
     });
 }
