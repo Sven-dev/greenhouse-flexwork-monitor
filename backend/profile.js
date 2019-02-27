@@ -29,7 +29,7 @@ function getUser()
 }
 
 //uploads a new profile picture to storage, and links it to profile
-function uploadProfilePicture(input, imgElement)
+function uploadProfilePicture(input)
 {  
     //Turn the input into a blob
     var blob = input.files[0].slice(0, input.files[0].size, 'image/png'); 

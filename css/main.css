@@ -57,6 +57,9 @@ label {
 
 .bg-createaccount {
   overflow: hidden; }
+  @media only screen and (max-width: 1199px) {
+    .bg-createaccount {
+      overflow: unset; } }
   .bg-createaccount:before {
     content: "";
     position: absolute;
@@ -79,20 +82,49 @@ label {
     left: 0px;
     top: 0px;
     z-index: -1; }
-  .bg-createaccount .greenhouse-logo {
-    height: 100px; }
-  .bg-createaccount .bg-light {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    -webkit-box-shadow: 0px 0px 36px -10px #b5b5b5;
-    -moz-box-shadow: 0px 0px 36px -10px #b5b5b5;
-    box-shadow: 0px 0px 36px -10px #b5b5b5; }
+  .bg-createaccount .signup-card {
+    height: 100vh; }
+    .bg-createaccount .signup-card .bg-light {
+      width: 900px;
+      min-height: 100%;
+      background-color: #6300A7 !important; }
+      @media only screen and (max-width: 1199px) {
+        .bg-createaccount .signup-card .bg-light {
+          width: 900px; } }
+      @media only screen and (max-width: 991px) {
+        .bg-createaccount .signup-card .bg-light {
+          width: 900px; } }
+      @media only screen and (max-width: 768px) {
+        .bg-createaccount .signup-card .bg-light {
+          width: 500px; } }
+      @media only screen and (max-width: 550px) {
+        .bg-createaccount .signup-card .bg-light {
+          width: 400px;
+          padding: -30px; } }
+      .bg-createaccount .signup-card .bg-light h3 {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-top: 2em;
+        padding: 10px; }
+        @media only screen and (max-width: 1199px) {
+          .bg-createaccount .signup-card .bg-light h3 {
+            margin-bottom: 0em;
+            padding: 0px; } }
+      .bg-createaccount .signup-card .bg-light label {
+        margin-top: 25px; }
+      .bg-createaccount .signup-card .bg-light .card-white {
+        background-color: #FFF;
+        height: 100vh; }
+      .bg-createaccount .signup-card .bg-light form {
+        padding: 2em; }
+        @media only screen and (max-width: 1199px) {
+          .bg-createaccount .signup-card .bg-light form {
+            padding: 1em;
+            margin-right: 30px; } }
   .bg-createaccount .styledSelect {
-    width: 50%;
+    width: 100%;
     margin: 0 auto; }
-    .bg-createaccount .styledSelect input {
+    .bg-createaccount .styledSelect input, .bg-createaccount .styledSelect button {
       width: 100%; }
 
 .bg-index {
@@ -290,7 +322,8 @@ ul {
   background-color: #F8F8F8;
   max-height: 90px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  z-index: 99; }
   .navigation-bar ul {
     list-style-type: none;
     margin: 0px; }
@@ -354,6 +387,9 @@ ul {
     transform: none !important;
     position: relative !important; }
 
+.popup-button {
+  display: block; }
+
 .bg-loginpage {
   overflow: hidden;
   /* When I remove background the icon goes back to that default size */ }
@@ -380,34 +416,59 @@ ul {
     top: 0px;
     z-index: -1; }
   .bg-loginpage .greenhouse-logo {
-    margin-top: 150px;
+    margin-top: 100px;
     height: 50px; }
   .bg-loginpage .login-card {
     height: 100vh; }
     .bg-loginpage .login-card .bg-light {
-      width: 800px;
+      width: 900px;
       min-height: 100%;
       background-color: #6300A7 !important; }
+      @media only screen and (max-width: 1199px) {
+        .bg-loginpage .login-card .bg-light {
+          width: 900px; } }
+      @media only screen and (max-width: 991px) {
+        .bg-loginpage .login-card .bg-light {
+          width: 900px; } }
+      @media only screen and (max-width: 768px) {
+        .bg-loginpage .login-card .bg-light {
+          width: 500px; } }
+      @media only screen and (max-width: 550px) {
+        .bg-loginpage .login-card .bg-light {
+          width: 400px;
+          padding: -30px; } }
       .bg-loginpage .login-card .bg-light h3 {
         font-size: 1.5em;
         font-weight: 300;
         margin-top: 2em;
-        margin-bottom: 1em;
         padding: 10px; }
+        @media only screen and (max-width: 550px) {
+          .bg-loginpage .login-card .bg-light h3 {
+            margin-bottom: 0em; } }
       .bg-loginpage .login-card .bg-light label {
         margin-top: 35px; }
       .bg-loginpage .login-card .bg-light .card-white {
         background-color: #FFF;
         height: 100vh; }
       .bg-loginpage .login-card .bg-light form {
-        padding: 10px; }
+        padding: 2em; }
+        @media only screen and (max-width: 550px) {
+          .bg-loginpage .login-card .bg-light form {
+            padding: 1em;
+            margin-right: 30px; } }
       .bg-loginpage .login-card .bg-light ul li {
         padding: 10px; }
+        @media only screen and (max-width: 550px) {
+          .bg-loginpage .login-card .bg-light ul li {
+            padding: 7px; } }
       .bg-loginpage .login-card .bg-light ul li a:hover {
         text-decoration: none;
         color: #000; }
   .bg-loginpage hr.login {
     margin: 4em; }
+    @media only screen and (max-width: 550px) {
+      .bg-loginpage hr.login {
+        margin: 2em; } }
   .bg-loginpage .forgotPassword {
     color: #797878; }
   .bg-loginpage .createAccount {
@@ -459,15 +520,25 @@ ul {
 .bg-profilepage .profiel {
   background-color: white;
   margin-top: 120px;
-  padding: 20px 20px 30px; }
+  padding: 20px 20px 30px;
+  z-index: -2px; }
   .bg-profilepage .profiel .profilePicture {
+    width: 65%;
+    text-align: center;
     position: relative;
-    width: 60%;
-    padding-bottom: 60%;
+    padding-bottom: 65%;
     border-radius: 50%;
     overflow: hidden;
     background-color: gray;
-    margin: -40% auto 20px; }
+    margin: -45% auto 20px; }
+    .bg-profilepage .profiel .profilePicture img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .bg-profilepage .profiel .status {
     width: 35px;
     height: 35px;
@@ -476,28 +547,44 @@ ul {
     background-color: red;
     position: absolute;
     z-index: 666;
-    right: 22%;
+    right: 20%;
     top: 16%; }
   .bg-profilepage .profiel .uploadPicture {
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    padding: 0;
     overflow: hidden;
     background-color: #6300A7;
+    border-color: #6300A7;
     position: absolute;
     right: 27%;
     z-index: 7666;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    cursor: pointer; }
     .bg-profilepage .profiel .uploadPicture:after {
       content: "+";
       position: absolute;
       z-index: 100000;
-      top: -5px;
-      left: 9px; }
-    .bg-profilepage .profiel .uploadPicture:hover {
+      top: -5.5px;
+      left: 8px; }
+    .bg-profilepage .profiel .uploadPicture:before {
+      content: "";
+      position: absolute;
+      background-color: #6300A7;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
+    .bg-profilepage .profiel .uploadPicture:hover:before {
+      content: "";
+      position: absolute;
       background-color: #490776;
-      text-decoration: none; }
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
@@ -510,7 +597,8 @@ ul {
   .bg-profilepage .profiel .subSettings ul {
     padding-left: 0;
     list-style-type: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: 100%; }
     .bg-profilepage .profiel .subSettings ul li {
       line-height: 35px; }
       .bg-profilepage .profiel .subSettings ul li .testIcon {
@@ -584,3 +672,90 @@ ul {
     .bg-profilepage .editProfile .changeButtons a:hover {
       background-color: #490776;
       text-decoration: none; }
+
+.game-button {
+  background-color: #6300A7;
+  margin-top: 10%;
+  color: #FFF;
+  padding: 3em 4em;
+  border: 3px solid #6300A7;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px 60px 60px 0px; }
+  .game-button:hover {
+    background-color: #CC77CF;
+    color: #FFF;
+    -webkit-transition: ease 0.5s;
+    -o-transition: ease 0.5s;
+    transition: ease 0.5s;
+    border: 3px solid #CC77CF; }
+
+.modal-wrap .modal-colomn {
+  background-color: #E1E1E1;
+  border-radius: 30px;
+  padding: 0px;
+  margin-top: -40px; }
+  .modal-wrap .modal-colomn .modal-header {
+    background-color: #6300A7;
+    border-radius: 30px 30px 00px 00px;
+    height: 50px; }
+    .modal-wrap .modal-colomn .modal-header h4 {
+      color: #FFF;
+      padding-right: 50px; }
+    .modal-wrap .modal-colomn .modal-header .tab {
+      height: 34px;
+      width: 150px;
+      margin-right: 10px;
+      margin-left: 2px;
+      display: inline-block; }
+    .modal-wrap .modal-colomn .modal-header .tab-1 {
+      background-color: #FFF; }
+  .modal-wrap .modal-colomn .modal-inner {
+    background-color: #FFF;
+    height: 430px;
+    margin: 0 auto;
+    border-radius: 0px 0px 30px 30px;
+    max-width: 725px;
+    overflow: auto;
+    margin-bottom: 20px; }
+    .modal-wrap .modal-colomn .modal-inner .modal-progression {
+      height: 150px;
+      border-radius: 25px;
+      margin: 30px 30px 0px 30px;
+      background-image: url("../image/achieve-bg.jpg");
+      background-size: cover; }
+      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg {
+        height: 130px;
+        -webkit-transform: translate(28%, 8%);
+        -ms-transform: translate(28%, 8%);
+        transform: translate(28%, 8%);
+        border-radius: 25px;
+        margin: 0px 130px 10px 130px;
+        margin-top: 30px;
+        background-color: #FFF; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg p {
+          margin-bottom: -25px;
+          -webkit-transform: translate(9%, 70%);
+          -ms-transform: translate(9%, 70%);
+          transform: translate(9%, 70%);
+          color: #707070; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-bar {
+          height: 30px;
+          -webkit-transform: translate(10%, 160%);
+          -ms-transform: translate(10%, 160%);
+          transform: translate(10%, 160%);
+          border-radius: 30px;
+          background-color: #707070;
+          margin: 0px 120px 10px 0px; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle {
+          width: 110px;
+          -webkit-transform: translate(230%, -25%);
+          -ms-transform: translate(230%, -25%);
+          transform: translate(230%, -25%);
+          height: 110px;
+          border-radius: 50%;
+          background-color: #707070; }
+          .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle img {
+            -webkit-transform: translate(60%, 60%);
+            -ms-transform: translate(60%, 60%);
+            transform: translate(60%, 60%); }
