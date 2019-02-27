@@ -1,7 +1,6 @@
 /* REQUIRES 
 backend/firebase_base.js
 backend/firebase_database.js
-backend/firebase_storage.js
 */
 
 //Fields
@@ -9,7 +8,6 @@ var currentUser;
 var profile;
 
 //Elements
-var headerPicture = document.getElementById("headerProfilePicture");
 var headerName = document.getElementById("dropdownMenuButton");
 
 //Start
@@ -56,6 +54,5 @@ function logOut()
 
 function showHeaderData()
 {
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => getImage(snap.val(), headerPicture));   
     headerName.innerHTML = "Welcome " + profile.Name;
 }

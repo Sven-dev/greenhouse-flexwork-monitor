@@ -22,8 +22,7 @@
 	<div class="navigation-bar">
 		<div class="profile-bar offset-10" onclick="myFunction()">
 
-			<img class="profile-pic" height="100px" id="headerProfilePicture" src="image/profile-pic.jpg">
-			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
+			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</a>
 
 			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
