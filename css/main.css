@@ -55,9 +55,6 @@ label {
 #account-btn {
   margin-top: 15px; }
 
-.pushDown {
-  padding-top: 90px; }
-
 .bg-createaccount {
   overflow: hidden; }
   @media only screen and (max-width: 1199px) {
@@ -264,10 +261,8 @@ ul {
     background-clip: content-box;
     white-space: nowrap;
     -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25)); }
-    @media only screen and (max-width: 1199px) {
-      .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
-        margin-bottom: 30px; } }
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 30px; }
     .bg-searchresults .history-wrap .history-block .profile-pn, .bg-searchresults .results-wrap .history-block .profile-pn {
       padding: 30px;
       -webkit-transform: translate(0%, 12%);
@@ -325,8 +320,7 @@ ul {
   background-color: #F8F8F8;
   max-height: 90px;
   width: 100%;
-  position: fixed;
-  z-index: 99; }
+  position: relative; }
   .navigation-bar ul {
     list-style-type: none;
     margin: 0px; }
@@ -349,8 +343,7 @@ ul {
   max-height: 90px;
   position: absolute;
   right: 0;
-  margin: 0;
-  cursor: pointer; }
+  margin: 0; }
   .profile-bar .dropdown-toggle {
     list-style-type: none;
     margin: 0px;
@@ -524,8 +517,7 @@ ul {
 .bg-profilepage .profiel {
   background-color: white;
   margin-top: 120px;
-  padding: 20px 20px 30px;
-  z-index: -2px; }
+  padding: 20px 20px 30px; }
   .bg-profilepage .profiel .profilePicture {
     width: 65%;
     text-align: center;
@@ -560,35 +552,22 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #6300A7;
-    border-color: #6300A7;
     position: absolute;
     right: 27%;
     z-index: 7666;
     color: white;
-    font-size: 30px;
-    cursor: pointer; }
+    font-size: 30px; }
     .bg-profilepage .profiel .uploadPicture:after {
       content: "+";
       position: absolute;
       z-index: 100000;
-      top: -5.5px;
-      left: 8px; }
-    .bg-profilepage .profiel .uploadPicture:before {
-      content: "";
-      position: absolute;
-      background-color: #6300A7;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%; }
-    .bg-profilepage .profiel .uploadPicture:hover:before {
-      content: "";
-      position: absolute;
+      top: -5px;
+      left: 9px; }
+    .bg-profilepage .profiel .uploadPicture:hover {
       background-color: #490776;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%; }
+      text-decoration: none; }
+    .bg-profilepage .profiel .uploadPicture input[type=file] {
+      background-color: purple; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
@@ -601,8 +580,7 @@ ul {
   .bg-profilepage .profiel .subSettings ul {
     padding-left: 0;
     list-style-type: none;
-    margin-bottom: 0;
-    width: 100%; }
+    margin-bottom: 0; }
     .bg-profilepage .profiel .subSettings ul li {
       line-height: 35px; }
       .bg-profilepage .profiel .subSettings ul li .testIcon {
@@ -654,8 +632,6 @@ ul {
     .bg-profilepage .editProfile .crafts:hover {
       background-color: #490776;
       text-decoration: none; }
-  .bg-profilepage .editProfile .selected {
-    background-color: #400569 !important; }
   .bg-profilepage .editProfile select {
     width: 100%;
     padding: 10px 20px 10px 10px;
@@ -679,28 +655,52 @@ ul {
       background-color: #490776;
       text-decoration: none; }
 
-.game-button {
-  background-color: #6300A7;
-  margin-top: 10%;
-  color: #FFF;
-  padding: 3em 4em;
-  border: 3px solid #6300A7;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 0px 60px 60px 0px; }
-  .game-button:hover {
-    background-color: #CC77CF;
-    color: #FFF;
-    -webkit-transition: ease 0.5s;
-    -o-transition: ease 0.5s;
-    transition: ease 0.5s;
-    border: 3px solid #CC77CF; }
+.bg-game {
+  overflow: hidden; }
+  .bg-game:before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/achieve-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2; }
+  .bg-game:after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1; }
+  .bg-game .gameBtns {
+    margin-top: 10%; }
+    .bg-game .gameBtns .game-button {
+      background-color: #6300A7;
+      margin-top: 40px;
+      color: #FFF;
+      padding: 2.5em 5em;
+      border: 3px solid #6300A7;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0px 60px 60px 0px; }
+      .bg-game .gameBtns .game-button:hover {
+        background-color: #CC77CF;
+        color: #FFF;
+        -webkit-transition: ease 0.5s;
+        -o-transition: ease 0.5s;
+        transition: ease 0.5s;
+        border: 3px solid #CC77CF;
+        padding: 2.5em 7em; }
 
 .modal-wrap .modal-colomn {
-  background-color: #E1E1E1;
-  border-radius: 30px;
-  padding: 0px;
-  margin-top: -40px; }
+  margin-top: 40px; }
   .modal-wrap .modal-colomn .modal-header {
     background-color: #6300A7;
     border-radius: 30px 30px 00px 00px;
@@ -721,8 +721,7 @@ ul {
     height: 430px;
     margin: 0 auto;
     border-radius: 0px 0px 30px 30px;
-    max-width: 725px;
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 20px; }
     .modal-wrap .modal-colomn .modal-inner .modal-progression {
       height: 150px;
@@ -765,3 +764,190 @@ ul {
             -webkit-transform: translate(60%, 60%);
             -ms-transform: translate(60%, 60%);
             transform: translate(60%, 60%); }
+
+.map-wrap svg {
+  padding-bottom: 60px;
+  padding-top: 60px; }
+  .map-wrap svg .rect1:hover {
+    fill: #afceff !important;
+    cursor: pointer; }
+  .map-wrap svg .rect2:hover {
+    fill: #6ba4ff !important;
+    cursor: pointer; }
+  .map-wrap svg .rect3:hover {
+    fill: #5879ad !important;
+    cursor: pointer; }
+  .map-wrap svg .rect4:hover {
+    fill: #dbd67d !important;
+    cursor: pointer; }
+  .map-wrap svg .rect5:hover {
+    fill: #d6cd33 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect6:hover {
+    fill: #d37e3d !important;
+    cursor: pointer; }
+  .map-wrap svg .rect7:hover {
+    fill: #f2b587 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect8:hover {
+    fill: #db4b39 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect9:hover {
+    fill: #e57f72 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect10:hover {
+    fill: #93e297 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect11:hover {
+    fill: #3dcc44 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect12:hover {
+    fill: #1fa826 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect1:hover {
+    fill: #17afb2 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect13:hover {
+    fill: #81d9db !important;
+    cursor: pointer; }
+  .map-wrap svg .rect14:hover {
+    fill: #8199db !important;
+    cursor: pointer; }
+  .map-wrap svg .rect15:hover {
+    fill: #4f7bf2 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect16:hover {
+    fill: #a979d1 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect17:hover {
+    fill: #9a36ed !important;
+    cursor: pointer; }
+  .map-wrap svg .rect18:hover {
+    fill: #d48bd6 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect19:hover {
+    fill: #d827dd !important;
+    cursor: pointer; }
+  .map-wrap svg .rect20:hover {
+    fill: #e27ab0 !important;
+    cursor: pointer; }
+  .map-wrap svg .rect21:hover {
+    fill: #d61b7c !important;
+    cursor: pointer; }
+  .map-wrap svg .rect22:hover {
+    fill: #14ce8a !important;
+    cursor: pointer; }
+  .map-wrap svg .rect23:hover {
+    fill: #9ce2c9 !important;
+    cursor: pointer; }
+
+.floor {
+  width: 100%;
+  height: 62px;
+  background: #444444;
+  padding-top: 78px; }
+  .floor h2 {
+    color: white;
+    line-height: 62px;
+    vertical-align: middle;
+    font-weight: 400; }
+    @media only screen and (max-width: 450px) {
+      .floor h2 {
+        font-size: 26px; } }
+  .floor i {
+    color: white; }
+    @media only screen and (max-width: 450px) {
+      .floor i {
+        font-size: 26px; } }
+
+#map-location-wrap {
+  padding: 30px;
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  background: #6300A7;
+  z-index: 999;
+  display: none; }
+  #map-location-wrap .proposition {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #E6E6E6; }
+    #map-location-wrap .proposition:after {
+      content: "CS";
+      font-size: 30px;
+      font-weight: 400;
+      position: absolute;
+      width: 150px;
+      line-height: 150px;
+      text-align: center;
+      vertical-align: middle; }
+  #map-location-wrap h3, #map-location-wrap h2, #map-location-wrap p, #map-location-wrap i {
+    color: #FFF; }
+  #map-location-wrap hr {
+    background: #FFF;
+    margin-top: 0px; }
+  #map-location-wrap h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    text-align: center; }
+  #map-location-wrap i {
+    display: inline-block;
+    font-size: 30px;
+    vertical-align: middle; }
+  #map-location-wrap h3 {
+    padding-top: 15px; }
+  #map-location-wrap .people a {
+    display: block;
+    width: 100%;
+    padding: 15px 15px;
+    background: #FFF;
+    color: #000;
+    border-bottom: 1px solid #E6E6E6; }
+    #map-location-wrap .people a:hover {
+      text-decoration: none;
+      color: #6300A7; }
+    #map-location-wrap .people a.name1:after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: red;
+      border-radius: 50%; }
+    #map-location-wrap .people a.name2:after {
+      content: "";
+      position: absolute;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      background: green;
+      border-radius: 50%; }
+  #map-location-wrap #closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    #map-location-wrap #closeButton i:hover {
+      cursor: pointer;
+      color: #E6E6E6; }
+  #map-location-wrap p {
+    display: inline-block;
+    padding-left: 5px; }
+  #map-location-wrap .user {
+    -webkit-transform: translate(0%, 35%);
+    -ms-transform: translate(0%, 35%);
+    transform: translate(0%, 35%); }
+  #map-location-wrap .points {
+    -webkit-transform: translate(0%, 15%);
+    -ms-transform: translate(0%, 15%);
+    transform: translate(0%, 15%); }
+
+@media only screen and (max-width: 823px) {
+  #map-location-wrap {
+    display: none; } }

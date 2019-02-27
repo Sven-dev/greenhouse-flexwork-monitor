@@ -66,9 +66,6 @@ label {
 #account-btn{
 	margin-top: 15px; 
 }
-.pushDown{
-    padding-top: 90px;
-}
 
 
 .bg-createaccount{
@@ -308,13 +305,11 @@ ul{
             background-clip: content-box; 
             white-space: nowrap; 
             filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
-            @media only screen and(max-width: 1199px){
-                margin-bottom: 30px;          
-            }
+            margin-bottom: 30px;          
             .profile-pn{
                 padding: 30px;
                 transform: translate(0%, 12%); 
-                .profile-pic{
+                 .profile-pic{
                     display: inline-block;
                     object-fit: cover;
                     width:100px;
@@ -370,8 +365,7 @@ ul{
     background-color: #F8F8F8;
     max-height: 90px;
     width: 100%;
-    position: fixed;
-    z-index: 99;
+    position: relative;
         ul{
             list-style-type: none;
              margin: 0px;
@@ -404,7 +398,6 @@ ul{
     position: absolute;
     right: 0;
     margin: 0;
-    cursor: pointer;
 
     .dropdown-toggle{
         list-style-type: none;
@@ -455,11 +448,13 @@ ul{
             margin-bottom: 0px;
         }
     }
+
     .show{
             transform: none !important;
             position: relative !important;
     }
 }
+
 .popup-button{
     display: block;
 }
@@ -548,9 +543,7 @@ ul{
             ul li  a:hover{
                 text-decoration: none;
                 color: $black;  
-            }
-            
-          
+            }          
     }  
 }  
     hr.login {
@@ -620,7 +613,6 @@ ul{
     background-color: white;
     margin-top: 120px;
     padding: 20px 20px 30px;
-    z-index: -2px;
     .profilePicture{
         width: 65%; 
         text-align: center; 
@@ -656,43 +648,27 @@ ul{
         border-radius:50%;
         padding: 0;
         overflow:hidden;
-        background-color: $primary;
-        border-color: $primary;
+        background-color: #6300A7;
         position: absolute;
         right: 27%;
         z-index: 7666;
         color: white;
         font-size: 30px;
-        cursor: pointer;
         &:after{
             content: "+"; 
             position:absolute; 
             z-index:100000; 
-            top: -5.5px;
-            left: 8px;
-        }
-        &:before{
-            content: "";
-            position: absolute;
-            background-color: $primary;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
+            top: -5px;
+            left: 9px;
         }
         &:hover{
-           // background-color: #490776;
-           // text-decoration: none;
-           &:before{
-            content: "";
-            position: absolute;
-            background-color: #490776;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
+           background-color: #490776;
+           text-decoration: none;
         }
+        input[type=file]{
+            background-color: purple;
         }
+
     }
     .name{
         text-align: center;
@@ -711,7 +687,6 @@ ul{
             padding-left: 0;
             list-style-type: none;
             margin-bottom: 0;
-            width: 100%;
             li{
                 line-height: 35px;
                 .testIcon{
@@ -773,10 +748,6 @@ ul{
            background-color: #490776;
            text-decoration: none;
         }
-
-    }
-    .selected{
-        background-color: #400569 !important;
     }
     select{
         width: 100%;
@@ -806,37 +777,63 @@ ul{
                text-decoration: none;
             }
         }
-    }
-    
+    }    
    }
 }
 
-.game-button{
-    background-color: $primary;
-    margin-top: 10%;
-    color: $white;
-    padding: 3em 4em;
-    border: 3px solid $primary;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0px 60px 60px 0px;
-
-    &:hover{
-        background-color: #CC77CF;
-        color: $white;
-        transition: ease 0.5s;
-        border: 3px solid #CC77CF;
-
+.bg-game{ 
+    overflow: hidden;
+    &:before{
+        content: "";
+        position: absolute;
+        background-image: url(../image/achieve-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: -2;
     }
-
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: $black;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    } 
+    .gameBtns{
+        margin-top: 10%;
+        .game-button{
+            background-color: $primary;
+            margin-top: 40px;
+            color: $white;
+            padding: 2.5em 5em;
+            border: 3px solid $primary;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0px 60px 60px 0px;
+            
+            &:hover{
+                background-color: #CC77CF;
+                color: $white;
+                transition: ease 0.5s;
+                border: 3px solid #CC77CF;
+                padding: 2.5em 7em;
+            }
+        }
+    }
 }
+
 
 .modal-wrap{
     .modal-colomn{
-        background-color: #E1E1E1;
-        border-radius: 30px;
-        padding: 0px;
-        margin-top: -40px;
+        margin-top: 40px;
 
             .modal-header{
                 background-color: $primary;
@@ -866,8 +863,7 @@ ul{
                 height: 430px;
                 margin: 0 auto;
                 border-radius: 0px 0px 30px 30px;
-                max-width: 725px;
-                overflow: auto;
+                overflow: hidden;
                 margin-bottom: 20px;
 
                  .modal-progression{
@@ -917,3 +913,290 @@ ul{
 
 }
 
+
+.map-wrap{
+    svg{
+        padding-bottom: 60px;
+        padding-top: 60px;
+        .rect1{
+            &:hover{
+                fill: #afceff !important;
+                cursor: pointer;
+            }
+        }
+        .rect2{
+            &:hover{
+                fill: #6ba4ff !important;
+                cursor: pointer;
+            }
+        }
+        .rect3{
+            &:hover{
+                fill: #5879ad !important;
+                cursor: pointer;
+            }
+        }
+        .rect4{
+            &:hover{
+                fill: #dbd67d !important;
+                cursor: pointer;
+            }
+        }
+        .rect5{
+            &:hover{
+                fill: #d6cd33 !important;
+                cursor: pointer;
+            }
+        }
+        .rect6{
+            &:hover{
+                fill: #d37e3d !important;
+                cursor: pointer;
+            }
+        }
+        .rect7{
+            &:hover{
+                fill: #f2b587 !important;
+                cursor: pointer;
+            }
+        }
+        .rect8{
+            &:hover{
+                fill: #db4b39 !important;
+                cursor: pointer;
+            }
+        }
+        .rect9{
+            &:hover{
+                fill: #e57f72 !important;
+                cursor: pointer;
+            }
+        }
+        .rect10{
+            &:hover{
+                fill: #93e297 !important;
+                cursor: pointer;
+            }
+        }
+        .rect11{
+            &:hover{
+                fill: #3dcc44 !important;
+                cursor: pointer;
+            }
+        }
+        .rect12{
+            &:hover{
+                fill: #1fa826 !important;
+                cursor: pointer;
+            }
+        }
+        .rect1{
+            &:hover{
+                fill: #17afb2 !important;
+                cursor: pointer;
+            }
+        }
+        .rect13{
+            &:hover{
+                fill: #81d9db !important;
+                cursor: pointer;
+            }
+        }
+        .rect14{
+            &:hover{
+                fill: #8199db !important;
+                cursor: pointer;
+            }
+        }
+        .rect15{
+            &:hover{
+                fill: #4f7bf2 !important;
+                cursor: pointer;
+            }
+        }
+        .rect16{
+            &:hover{
+                fill: #a979d1 !important;
+                cursor: pointer;
+            }
+        }
+        .rect17{
+            &:hover{
+                fill: #9a36ed !important;
+                cursor: pointer;
+            }
+        }
+        .rect18{
+            &:hover{
+                fill: #d48bd6 !important;
+                cursor: pointer;
+            }
+        }
+        .rect19{
+            &:hover{
+                fill: #d827dd !important;
+                cursor: pointer;
+            }
+        }
+        .rect20{
+            &:hover{
+                fill: #e27ab0 !important;
+                cursor: pointer;
+            }
+        }
+        .rect21{
+            &:hover{
+                fill: #d61b7c !important;
+                cursor: pointer;
+            }
+        }
+        .rect22{
+            &:hover{
+                fill: #14ce8a !important;
+                cursor: pointer;
+            }
+        }
+        .rect23{
+            &:hover{
+                fill: #9ce2c9 !important;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.floor{
+    width: 100%;
+    height: 62px;
+    background: #444444;
+    padding-top: 78px;
+    h2{
+        color: white;
+        line-height: 62px;
+        vertical-align: middle;
+        font-weight:400;
+        @media only screen and(max-width: 450px){
+            font-size: 26px;
+        }
+    }
+    i{
+        color: white;
+        @media only screen and(max-width: 450px){
+            font-size: 26px;
+        }
+    }
+}
+
+#map-location-wrap{
+    padding: 30px;
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    background: $primary;
+    z-index: 999;
+    display: none;
+    .proposition{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        width:150px;
+        height:150px;
+        border-radius: 50%; 
+        background: $secondary;
+        &:after{
+            content: "CS";
+            font-size: 30px;
+            font-weight: 400;
+            position: absolute;
+            width:150px;
+            line-height:150px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }     
+    h3, h2, p, i{
+        color: $white;
+    }   
+    hr{
+        background: $white;
+        margin-top: 0px;
+    } 
+    h2{
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    i{
+        display: inline-block;
+        font-size: 30px;
+        vertical-align: middle;
+    }
+    h3{
+        padding-top: 15px;
+    }
+    .people{
+        a{
+        display: block;
+        width: 100%;
+        padding: 15px 15px;
+        background: $white;
+        color: $black;
+        border-bottom: 1px solid $secondary;
+        &:hover{
+            text-decoration: none;
+            color: $primary;
+        }
+        &.name1{
+            &:after{
+                content: "";
+                position: absolute;
+                right: 15px;
+                width: 30px;
+                height: 30px;
+                background: red;
+                border-radius: 50%;
+            }
+        }
+        &.name2{
+            &:after{
+                content: "";
+                position: absolute;
+                right: 15px;
+                width: 30px;
+                height: 30px;
+                background: green;
+                border-radius: 50%;
+                }
+            }       
+        }
+    } 
+    #closeButton{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        i{
+            &:hover{
+                cursor: pointer;
+                color: $secondary;
+            }           
+        }
+    }   
+    p{
+        display: inline-block;
+        padding-left: 5px;
+    }
+    .user{
+        transform: translate(0%, 35%);
+    }
+    .points{
+        transform: translate(0%, 15%);
+    }
+}
+
+@media only screen and(max-width: 823px){
+    #map-location-wrap{
+        display: none;
+    }
+}
