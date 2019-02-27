@@ -35,11 +35,11 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul>
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Map</a></li>
+						<li class="active"><a href="index.php">Home</a></li>
+						<li><a href="map.php">Map</a></li>
 						<li><img src="image/logo-small.png" alt="Greenhouse Logo" width="50px" height="50px"></li>
-						<li><a href="#">Game</a></li>
-						<li><a href="#">People</a></li>
+						<li><a href="game.php">Game</a></li>
+						<li><a href="searchresults.php">People</a></li>
 					</ul>
 				</div>
 			</div>	
