@@ -593,7 +593,8 @@ ul {
   .bg-profilepage .profiel .subSettings ul {
     padding-left: 0;
     list-style-type: none;
-    margin-bottom: 0; }
+    margin: 30px 0 40px;
+    width: 100%; }
     .bg-profilepage .profiel .subSettings ul li {
       line-height: 35px; }
       .bg-profilepage .profiel .subSettings ul li .testIcon {
@@ -618,8 +619,6 @@ ul {
     .bg-profilepage .profiel a:hover {
       background-color: #490776;
       text-decoration: none; }
-  .bg-profilepage .profiel .subSettings {
-    margin: 30px 0 40px; }
 
 .bg-profilepage .editProfile {
   width: 100%;
@@ -645,6 +644,8 @@ ul {
     .bg-profilepage .editProfile .crafts:hover {
       background-color: #490776;
       text-decoration: none; }
+  .bg-profilepage .editProfile .selected {
+    background-color: #38005e; }
   .bg-profilepage .editProfile select {
     width: 100%;
     padding: 10px 20px 10px 10px;
