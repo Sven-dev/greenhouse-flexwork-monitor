@@ -55,6 +55,9 @@ label {
 #account-btn {
   margin-top: 15px; }
 
+.pushDown {
+  padding-top: 90px; }
+
 .bg-createaccount {
   overflow: hidden; }
   @media only screen and (max-width: 1199px) {
@@ -322,7 +325,7 @@ ul {
   background-color: #F8F8F8;
   max-height: 90px;
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 99; }
   .navigation-bar ul {
     list-style-type: none;
@@ -651,6 +654,8 @@ ul {
     .bg-profilepage .editProfile .crafts:hover {
       background-color: #490776;
       text-decoration: none; }
+  .bg-profilepage .editProfile .selected {
+    background-color: #400569 !important; }
   .bg-profilepage .editProfile select {
     width: 100%;
     padding: 10px 20px 10px 10px;

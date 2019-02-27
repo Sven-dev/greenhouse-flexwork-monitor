@@ -66,6 +66,9 @@ label {
 #account-btn{
 	margin-top: 15px; 
 }
+.pushDown{
+    padding-top: 90px;
+}
 
 
 .bg-createaccount{
@@ -311,7 +314,7 @@ ul{
             .profile-pn{
                 padding: 30px;
                 transform: translate(0%, 12%); 
-                 .profile-pic{
+                .profile-pic{
                     display: inline-block;
                     object-fit: cover;
                     width:100px;
@@ -367,7 +370,7 @@ ul{
     background-color: #F8F8F8;
     max-height: 90px;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 99;
         ul{
             list-style-type: none;
@@ -452,13 +455,11 @@ ul{
             margin-bottom: 0px;
         }
     }
-
     .show{
             transform: none !important;
             position: relative !important;
     }
 }
-
 .popup-button{
     display: block;
 }
@@ -772,6 +773,10 @@ ul{
            background-color: #490776;
            text-decoration: none;
         }
+
+    }
+    .selected{
+        background-color: #400569 !important;
     }
     select{
         width: 100%;

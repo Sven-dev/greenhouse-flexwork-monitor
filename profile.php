@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-    <div class="container form-wrap">
+    <div class="container pushDown form-wrap">
         <div class="row">
             <div class="col-md-3">
                 <div class="profiel">
@@ -33,7 +33,7 @@
                     <div class="crafts col-md-6">
                         Data
                     </div>
-                    <div class="crafts col-md-6">
+                    <div class="crafts selected col-md-6">
                         Creative
                     </div>
                     <div class="crafts col-md-6">
