@@ -10,8 +10,16 @@
 						<input id="search-colleague" type="text" name="search" placeholder="Search...">
 					</div>
 					<!-- <button class="btns-primary" type="button" name="find-colleague">Find</button> -->
-					<div id="search-results"></div>
 				</form>
+
+			</div>
+		</div>		
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div id="search-results"></div>
 			</div>
 		</div>		
 	</div>

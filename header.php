@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-   	<link rel="stylesheet" href="includes/fontawesome-free-5.7.2-web/css/all.css">
+   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">    
 
@@ -20,11 +20,11 @@
 <body onLoad="logInCheck()">
 
 	<div class="navigation-bar">
-		<div class="profile-bar offset-10">
+		<div class="profile-bar offset-10" onclick="myFunction()">
 
 			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
 
-			<div class="dropdown-menu">
+			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
 			        <li class="dropdown-item border-bottom"><a href="profile.php">Edit Profile</a></li>
 			        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
@@ -47,5 +47,26 @@
 		</div>
 
 	</div>
+	<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}ever
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.profile-bar')) {
+    var dropdowns = document.getElementsByClassName("list-unstyled");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 	
