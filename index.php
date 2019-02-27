@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-	<div class="container search-wrap">
+	<div class="container pushDown search-wrap">
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h1>Who are you looking for?</h1>
