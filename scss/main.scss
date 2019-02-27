@@ -70,6 +70,9 @@ label {
 
 .bg-createaccount{
      overflow: hidden;
+        @media only screen and(max-width: 1199px){
+            overflow: unset;          
+        }
         &:before{
             content: "";
             position: absolute;
@@ -94,23 +97,59 @@ label {
             top: 0px;
             z-index: -1;
         }
-    .greenhouse-logo{
-        height: 100px;
-    }
-    .bg-light{
-        position: relative;
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        -webkit-box-shadow: 0px 0px 36px -10px rgba(181,181,181,1);
-        -moz-box-shadow: 0px 0px 36px -10px rgba(181,181,181,1);
-        box-shadow: 0px 0px 36px -10px rgba(181,181,181,1);
-    }
-    .styledSelect{
-        width: 50%;
-        margin: 0 auto;
-        input{
+        .signup-card{ 
+            height: 100vh;
+            .bg-light{
+                // padding: 3rem;
+                width: 900px; 
+                min-height: 100%;
+                background-color: $primary !important;
+                @media only screen and(max-width: 1199px){
+                    width: 900px;          
+                }
+                @media only screen and(max-width: 991px){
+                   width: 900px;          
+         
+               }
+                @media only screen and(max-width: 768px){
+                   width: 500px;          
+         
+                }
+                @media only screen and(max-width: 550px){
+                   width: 400px;          
+                   padding: -30px;
+                }
+                h3{
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    margin-top: 2em;
+                    padding: 10px;
+                    @media only screen and(max-width: 1199px){
+                        margin-bottom: 0em;
+                        padding: 0px;          
+                    }
+                }  
+                label{
+                    margin-top: 25px;
+                } 
+                .card-white{
+                    background-color: $white;
+                    height: 100vh;
+                } 
+                form{
+                    padding: 2em;
+                    @media only screen and(max-width: 1199px){
+                        padding: 1em;
+                        margin-right: 30px;          
+                    }
+                }
+            }  
+        }  
+        .styledSelect{
             width: 100%;
+            margin: 0 auto;
+            input, button{
+                width: 100%;
         }
     }
 }
@@ -418,6 +457,9 @@ ul{
     }
 }
 
+.popup-button{
+    display: block;
+}
 
 .bg-loginpage{
     overflow: hidden;
@@ -446,38 +488,39 @@ ul{
         z-index: -1;
     } 
     .greenhouse-logo{
-        margin-top: 150px;
+        margin-top: 100px;
         height: 50px;
     }
     .login-card{ 
         height: 100vh;
         .bg-light{
             // padding: 3rem;
-            width: 800px; 
+            width: 900px; 
             min-height: 100%;
             background-color: $primary !important;
-            // @media only screen and(max-width: 1199px){
-            //     margin-top: 150px;  
-            //     margin-left: 150px;         
-            // }
-            // @media only screen and(max-width: 991px){
-            //     margin-top: 100px;  
-            //     margin-left: 100px;            
-            // }
-            // @media only screen and(max-width: 768px){
-            //     margin-top: 50px;  
-            //     margin-left: 50px;           
-            // }
-            // @media only screen and(max-width: 550px){
-            //     margin-top: 0px;  
-            //     margin-left: 0px;            
-            // }
+             @media only screen and(max-width: 1199px){
+                 width: 900px;          
+             }
+             @media only screen and(max-width: 991px){
+                width: 900px;          
+      
+            }
+             @media only screen and(max-width: 768px){
+                width: 500px;          
+      
+             }
+             @media only screen and(max-width: 550px){
+                width: 400px;          
+                padding: -30px;
+             }
             h3{
                 font-size: 1.5em;
                 font-weight: 300;
                 margin-top: 2em;
-                margin-bottom: 1em;
                 padding: 10px;
+                @media only screen and(max-width: 550px){
+                   margin-bottom: 0em;
+                  }
             }  
             label{
                 margin-top: 35px;
@@ -487,11 +530,17 @@ ul{
                 height: 100vh;
             } 
             form{
-                padding: 10px;
+                padding: 2em;
+                @media only screen and(max-width: 550px){
+                   padding: 1em;
+                   margin-right: 30px;
+                 }
             } 
             ul li {
                 padding: 10px;
-                
+                @media only screen and(max-width: 550px){
+                    padding: 7px;
+                   }
             }
             ul li  a:hover{
                 text-decoration: none;
@@ -501,9 +550,11 @@ ul{
           
     }  
 }  
-
     hr.login {
         margin: 4em;
+        @media only screen and(max-width: 550px){
+            margin: 2em;
+           }
     }
     .forgotPassword{
         color: #797878;
@@ -734,3 +785,110 @@ ul{
     
    }
 }
+
+.game-button{
+    background-color: $primary;
+    margin-top: 10%;
+    color: $white;
+    padding: 3em 4em;
+    border: 3px solid $primary;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0px 60px 60px 0px;
+
+    &:hover{
+        background-color: #CC77CF;
+        color: $white;
+        transition: ease 0.5s;
+        border: 3px solid #CC77CF;
+
+    }
+
+}
+
+.modal-wrap{
+    .modal-colomn{
+        background-color: #E1E1E1;
+        border-radius: 30px;
+        padding: 0px;
+        margin-top: -40px;
+
+            .modal-header{
+                background-color: $primary;
+                border-radius: 30px 30px 00px 00px;
+                height: 50px;
+
+                h4{
+                    color: $white;
+                    padding-right: 50px;
+                }
+
+                .tab{
+                    height: 34px;
+                    width: 150px;
+                    margin-right: 10px;
+                    margin-left: 2px;
+                    display: inline-block;
+                }
+
+                .tab-1{
+                    background-color: $white;
+                }
+            }
+
+            .modal-inner{
+                background-color: #FFF;
+                height: 430px;
+                margin: 0 auto;
+                border-radius: 0px 0px 30px 30px;
+                max-width: 725px;
+                overflow: auto;
+                margin-bottom: 20px;
+
+                 .modal-progression{
+                    height: 150px;
+                    border-radius: 25px;
+                    margin: 30px 30px 0px 30px;
+                    background-image: url("../image/achieve-bg.jpg");
+                    background-size: cover;
+
+                    .progress-bar-bg{
+                        height: 130px;
+                        transform: translate(28%, 8%);
+                        border-radius: 25px;
+                        margin: 0px 130px 10px 130px;
+                        margin-top: 30px;
+                        background-color: $white;
+
+                        p{
+                            margin-bottom: -25px;
+                            transform: translate(9%, 70%);
+                            color: #707070;
+                        }
+
+                        .progress-bar{
+                            height: 30px;
+                            transform: translate(10%, 160%);
+                            border-radius: 30px;
+                            background-color: #707070;
+                            margin: 0px 120px 10px 0px;
+                        }
+
+                        .progress-circle{
+                            width: 110px;
+                            transform: translate(230%, -25%);
+                            height: 110px;
+                            border-radius: 50%;
+                            background-color: #707070;
+
+                            img{
+                                 transform: translate(60%, 60%);
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+}
+
