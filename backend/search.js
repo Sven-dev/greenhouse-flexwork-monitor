@@ -37,7 +37,6 @@ window.setInterval(function()
   }
   else if (search != previousQuery)
   {
-    search_results.innerHTML = "";
     filter(search);
   }
 
@@ -64,13 +63,14 @@ function filter(search)
 //Creates an HTML-element displaying the user data
 function displayData(profile)
 {
+  search_results.innerHTML = "";
   storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
   {
-      search_results.innerHTML += 
       "<div>" + 
         "<img src=" + url + ">" + 
         "<p>" + profile.Name + "<br>" + profile.Craft + "</p>" +
       "</div>";
+      
 
   }).catch(function(error) 
   {
