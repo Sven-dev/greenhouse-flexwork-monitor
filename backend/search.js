@@ -1,11 +1,18 @@
 /* REQUIRES 
 backend/firebase_base.js
-basebackend/firebase_database.js
+backend/firebase_database.js
+backend/firebase_storage.js
 */
 
+//Fields
 var previousQuery = "";
 var colleagues = [];
 
+//Elements
+var search_bar = document.getElementById('search-colleague');
+var search_results = document.getElementById('search-results');
+
+//Start
 getColleagues();
 
 //Gets all colleagues whose name starts with the given search term
@@ -42,17 +49,31 @@ function filter(search)
 {
   if (colleagues.length != 0)
   {  
+    var lsearch = search.toLowerCase();    
     colleagues.forEach(function(profile)
     {
       var lname = profile.Name.toLowerCase();
-      var lsearch = search.toLowerCase();
       if (lname.includes(lsearch))
-      {
-        //profile picture  
-        search_results.innerHTML += "<div>" + profile.Name + ", " + profile.Craft + "</div>";
+      { 
+        displayData(profile);
       }
     });
-
-    //search_results.innerHTML += "</ul>";
   }
+}
+
+//Creates an HTML-element displaying the user data
+function displayData(profile)
+{
+  storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
+  {
+      search_results.innerHTML += 
+      "<div>" + 
+        "<img src=" + url + ">" + 
+        "<p>" + profile.Name + "<br>" + profile.Craft + "</p>" +
+      "</div>";
+
+  }).catch(function(error) 
+  {
+      console.log(error.code + ": " +  error.message);
+  });
 }

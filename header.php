@@ -17,7 +17,7 @@
     <title>header</title>
 </head>
 
-<body onLoad="logInCheck()">
+<body>
 
 	<div class="navigation-bar">
 		
@@ -47,26 +47,35 @@
 </div>	
 		</div>
 	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script src="backend/firebase_base.js"></script>
+	<script src="backend/firebase_database.js"></script>
+	<script src="backend/firebase_storage.js"></script>
+	<script src="backend/user.js"></script>
 	<script>
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function myFunction()
+{
   document.getElementById("myDropdown").classList.toggle("show");
-}ever
+}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.profile-bar')) {
+	if (!event.target.matches('.profile-bar'))
+	{
     var dropdowns = document.getElementsByClassName("list-unstyled");
     var i;
-    for (i = 0; i < dropdowns.length; i++) {
+		for (i = 0; i < dropdowns.length; i++)
+		{
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
+			if (openDropdown.classList.contains('show'))
+			{
         openDropdown.classList.remove('show');
       }
     }
   }
 }
 </script>
-
-	
