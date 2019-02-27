@@ -29,6 +29,7 @@ function logInCheck()
 
             dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
             {
+                profile = snapshot.val();
                 console.log(profile);
                 showHeaderData();
             });
