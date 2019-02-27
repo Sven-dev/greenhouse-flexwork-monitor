@@ -552,22 +552,35 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #6300A7;
+    border-color: #6300A7;
     position: absolute;
     right: 27%;
     z-index: 7666;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    cursor: pointer; }
     .bg-profilepage .profiel .uploadPicture:after {
       content: "+";
       position: absolute;
       z-index: 100000;
-      top: -5px;
-      left: 9px; }
-    .bg-profilepage .profiel .uploadPicture:hover {
+      top: -5.5px;
+      left: 8px; }
+    .bg-profilepage .profiel .uploadPicture:before {
+      content: "";
+      position: absolute;
+      background-color: #6300A7;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
+    .bg-profilepage .profiel .uploadPicture:hover:before {
+      content: "";
+      position: absolute;
       background-color: #490776;
-      text-decoration: none; }
-    .bg-profilepage .profiel .uploadPicture input[type=file] {
-      background-color: purple; }
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
