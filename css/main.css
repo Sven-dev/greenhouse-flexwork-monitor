@@ -1007,4 +1007,4 @@ ul {
 
 @media only screen and (max-width: 823px) {
   #map-location-wrap {
-    display: none; } }
+    display: none !important; } }
