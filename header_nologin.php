@@ -15,10 +15,4 @@
     <title>header</title>
 </head>
 
-<body>
-
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-    <script src="backend/firebase_base.js"></script>
-    <script src="backend/firebase_database.js"></script>
-    <script src="backend/firebase_storage.js"></script>
-    <script src="backend/login.js"></script>
+<body onLoad="logInCheck()">
