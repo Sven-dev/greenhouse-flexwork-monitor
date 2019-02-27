@@ -68,13 +68,6 @@ function displayData(profile)
     var index = 0;
     storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
     {
-        /*    
-        if (index == 0)
-        {
-            search_results.innerHTML +=  '<div class="row">'
-        }
-        */
-
         search_results.innerHTML += 
         '<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 history-block">' +
             '<div class="profile-pn">' + 
@@ -82,15 +75,6 @@ function displayData(profile)
                 '<p class="profile-name">' + profile.Name + '<br>' + profile.Craft + '</p>' +
             '</div>' + 
         '</div>';
-
-        /*
-        if (index == 3)
-        {
-            search_results.innerHTML +=  '<div class="row">'
-            index = 0;
-        }
-        */
-
     }).catch(function(error) 
     {
         console.log(error.code + ": " +  error.message);

@@ -9,7 +9,8 @@ var currentUser;
 var profile;
 
 //Elements
-//document.getElementById(header img element);
+var headerPicture = document.getElementById("headerProfilePicture");
+var headerName = document.getElementById("dropdownMenuButton");
 
 //Start
 logInCheck();
@@ -25,9 +26,11 @@ function logInCheck()
         {
             //Get the users profile
             currentUser = user;
-            profile = get('Profiles/' + user.uid);
-            
-            //showHeaderPicture(header img element);
+
+            profile = dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
+            {
+                showHeaderData();
+            });
         }
         // No user is signed in.        
         else
@@ -49,7 +52,8 @@ function logOut()
     });
 }
 
-function showHeaderPicture(imgElement)
+function showHeaderData()
 {
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => getImage(snap.val(), imgElement));   
+    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => getImage(snap.val(), headerPicture));   
+    headerName.innerHTML = "Welcome " + profile.Name;
 }
