@@ -120,7 +120,10 @@ label {
     top: 0px;
     z-index: -1; }
   .bg-index .search-wrap {
-    padding-top: 120px; }
+    padding-top: 220px; }
+    @media only screen and (max-width: 1199px) {
+      .bg-index .search-wrap {
+        padding-top: 180px; } }
     .bg-index .search-wrap #search-colleague {
       position: relative;
       width: 50%;
@@ -171,6 +174,117 @@ label {
   @media only screen and (max-width: 768px) {
     .explosion-img {
       display: none; } }
+
+ul {
+  display: inline-block; }
+
+.bg-searchresults .banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  top: 0px;
+  left: 0px;
+  background-image: url(../image/bg-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; }
+
+.bg-searchresults #search-colleague {
+  position: relative;
+  width: 50%;
+  margin-top: 60px;
+  height: 35px; }
+
+.bg-searchresults form:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: inherit;
+  position: absolute;
+  right: 305px;
+  bottom: 4px;
+  font-size: 18px;
+  z-index: 15px; }
+  @media only screen and (max-width: 1199px) {
+    .bg-searchresults form:after {
+      right: 260px; } }
+  @media only screen and (max-width: 991px) {
+    .bg-searchresults form:after {
+      right: 200px; } }
+  @media only screen and (max-width: 768px) {
+    .bg-searchresults form:after {
+      right: 155px; } }
+  @media only screen and (max-width: 550px) {
+    .bg-searchresults form:after {
+      display: none; } }
+
+.bg-searchresults .history-wrap, .bg-searchresults .results-wrap {
+  padding-top: 120px; }
+  .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
+    height: 200px;
+    background: #E6E6E6;
+    background-clip: content-box;
+    white-space: nowrap;
+    -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25)); }
+    @media only screen and (max-width: 1199px) {
+      .bg-searchresults .history-wrap .history-block, .bg-searchresults .results-wrap .history-block {
+        margin-bottom: 30px; } }
+    .bg-searchresults .history-wrap .history-block .profile-pn, .bg-searchresults .results-wrap .history-block .profile-pn {
+      padding: 30px;
+      -webkit-transform: translate(0%, 12%);
+      -ms-transform: translate(0%, 12%);
+      transform: translate(0%, 12%); }
+      .bg-searchresults .history-wrap .history-block .profile-pn .profile-pic, .bg-searchresults .results-wrap .history-block .profile-pn .profile-pic {
+        display: inline-block;
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; }
+      .bg-searchresults .history-wrap .history-block .profile-pn .profile-name, .bg-searchresults .results-wrap .history-block .profile-pn .profile-name {
+        padding-left: 15px;
+        display: inline-block;
+        margin-bottom: 0px;
+        -webkit-transform: translate(0%, 30%);
+        -ms-transform: translate(0%, 30%);
+        transform: translate(0%, 30%);
+        width: 150px;
+        word-break: break-all;
+        white-space: normal; }
+      .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+        position: absolute;
+        right: 30px;
+        -webkit-transform: translate(0%, 260%);
+        -ms-transform: translate(0%, 260%);
+        transform: translate(0%, 260%);
+        color: #6300A7;
+        font-size: 18px; }
+        @media only screen and (max-width: 380px) {
+          .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+            padding-left: 30px; } }
+        @media only screen and (max-width: 340px) {
+          .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
+            padding-left: 15px; } }
+  .bg-searchresults .history-wrap hr, .bg-searchresults .results-wrap hr {
+    margin-left: 0px;
+    height: 1px;
+    width: 31.5%;
+    background: #6300A7; }
+
+.bg-searchresults .results-wrap {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.bg-searchresults input {
+  background: #FFF;
+  border: none;
+  -webkit-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75); }
 
 .navigation-bar {
   background-color: #F8F8F8;
@@ -265,6 +379,9 @@ label {
     left: 0px;
     top: 0px;
     z-index: -1; }
+  .bg-loginpage .greenhouse-logo {
+    margin-top: 150px;
+    height: 50px; }
   .bg-loginpage .login-card {
     height: 100vh; }
     .bg-loginpage .login-card .bg-light {
@@ -275,19 +392,26 @@ label {
         font-size: 1.5em;
         font-weight: 300;
         margin-top: 2em;
-        margin-bottom: 2em;
+        margin-bottom: 1em;
         padding: 10px; }
       .bg-loginpage .login-card .bg-light label {
         margin-top: 35px; }
-      .bg-loginpage .login-card .bg-light .test {
+      .bg-loginpage .login-card .bg-light .card-white {
         background-color: #FFF;
         height: 100vh; }
       .bg-loginpage .login-card .bg-light form {
         padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li {
+        padding: 10px; }
+      .bg-loginpage .login-card .bg-light ul li a:hover {
+        text-decoration: none;
+        color: #000; }
   .bg-loginpage hr.login {
     margin: 4em; }
   .bg-loginpage .forgotPassword {
-    color: #A8A8A8; }
+    color: #797878; }
+  .bg-loginpage .createAccount {
+    color: #6300A7; }
   .bg-loginpage .vertical-center {
     margin: 0;
     position: relative;
@@ -301,10 +425,6 @@ label {
     text-align: center; }
     .bg-loginpage .styledSelect button {
       width: 100%; }
-  .bg-loginpage input[type="checkbox"] {
-    -webkit-transform: scale(2, 2);
-    -ms-transform: scale(2, 2);
-    transform: scale(2, 2); }
   .bg-loginpage .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #6300A7;
     border: none; }

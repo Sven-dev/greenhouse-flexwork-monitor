@@ -142,7 +142,10 @@ label {
         z-index: -1;
     }
     .search-wrap{
-        padding-top: 120px;
+        padding-top: 220px;
+        @media only screen and(max-width: 1199px){
+            padding-top: 180px;           
+        }
         #search-colleague{
             position: relative;
             width: 50%;           
@@ -160,7 +163,8 @@ label {
             color: $white;
             padding-bottom: 30px;
             @media only screen and(max-width: 768px){
-                font-size: 26px;            }
+                font-size: 26px;            
+            }
             }
         }
         form{
@@ -176,22 +180,21 @@ label {
                 bottom: 4px;
                 font-size: 18px;
                 z-index: 15px;
-                    @media only screen and(max-width: 1199px){
-                        right: 260px;           
-                    }
-                    @media only screen and(max-width: 991px){
-                        right: 200px;           
-                    }
-                    @media only screen and(max-width: 768px){
-                        right: 155px;           
-                    }
-                    @media only screen and(max-width: 550px){
-                        display: none;           
-                    }
+                @media only screen and(max-width: 1199px){
+                    right: 260px;           
+                }
+                @media only screen and(max-width: 991px){
+                    right: 200px;           
+                }
+                @media only screen and(max-width: 768px){
+                    right: 155px;           
+                }
+                @media only screen and(max-width: 550px){
+                    display: none;           
                 }
             }
-          
 }
+        }        
 
 .explosion-img{
     position: fixed;
@@ -200,6 +203,123 @@ label {
     width: 420px;
     @media only screen and(max-width: 768px){
         display: none;
+    }
+}
+
+ul{
+    display: inline-block;
+}
+
+.bg-searchresults{
+    .banner{
+        &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 240px;
+            top: 0px;
+            left: 0px;
+            background-image: url(../image/bg-3.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+    }
+    #search-colleague{
+        position: relative;
+        width: 50%;           
+        margin-top: 60px;
+        height: 35px;
+    }
+    form{
+        &:after{
+            font-family: "Font Awesome 5 Free";
+            content: "\f002";
+            font-style: normal;
+            font-weight: 900;
+            text-decoration: inherit;
+            position: absolute;
+            right: 305px;
+            bottom: 4px;
+            font-size: 18px;
+            z-index: 15px;
+            @media only screen and(max-width: 1199px){
+                right: 260px;           
+            }
+            @media only screen and(max-width: 991px){
+                right: 200px;           
+            }
+            @media only screen and(max-width: 768px){
+                right: 155px;           
+            }
+            @media only screen and(max-width: 550px){
+                display: none;           
+            }
+        }
+    }   
+    .history-wrap, .results-wrap{
+        padding-top: 120px;
+        .history-block{ 
+            height: 200px;
+            background: $secondary;  
+            background-clip: content-box; 
+            white-space: nowrap; 
+            filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
+            @media only screen and(max-width: 1199px){
+                margin-bottom: 30px;          
+            }
+            .profile-pn{
+                padding: 30px;
+                transform: translate(0%, 12%); 
+                 .profile-pic{
+                    display: inline-block;
+                    object-fit: cover;
+                    width:100px;
+                    height:100px;
+                    border-radius: 50%;                 
+                }
+                .profile-name{
+                    padding-left: 15px;
+                    display: inline-block;
+                    margin-bottom: 0px;
+                    transform: translate(0%, 30%); 
+                    width: 150px;
+                    word-break: break-all;
+                    white-space: normal;
+                }
+                i{
+                    position: absolute;
+                    right: 30px;
+                    transform: translate(0%, 260%); 
+                    color: $primary;
+                    font-size: 18px;
+                    @media only screen and(max-width: 380px){
+                        padding-left: 30px;          
+                    }
+                    @media only screen and(max-width: 340px){
+                        padding-left: 15px;          
+                    }
+                }
+            }
+        }
+        hr{
+            margin-left: 0px;
+            height: 1px;
+            width: 31.5%;
+            background: $primary;
+        }
+    }  
+    .results-wrap{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    input{
+        background: $white;
+        border: none;
+        -webkit-box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
     }
 }
 
@@ -325,6 +445,10 @@ label {
         top: 0px;
         z-index: -1;
     } 
+    .greenhouse-logo{
+        margin-top: 150px;
+        height: 50px;
+    }
     .login-card{ 
         height: 100vh;
         .bg-light{
@@ -352,27 +476,40 @@ label {
                 font-size: 1.5em;
                 font-weight: 300;
                 margin-top: 2em;
-                margin-bottom: 2em;
+                margin-bottom: 1em;
                 padding: 10px;
             }  
             label{
                 margin-top: 35px;
             } 
-            .test{
+            .card-white{
                 background-color: $white;
                 height: 100vh;
             } 
             form{
                 padding: 10px;
             } 
-        }  
+            ul li {
+                padding: 10px;
+                
+            }
+            ul li  a:hover{
+                text-decoration: none;
+                color: $black;  
+            }
+            
+          
     }  
+}  
 
     hr.login {
         margin: 4em;
     }
     .forgotPassword{
-        color: #A8A8A8;
+        color: #797878;
+    }         
+    .createAccount{
+        color: $primary;
     }         
     .vertical-center {
         margin: 0;
@@ -389,10 +526,6 @@ label {
         }
     }
 
-    input[type="checkbox"] {
-        transform:scale(2, 2);
-      }
-
     /* When I remove background the icon goes back to that default size */
     .custom-control-input:checked ~ .custom-control-label::before {
     background-color: $primary;
@@ -403,6 +536,7 @@ label {
     box-shadow:none !important;
     }
 }
+
 .bg-profilepage{
     &:before{
        content: "";

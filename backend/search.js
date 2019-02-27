@@ -1,6 +1,6 @@
 /* REQUIRES 
 backend/firebase_base.js
-firebase_databasebackend/firebase_database.js
+basebackend/firebase_database.js
 */
 
 var previousQuery = "";
@@ -10,8 +10,7 @@ getColleagues();
 
 //Gets all colleagues whose name starts with the given search term
 function getColleagues()
-{
-  
+{ 
   dbroot.child("Profiles").orderByKey().once('value').then(function(snapshot)
   {  
     snapshot.forEach(function(profile)
