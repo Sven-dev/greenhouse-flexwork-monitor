@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-	<div class="container search-wrap">
+	<div class="container pushDown search-wrap">
 		<div class="row">
 			<div class="col-md-12 text-center">
 				<h1>Who are you looking for?</h1>
@@ -42,9 +42,15 @@
 		</div>		
 	</div> -->
 
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script src="backend/firebase_base.js"></script>
+	<script src="backend/firebase_database.js"></script>
+	<script src="backend/user.js"></script>
 	<script src="backend/search.js"></script>
 	<script>
 		document.body.classList.add("bg-index");
+		var search_bar = document.getElementById('search-colleague');
+		var search_results = document.getElementById('search-results');
 	</script>
 </body>
 </html>
