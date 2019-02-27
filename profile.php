@@ -1,11 +1,11 @@
 <?php include 'header.php'; ?>
-    <div class="container form-wrap">
+    <div class="container pushDown form-wrap">
         <div class="row">
             <div class="col-md-3">
                 <div class="profiel">
                     <div class="status">
                     </div>
-                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input, preview)">
+                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input)">
                     <div class="profilePicture">
                         <img src="" id="profilepicture">
                     </div>
@@ -33,7 +33,7 @@
                     <div class="crafts col-md-6">
                         Data
                     </div>
-                    <div class="crafts col-md-6">
+                    <div class="crafts selected col-md-6">
                         Creative
                     </div>
                     <div class="crafts col-md-6">
@@ -61,15 +61,9 @@
             </div>
         </div>
     </div>
-    
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-    <script src="backend/firebase_base.js"></script>
-    <script src="backend/firebase_database.js"></script>
-    <script src="backend/firebase_storage.js"></script>
-    <script src="backend/user.js"></script>
+
+    <script src="backend/profile.js"></script>
     <script>
-        var input = document.querySelector("input[type=file]"); 
-        var preview = document.getElementById("profilepicture"); 
         document.body.classList.add("bg-profilepage");
     </script>
 </body>
