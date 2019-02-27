@@ -34,7 +34,7 @@
 				</div>
 			<div class="profile-bar offset-10" onclick="myFunction()">
 
-			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
+			<a class="dropdown-toggle" href="#">Welcome Alies</a>
 
 			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
