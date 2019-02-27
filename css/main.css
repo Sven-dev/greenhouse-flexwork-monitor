@@ -386,6 +386,9 @@ ul {
     transform: none !important;
     position: relative !important; }
 
+.popup-button {
+  display: block; }
+
 .bg-loginpage {
   overflow: hidden;
   /* When I remove background the icon goes back to that default size */ }
@@ -654,31 +657,52 @@ ul {
       background-color: #490776;
       text-decoration: none; }
 
-.popup-button {
-  display: block; }
-
-.game-button {
-  background-color: #6300A7;
-  margin-top: 10%;
-  color: #FFF;
-  padding: 3em 4em;
-  border: 3px solid #6300A7;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 0px 60px 60px 0px; }
-  .game-button:hover {
-    background-color: #CC77CF;
-    color: #FFF;
-    -webkit-transition: ease 0.5s;
-    -o-transition: ease 0.5s;
-    transition: ease 0.5s;
-    border: 3px solid #CC77CF; }
+.bg-game {
+  overflow: hidden; }
+  .bg-game:before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/achieve-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -2; }
+  .bg-game:after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1; }
+  .bg-game .gameBtns {
+    margin-top: 10%; }
+    .bg-game .gameBtns .game-button {
+      background-color: #6300A7;
+      margin-top: 40px;
+      color: #FFF;
+      padding: 2.5em 5em;
+      border: 3px solid #6300A7;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0px 60px 60px 0px; }
+      .bg-game .gameBtns .game-button:hover {
+        background-color: #CC77CF;
+        color: #FFF;
+        -webkit-transition: ease 0.5s;
+        -o-transition: ease 0.5s;
+        transition: ease 0.5s;
+        border: 3px solid #CC77CF;
+        padding: 2.5em 7em; }
 
 .modal-wrap .modal-colomn {
-  background-color: #E1E1E1;
-  border-radius: 30px;
-  padding: 0px;
-  margin-top: -40px; }
+  margin-top: 40px; }
   .modal-wrap .modal-colomn .modal-header {
     background-color: #6300A7;
     border-radius: 30px 30px 00px 00px;
@@ -699,8 +723,7 @@ ul {
     height: 430px;
     margin: 0 auto;
     border-radius: 0px 0px 30px 30px;
-    max-width: 725px;
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 20px; }
     .modal-wrap .modal-colomn .modal-inner .modal-progression {
       height: 150px;

@@ -786,32 +786,59 @@ ul{
    }
 }
 
-.game-button{
-    background-color: $primary;
-    margin-top: 10%;
-    color: $white;
-    padding: 3em 4em;
-    border: 3px solid $primary;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0px 60px 60px 0px;
-
-    &:hover{
-        background-color: #CC77CF;
-        color: $white;
-        transition: ease 0.5s;
-        border: 3px solid #CC77CF;
-
+.bg-game{ 
+    overflow: hidden;
+    &:before{
+        content: "";
+        position: absolute;
+        background-image: url(../image/achieve-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: -2;
     }
-
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: $black;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    } 
+    .gameBtns{
+        margin-top: 10%;
+        .game-button{
+            background-color: $primary;
+            margin-top: 40px;
+            color: $white;
+            padding: 2.5em 5em;
+            border: 3px solid $primary;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0px 60px 60px 0px;
+            
+            &:hover{
+                background-color: #CC77CF;
+                color: $white;
+                transition: ease 0.5s;
+                border: 3px solid #CC77CF;
+                padding: 2.5em 7em;
+            }
+        }
+    }
 }
+
 
 .modal-wrap{
     .modal-colomn{
-        background-color: #E1E1E1;
-        border-radius: 30px;
-        padding: 0px;
-        margin-top: -40px;
+        margin-top: 40px;
 
             .modal-header{
                 background-color: $primary;
@@ -841,8 +868,7 @@ ul{
                 height: 430px;
                 margin: 0 auto;
                 border-radius: 0px 0px 30px 30px;
-                max-width: 725px;
-                overflow: auto;
+                overflow: hidden;
                 margin-bottom: 20px;
 
                  .modal-progression{
