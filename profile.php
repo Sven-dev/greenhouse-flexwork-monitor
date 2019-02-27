@@ -5,9 +5,7 @@
                 <div class="profiel">
                     <div class="status">
                     </div>
-                    <div class="uploadPicture">
                         <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input, preview)">
-                    </div>
                     <div class="profilePicture">
                         <img src="" id="profilepicture">
                     </div>
@@ -18,8 +16,8 @@
                     </div>
                     <div class="subSettings">
                         <ul>
-                            <li><div class="testIcon">X</div><p>alies@greenhouse.com</p></li>
-                            <li><div class="testIcon">X</div><p>064566798</p></li>
+                            <li><div class="testIcon"></div><p>alies@greenhouse.com</p></li>
+                            <li><div class="testIcon"></div><p>064566798</p></li>
                         </ul>
                     </div>
                     <a href="#" class="button">Change password</a>

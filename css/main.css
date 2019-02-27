@@ -461,13 +461,22 @@ ul {
   margin-top: 120px;
   padding: 20px 20px 30px; }
   .bg-profilepage .profiel .profilePicture {
+    width: 65%;
+    text-align: center;
     position: relative;
-    width: 60%;
-    padding-bottom: 60%;
+    padding-bottom: 65%;
     border-radius: 50%;
     overflow: hidden;
     background-color: gray;
-    margin: -40% auto 20px; }
+    margin: -45% auto 20px; }
+    .bg-profilepage .profiel .profilePicture img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -o-object-fit: cover;
+      object-fit: cover; }
   .bg-profilepage .profiel .status {
     width: 35px;
     height: 35px;
@@ -476,12 +485,13 @@ ul {
     background-color: red;
     position: absolute;
     z-index: 666;
-    right: 22%;
+    right: 20%;
     top: 16%; }
   .bg-profilepage .profiel .uploadPicture {
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    padding: 0;
     overflow: hidden;
     background-color: #6300A7;
     position: absolute;
@@ -498,6 +508,8 @@ ul {
     .bg-profilepage .profiel .uploadPicture:hover {
       background-color: #490776;
       text-decoration: none; }
+    .bg-profilepage .profiel .uploadPicture input[type=file] {
+      background-color: purple; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
