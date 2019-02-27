@@ -35,6 +35,21 @@ function getUser()
     });
 }
 
+//uploads a new profile picture to storage, and links it to profile
+function uploadProfilePicture()
+{  
+    //Turn the input into a blob
+    var blob = input.files[0].slice(0, input.files[0].size, 'image/png'); 
+    var newFile = new File([blob], input.files[0].name, {type: 'image/png'});
+    var imgPath = "Images/" + currentUser.uid + "/" + newFile.name;
+
+    //Upload the blob to the database
+    storageroot.child(imgPath).put(newFile).then(function()
+    {
+        set("Profiles/" + currentUser.uid + "/ProfilePicture", imgPath);
+    });
+}
+
 function displayImage(imageUrl)
 {
     storageroot.child(imageUrl).getDownloadURL().then(function(url)
