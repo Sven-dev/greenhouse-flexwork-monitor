@@ -175,18 +175,20 @@ label {
 .navigation-bar {
   background-color: #F8F8F8;
   max-height: 90px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .navigation-bar ul {
     list-style-type: none;
     margin: 0px; }
     .navigation-bar ul li {
       display: inline-block;
       padding: 10px;
-      line-height: 70px;
+      line-height: 50px;
       overflow: auto; }
       .navigation-bar ul li a {
         color: #707070;
-        display: block; }
+        display: block;
+        border-bottom: 2px solid transparent; }
         .navigation-bar ul li a:hover {
           text-decoration: none;
           border-bottom: 2px solid #6300A7; }
@@ -201,7 +203,7 @@ label {
   .profile-bar .dropdown-toggle {
     list-style-type: none;
     margin: 0px;
-    line-height: 90px;
+    line-height: 78px;
     margin-left: 20%;
     font-size: 18px;
     font-weight: 300;
@@ -217,7 +219,9 @@ label {
     border-radius: 0; }
     .profile-bar .dropdown-menu li {
       width: 100%;
-      position: relative; }
+      position: relative;
+      padding: 0;
+      margin: 0; }
       .profile-bar .dropdown-menu li .border-bottom {
         border-bottom: 2px solid #C2C2C2; }
       .profile-bar .dropdown-menu li a {
@@ -226,7 +230,8 @@ label {
         padding: 0 30px; }
         .profile-bar .dropdown-menu li a:hover {
           text-decoration: none;
-          color: #6300A7; }
+          color: #6300A7;
+          border-bottom: 2px solid transparent; }
     .profile-bar .dropdown-menu .list-unstyled {
       margin-bottom: 0px; }
   .profile-bar .show {

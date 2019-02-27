@@ -20,11 +20,11 @@
 <body onLoad="logInCheck()">
 
 	<div class="navigation-bar">
-		<div class="profile-bar offset-10">
+		<div class="profile-bar offset-10" onclick="myFunction()">
 
 			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
 
-			<div class="dropdown-menu">
+			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
 			        <li class="dropdown-item border-bottom"><a href="profile.php">Edit Profile</a></li>
 			        <li class="dropdown-item border-bottom"><a href="#">Settings</a></li>
@@ -47,5 +47,26 @@
 		</div>
 
 	</div>
+	<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}ever
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.profile-bar')) {
+    var dropdowns = document.getElementsByClassName("list-unstyled");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
 	

@@ -208,6 +208,7 @@ label {
     background-color: #F8F8F8;
     max-height: 90px;
     width: 100%;
+    position: relative;
         ul{
             list-style-type: none;
              margin: 0px;
@@ -215,12 +216,13 @@ label {
             li{
                 display: inline-block;
                 padding: 10px;
-                line-height: 70px;
+                line-height: 50px;
                 overflow: auto;
 
                 a{
                     color: #707070;
                     display: block;
+                    border-bottom: 2px solid transparent;
                     &:hover
                     {
                         text-decoration: none;
@@ -243,7 +245,7 @@ label {
     .dropdown-toggle{
         list-style-type: none;
         margin: 0px;
-        line-height: 90px;
+        line-height: 78px;
         margin-left: 20%;
         font-size: 18px;
         font-weight: 300;
@@ -264,6 +266,8 @@ label {
         li{
                 width: 100%;
                 position: relative;
+                padding: 0;
+                margin:0;
 
                 .border-bottom{
                     border-bottom: 2px solid #C2C2C2;
@@ -277,6 +281,7 @@ label {
                     {
                         text-decoration: none;
                         color: $primary;
+                        border-bottom: 2px solid transparent;
                     }
                 }
 
