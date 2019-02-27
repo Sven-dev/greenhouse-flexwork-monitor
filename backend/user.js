@@ -27,8 +27,9 @@ function logInCheck()
             //Get the users profile
             currentUser = user;
 
-            profile = dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
+            dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
             {
+                console.log(profile);
                 showHeaderData();
             });
         }
