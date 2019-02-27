@@ -5,7 +5,7 @@
                 <div class="profiel">
                     <div class="status">
                     </div>
-                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input, preview)">
+                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input)">
                     <div class="profilePicture">
                         <img src="" id="profilepicture">
                     </div>
