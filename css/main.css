@@ -779,99 +779,142 @@ ul {
             -ms-transform: translate(60%, 60%);
             transform: translate(60%, 60%); }
 
-.map-wrap svg {
-  padding-bottom: 60px;
-  padding-top: 60px; }
-  .map-wrap svg .rect1:hover {
-    fill: #afceff !important;
-    cursor: pointer; }
-  .map-wrap svg .rect2:hover {
-    fill: #6ba4ff !important;
-    cursor: pointer; }
-  .map-wrap svg .rect3:hover {
-    fill: #5879ad !important;
-    cursor: pointer; }
-  .map-wrap svg .rect4:hover {
-    fill: #dbd67d !important;
-    cursor: pointer; }
-  .map-wrap svg .rect5:hover {
-    fill: #d6cd33 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect6:hover {
-    fill: #d37e3d !important;
-    cursor: pointer; }
-  .map-wrap svg .rect7:hover {
-    fill: #f2b587 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect8:hover {
-    fill: #db4b39 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect9:hover {
-    fill: #e57f72 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect10:hover {
-    fill: #93e297 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect11:hover {
-    fill: #3dcc44 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect12:hover {
-    fill: #1fa826 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect1:hover {
-    fill: #17afb2 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect13:hover {
-    fill: #81d9db !important;
-    cursor: pointer; }
-  .map-wrap svg .rect14:hover {
-    fill: #8199db !important;
-    cursor: pointer; }
-  .map-wrap svg .rect15:hover {
-    fill: #4f7bf2 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect16:hover {
-    fill: #a979d1 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect17:hover {
-    fill: #9a36ed !important;
-    cursor: pointer; }
-  .map-wrap svg .rect18:hover {
-    fill: #d48bd6 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect19:hover {
-    fill: #d827dd !important;
-    cursor: pointer; }
-  .map-wrap svg .rect20:hover {
-    fill: #e27ab0 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect21:hover {
-    fill: #d61b7c !important;
-    cursor: pointer; }
-  .map-wrap svg .rect22:hover {
-    fill: #14ce8a !important;
-    cursor: pointer; }
-  .map-wrap svg .rect23:hover {
-    fill: #9ce2c9 !important;
-    cursor: pointer; }
+.bg-map-page .map-wrap {
+  padding-top: 50px; }
+  .bg-map-page .map-wrap form {
+    margin-top: 45px;
+    margin-bottom: 5px; }
+    .bg-map-page .map-wrap form:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f002";
+      font-style: normal;
+      font-weight: 900;
+      text-decoration: inherit;
+      position: absolute;
+      right: 305px;
+      top: 80px;
+      font-size: 18px;
+      z-index: 15px; }
+      @media only screen and (max-width: 1199px) {
+        .bg-map-page .map-wrap form:after {
+          right: 260px; } }
+      @media only screen and (max-width: 991px) {
+        .bg-map-page .map-wrap form:after {
+          right: 200px; } }
+      @media only screen and (max-width: 768px) {
+        .bg-map-page .map-wrap form:after {
+          right: 155px; } }
+      @media only screen and (max-width: 550px) {
+        .bg-map-page .map-wrap form:after {
+          display: none; } }
+  .bg-map-page .map-wrap input {
+    background: #FFF;
+    border: none;
+    -webkit-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75); }
+  .bg-map-page .map-wrap #search-colleague {
+    position: relative;
+    width: 50%;
+    margin-top: 30px;
+    height: 35px; }
+  .bg-map-page .map-wrap .searchform {
+    margin-bottom: 0px;
+    margin-top: 15px; }
+  .bg-map-page .map-wrap svg {
+    padding-bottom: 60px;
+    padding-top: 60px; }
+    .bg-map-page .map-wrap svg .rect1:hover {
+      fill: #afceff !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect2:hover {
+      fill: #6ba4ff !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect3:hover {
+      fill: #5879ad !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect4:hover {
+      fill: #dbd67d !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect5:hover {
+      fill: #d6cd33 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect6:hover {
+      fill: #d37e3d !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect7:hover {
+      fill: #f2b587 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect8:hover {
+      fill: #db4b39 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect9:hover {
+      fill: #e57f72 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect10:hover {
+      fill: #93e297 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect11:hover {
+      fill: #3dcc44 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect12:hover {
+      fill: #1fa826 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect1:hover {
+      fill: #17afb2 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect13:hover {
+      fill: #81d9db !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect14:hover {
+      fill: #8199db !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect15:hover {
+      fill: #4f7bf2 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect16:hover {
+      fill: #a979d1 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect17:hover {
+      fill: #9a36ed !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect18:hover {
+      fill: #d48bd6 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect19:hover {
+      fill: #d827dd !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect20:hover {
+      fill: #e27ab0 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect21:hover {
+      fill: #d61b7c !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect22:hover {
+      fill: #14ce8a !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect23:hover {
+      fill: #9ce2c9 !important;
+      cursor: pointer; }
 
-.floor {
+.bg-map-page .floor {
   width: 100%;
   height: 62px;
   background: #444444;
-  padding-top: 78px; }
-  .floor h2 {
+  position: absolute;
+  top: 78px; }
+  .bg-map-page .floor h2 {
     color: white;
     line-height: 62px;
     vertical-align: middle;
     font-weight: 400; }
     @media only screen and (max-width: 450px) {
-      .floor h2 {
+      .bg-map-page .floor h2 {
         font-size: 26px; } }
-  .floor i {
+  .bg-map-page .floor i {
     color: white; }
     @media only screen and (max-width: 450px) {
-      .floor i {
+      .bg-map-page .floor i {
         font-size: 26px; } }
 
 #map-location-wrap {

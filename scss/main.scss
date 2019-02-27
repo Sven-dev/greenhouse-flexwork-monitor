@@ -930,176 +930,224 @@ ul{
 
 }
 
-
-.map-wrap{
-    svg{
-        padding-bottom: 60px;
-        padding-top: 60px;
-        .rect1{
-            &:hover{
-                fill: #afceff !important;
-                cursor: pointer;
+.bg-map-page{
+    .map-wrap{
+        padding-top: 50px;
+        form{
+            &:after{
+                font-family: "Font Awesome 5 Free";
+                content: "\f002";
+                font-style: normal;
+                font-weight: 900;
+                text-decoration: inherit;
+                position: absolute;
+                right: 305px;
+                top: 80px;
+                font-size: 18px;
+                z-index: 15px;
+                @media only screen and(max-width: 1199px){
+                    right: 260px;           
+                }
+                @media only screen and(max-width: 991px){
+                    right: 200px;           
+                }
+                @media only screen and(max-width: 768px){
+                    right: 155px;           
+                }
+                @media only screen and(max-width: 550px){
+                    display: none;           
+                }
             }
+            margin-top: 45px;
+            margin-bottom: 5px;
+        }   
+        input{
+            background: $white;
+            border: none;
+            -webkit-box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 52px -13px rgba(0,0,0,0.75);
         }
-        .rect2{
-            &:hover{
-                fill: #6ba4ff !important;
-                cursor: pointer;
+        #search-colleague{
+            position: relative;
+            width: 50%;           
+            margin-top: 30px;
+            height: 35px;
+        }
+        .searchform{
+            margin-bottom: 0px;
+            margin-top: 15px;
+        }
+        svg{
+            padding-bottom: 60px;
+            padding-top: 60px;
+            .rect1{
+                &:hover{
+                    fill: #afceff !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect3{
-            &:hover{
-                fill: #5879ad !important;
-                cursor: pointer;
+            .rect2{
+                &:hover{
+                    fill: #6ba4ff !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect4{
-            &:hover{
-                fill: #dbd67d !important;
-                cursor: pointer;
+            .rect3{
+                &:hover{
+                    fill: #5879ad !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect5{
-            &:hover{
-                fill: #d6cd33 !important;
-                cursor: pointer;
+            .rect4{
+                &:hover{
+                    fill: #dbd67d !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect6{
-            &:hover{
-                fill: #d37e3d !important;
-                cursor: pointer;
+            .rect5{
+                &:hover{
+                    fill: #d6cd33 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect7{
-            &:hover{
-                fill: #f2b587 !important;
-                cursor: pointer;
+            .rect6{
+                &:hover{
+                    fill: #d37e3d !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect8{
-            &:hover{
-                fill: #db4b39 !important;
-                cursor: pointer;
+            .rect7{
+                &:hover{
+                    fill: #f2b587 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect9{
-            &:hover{
-                fill: #e57f72 !important;
-                cursor: pointer;
+            .rect8{
+                &:hover{
+                    fill: #db4b39 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect10{
-            &:hover{
-                fill: #93e297 !important;
-                cursor: pointer;
+            .rect9{
+                &:hover{
+                    fill: #e57f72 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect11{
-            &:hover{
-                fill: #3dcc44 !important;
-                cursor: pointer;
+            .rect10{
+                &:hover{
+                    fill: #93e297 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect12{
-            &:hover{
-                fill: #1fa826 !important;
-                cursor: pointer;
+            .rect11{
+                &:hover{
+                    fill: #3dcc44 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect1{
-            &:hover{
-                fill: #17afb2 !important;
-                cursor: pointer;
+            .rect12{
+                &:hover{
+                    fill: #1fa826 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect13{
-            &:hover{
-                fill: #81d9db !important;
-                cursor: pointer;
+            .rect1{
+                &:hover{
+                    fill: #17afb2 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect14{
-            &:hover{
-                fill: #8199db !important;
-                cursor: pointer;
+            .rect13{
+                &:hover{
+                    fill: #81d9db !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect15{
-            &:hover{
-                fill: #4f7bf2 !important;
-                cursor: pointer;
+            .rect14{
+                &:hover{
+                    fill: #8199db !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect16{
-            &:hover{
-                fill: #a979d1 !important;
-                cursor: pointer;
+            .rect15{
+                &:hover{
+                    fill: #4f7bf2 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect17{
-            &:hover{
-                fill: #9a36ed !important;
-                cursor: pointer;
+            .rect16{
+                &:hover{
+                    fill: #a979d1 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect18{
-            &:hover{
-                fill: #d48bd6 !important;
-                cursor: pointer;
+            .rect17{
+                &:hover{
+                    fill: #9a36ed !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect19{
-            &:hover{
-                fill: #d827dd !important;
-                cursor: pointer;
+            .rect18{
+                &:hover{
+                    fill: #d48bd6 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect20{
-            &:hover{
-                fill: #e27ab0 !important;
-                cursor: pointer;
+            .rect19{
+                &:hover{
+                    fill: #d827dd !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect21{
-            &:hover{
-                fill: #d61b7c !important;
-                cursor: pointer;
+            .rect20{
+                &:hover{
+                    fill: #e27ab0 !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect22{
-            &:hover{
-                fill: #14ce8a !important;
-                cursor: pointer;
+            .rect21{
+                &:hover{
+                    fill: #d61b7c !important;
+                    cursor: pointer;
+                }
             }
-        }
-        .rect23{
-            &:hover{
-                fill: #9ce2c9 !important;
-                cursor: pointer;
+            .rect22{
+                &:hover{
+                    fill: #14ce8a !important;
+                    cursor: pointer;
+                }
+            }
+            .rect23{
+                &:hover{
+                    fill: #9ce2c9 !important;
+                    cursor: pointer;
+                }
             }
         }
     }
-}
 
-.floor{
-    width: 100%;
-    height: 62px;
-    background: #444444;
-    padding-top: 78px;
-    h2{
-        color: white;
-        line-height: 62px;
-        vertical-align: middle;
-        font-weight:400;
-        @media only screen and(max-width: 450px){
-            font-size: 26px;
+    .floor{
+        width: 100%;
+        height: 62px;
+        background: #444444;
+        position: absolute;
+        top: 78px;
+        h2{
+            color: white;
+            line-height: 62px;
+            vertical-align: middle;
+            font-weight:400;
+            @media only screen and(max-width: 450px){
+                font-size: 26px;
+            }
         }
-    }
-    i{
-        color: white;
-        @media only screen and(max-width: 450px){
-            font-size: 26px;
+        i{
+            color: white;
+            @media only screen and(max-width: 450px){
+                font-size: 26px;
+            }
         }
     }
 }
