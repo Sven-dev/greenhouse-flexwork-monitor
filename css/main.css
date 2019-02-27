@@ -322,7 +322,8 @@ ul {
   background-color: #F8F8F8;
   max-height: 90px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  z-index: 99; }
   .navigation-bar ul {
     list-style-type: none;
     margin: 0px; }
@@ -385,6 +386,9 @@ ul {
     -ms-transform: none !important;
     transform: none !important;
     position: relative !important; }
+
+.popup-button {
+  display: block; }
 
 .bg-loginpage {
   overflow: hidden;
@@ -516,7 +520,8 @@ ul {
 .bg-profilepage .profiel {
   background-color: white;
   margin-top: 120px;
-  padding: 20px 20px 30px; }
+  padding: 20px 20px 30px;
+  z-index: -2px; }
   .bg-profilepage .profiel .profilePicture {
     width: 65%;
     text-align: center;
@@ -551,22 +556,35 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #6300A7;
+    border-color: #6300A7;
     position: absolute;
     right: 27%;
     z-index: 7666;
     color: white;
-    font-size: 30px; }
+    font-size: 30px;
+    cursor: pointer; }
     .bg-profilepage .profiel .uploadPicture:after {
       content: "+";
       position: absolute;
       z-index: 100000;
-      top: -5px;
-      left: 9px; }
-    .bg-profilepage .profiel .uploadPicture:hover {
+      top: -5.5px;
+      left: 8px; }
+    .bg-profilepage .profiel .uploadPicture:before {
+      content: "";
+      position: absolute;
+      background-color: #6300A7;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
+    .bg-profilepage .profiel .uploadPicture:hover:before {
+      content: "";
+      position: absolute;
       background-color: #490776;
-      text-decoration: none; }
-    .bg-profilepage .profiel .uploadPicture input[type=file] {
-      background-color: purple; }
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
   .bg-profilepage .profiel .name {
     text-align: center;
     word-break: break-all; }
@@ -579,7 +597,8 @@ ul {
   .bg-profilepage .profiel .subSettings ul {
     padding-left: 0;
     list-style-type: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: 100%; }
     .bg-profilepage .profiel .subSettings ul li {
       line-height: 35px; }
       .bg-profilepage .profiel .subSettings ul li .testIcon {
@@ -653,9 +672,6 @@ ul {
     .bg-profilepage .editProfile .changeButtons a:hover {
       background-color: #490776;
       text-decoration: none; }
-
-.popup-button {
-  display: block; }
 
 .game-button {
   background-color: #6300A7;
