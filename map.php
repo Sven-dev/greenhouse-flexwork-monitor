@@ -14,7 +14,7 @@
 			<style type="text/css">
 				.st0{fill:white;stroke:#000000;stroke-miterlimit:10;}
 			</style>
-			<g>
+			<g> 
 				<line class="st0" x1="4.5" y1="331.5" x2="4.5" y2="528.5"/>
 			</g>
 			<line class="st0" x1="1109.5" y1="528.5" x2="4.5" y2="528.5"/>
