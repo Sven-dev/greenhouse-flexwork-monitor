@@ -1,6 +1,7 @@
 /* REQUIRES 
 backend/firebase_base.js
-basebackend/firebase_database.js
+backend/firebase_database.js
+backend/firebase_storage.js
 */
 
 var previousQuery = "";

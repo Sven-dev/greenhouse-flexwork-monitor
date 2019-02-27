@@ -42,7 +42,7 @@ function logOut()
     });
 }
 
-//
+//uploads a new profile picture to storage, and links it to profile
 function uploadProfilePicture(input, imgElement)
 {  
     //Turn the input into a blob
@@ -59,16 +59,5 @@ function uploadProfilePicture(input, imgElement)
 
 function showProfilePicture(imgElement)
 {
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => displayImage(snap.val(), imgElement));   
-}
-
-function displayImage(imageUrl, imgElement)
-{
-    storageroot.child(imageUrl).getDownloadURL().then(function(url)
-    {
-        imgElement.src = url;
-    }).catch(function(error) 
-    {
-        console.log(error.code + ": " +  error.message);
-    });
+    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => getImage(snap.val(), imgElement));   
 }
