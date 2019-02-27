@@ -1,12 +1,17 @@
 /* REQUIRES 
 backend/firebase_base.js
 backend/firebase_database.js
-backend/firebase_storage.js
 */
 
 //Fields
 var currentUser;
 var profile;
+
+//Elements
+var headerName = document.getElementById("dropdownMenuButton");
+
+//Start
+logInCheck();
 
 //Checks if a user is logged in
 function logInCheck()
@@ -19,9 +24,13 @@ function logInCheck()
         {
             //Get the users profile
             currentUser = user;
-            profile = get('Profiles/' + user.uid);
-            showProfilePicture(preview);           
-        } 
+
+            dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
+            {
+                profile = snapshot.val();
+                showHeaderData();
+            });
+        }
         // No user is signed in.        
         else 
         {
@@ -42,33 +51,7 @@ function logOut()
     });
 }
 
-//
-function uploadProfilePicture(input, imgElement)
-{  
-    //Turn the input into a blob
-    var blob = input.files[0].slice(0, input.files[0].size, 'image/png'); 
-    var newFile = new File([blob], input.files[0].name, {type: 'image/png'});
-    var imgPath = "Images/" + currentUser.uid + "/" + newFile.name;
-
-    //Upload the blob to the database
-    storageroot.child(imgPath).put(newFile).then(function()
-    {
-        set("Profiles/" + currentUser.uid + "/ProfilePicture", imgPath);
-    });
-}
-
-function showProfilePicture(imgElement)
+function showHeaderData()
 {
-    dbroot.child("Profiles/" + currentUser.uid + "/ProfilePicture").on('value', snap => displayImage(snap.val(), imgElement));   
-}
-
-function displayImage(imageUrl, imgElement)
-{
-    storageroot.child(imageUrl).getDownloadURL().then(function(url)
-    {
-        imgElement.src = url;
-    }).catch(function(error) 
-    {
-        console.log(error.code + ": " +  error.message);
-    });
+    headerName.innerHTML = "Welcome " + profile.Name;
 }

@@ -3,9 +3,15 @@ backend/firebase_base.js
 basebackend/firebase_database.js
 */
 
+//Fields
 var previousQuery = "";
 var colleagues = [];
 
+//Elements
+var search_bar = document.getElementById('search-colleague');
+var search_results = document.getElementById('search-results');
+
+//Start
 getColleagues();
 
 //Gets all colleagues whose name starts with the given search term
@@ -30,7 +36,6 @@ window.setInterval(function()
   }
   else if (search != previousQuery)
   {
-    search_results.innerHTML = "";
     filter(search);
   }
 
@@ -55,4 +60,22 @@ function filter(search)
 
     //search_results.innerHTML += "</ul>";
   }
+}
+
+//Creates an HTML-element displaying the user data
+function displayData(profile)
+{
+  search_results.innerHTML = "";
+  storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
+  {
+      "<div>" + 
+        "<img src=" + url + ">" + 
+        "<p>" + profile.Name + "<br>" + profile.Craft + "</p>" +
+      "</div>";
+      
+
+  }).catch(function(error) 
+  {
+      console.log(error.code + ": " +  error.message);
+  });
 }
