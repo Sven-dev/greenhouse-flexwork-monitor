@@ -8,6 +8,11 @@ backend/firebase_database.js
 //Elements
 var search_bar = document.getElementById('search-colleague');
 
+var group1 = document.getElementById('groep1');
+var group2 = document.getElementById('groep2');
+var group3 = document.getElementById('groep3');
+var group4 = document.getElementById('groep4');
+
 //Start
 getUrlData();
 
@@ -49,29 +54,29 @@ function getProfile(username)
 
 function EnableBeacon(location)
 {
-    if (location == 0)
-    {
-        console.log("user is not here");
+    group1.style.display = "none";
+    group2.style.display = "none";
+    group3.style.display = "none";
+    group4.style.display = "none";
 
-    }
-    else if (location == 1)
+    if (location == 1)
     {
         console.log("user is in zone 1");
+        group1.style.display = "block";
     }
     else if (location == 2)
     {
         console.log("user is in zone 2");
+        group2.style.display = "block";
     }
     else if (location == 3)
     {
         console.log("user is in zone 3");
+        group3.style.display = "block";
     }
     else if (location == 4)
     {
         console.log("user is in zone 4");
-    }
-    else
-    {
-        console.log("user is in a different zone");
+        group4.style.display = "block";
     }
 }
