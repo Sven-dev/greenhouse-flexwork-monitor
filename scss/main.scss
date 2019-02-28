@@ -25,6 +25,33 @@ h1, h2, h3, h4, h5, h6 {
         color: $primary;
         transition: ease 0.5s;
     }
+    &.custom{
+        z-index: 60;
+        position: absolute;
+        width: 95%;
+        border-radius: 0px;
+        bottom: -54px;
+        left: 15px;
+        @media only screen and(max-width: 1199px){
+           width: 94%;       
+        }
+        @media only screen and(max-width: 991px){
+           width: 92%;       
+        }
+        @media only screen and(max-width: 768px){
+           width: 89%;       
+        }
+        @media only screen and(max-width: 500px){
+           width: 87%;       
+           bottom: -78px;
+        }
+        &:hover{
+            text-decoration: none;
+            background-color: lighten($primary, 10%);
+            color: $white;
+            border: 3px solid lighten($primary, 10%);
+        }
+    }
 }
 
 input, select{
@@ -155,10 +182,13 @@ label {
 }
 
 .bg-index{
-    overflow: hidden;
+    .search-link{
+        width: 100%;
+        color: $black;
+    }
     &:before{
         content: "";
-        position: absolute;
+        position: fixed;
         background-image: url(../image/bg-4.jpg);
         background-size: cover;
         background-position: center;
@@ -171,7 +201,7 @@ label {
     }
     &:after{
         content: "";
-        position: absolute;
+        position: fixed;
         background-color: $black;
         opacity: 0.5;
         width: 100%;
@@ -181,10 +211,7 @@ label {
         z-index: -1;
     }
     .search-wrap{
-        padding-top: 220px;
-        @media only screen and(max-width: 1199px){
-            padding-top: 180px;           
-        }
+        padding-top: 60px;
         #search-colleague{
             position: relative;
             width: 50%;           
@@ -232,14 +259,70 @@ label {
                     display: none;           
                 }
             }
-}
-        }        
+        }
+    .search-block{ 
+            height: 100px;
+            background: $secondary;  
+            background-clip: content-box; 
+            white-space: nowrap; 
+            filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
+            &:hover{
+                background: darken($secondary, 10%);
+                transition: all 0.3s;
+            }        
+            .profile-pn{
+                padding: 2px 30px;
+                transform: translate(0%, 12%); 
+                @media only screen and(max-width: 768px){
+                    padding: 2px 0px;          
+                }
+                 .profile-pic{
+                    display: inline-block;
+                    object-fit: cover;
+                    width:75px;
+                    height:75px;
+                    border-radius: 50%;  
+                    @media only screen and(max-width: 768px){
+                        display: none;         
+                    }               
+                }
+                .profile-name{
+                    padding-left: 15px;
+                    display: inline-block;
+                    margin-bottom: 0px;
+                    transform: translate(0%, 30%); 
+                    width: 250px;
+                    word-break: break-all;
+                    white-space: normal;
+                }
+                i{
+                    position: absolute;
+                    right: 30px;
+                    transform: translate(0%, 260%); 
+                    color: $primary;
+                    font-size: 18px;
+                    @media only screen and(max-width: 380px){
+                        padding-left: 30px;          
+                    }
+                    @media only screen and(max-width: 340px){
+                        padding-left: 15px;          
+                    }
+                }
+            }
+        }
+     .results{
+        position: relative;
+        margin-top: -3px;
+        z-index: 30;
+    }
+}        
 
 .explosion-img{
     position: fixed;
     bottom: 0px;
     left: 0px;
     width: 420px;
+    z-index: 15;
     @media only screen and(max-width: 768px){
         display: none;
     }
