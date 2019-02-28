@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1356" height="679" viewBox="0 0 1356 679">
+  <defs>
+    <pattern id="pattern" width="1" height="1" viewBox="-6.216 -21.134 253.613 253.613">
+      <use preserveAspectRatio="none" xlink:href="#image"/>
+    </pattern>
+    <image id="image" preserveAspectRatio="none" width="253.613" height="253.613" xlink:href="leaderboard-image.png"/>
+    <pattern id="pattern-2" width="1" height="1" viewBox="-6.216 -21.134 253.613 253.613">
+      <use xlink:href="#image"/>
+    </pattern>
+    <filter id="Rectangle_52" x="360.598" y="-46.524" width="627.771" height="769.97" filterUnits="userSpaceOnUse">
+      <feOffset dy="24" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="24" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-leaderboard">
+      <rect width="1356" height="679"/>
+    </clipPath>
+  </defs>
+  <g id="leaderboard" clip-path="url(#clip-leaderboard)">
+    <rect width="1356" height="679" fill="#fff"/>
+    <g id="Rectangle_54" data-name="Rectangle 54" transform="translate(6 49.854)" fill="#a43bec" stroke="#707070" stroke-width="1">
+      <rect width="483.771" height="625.97" stroke="none"/>
+      <rect x="0.5" y="0.5" width="482.771" height="624.97" fill="none"/>
+    </g>
+    <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(101.288 104.094)" fill="#fff" stroke="#707070" stroke-width="1">
+      <ellipse cx="146.597" cy="146.597" rx="146.597" ry="146.597" stroke="none"/>
+      <ellipse cx="146.597" cy="146.597" rx="146.097" ry="146.097" fill="none"/>
+    </g>
+    <text id="Team_2" data-name="Team 2" transform="translate(154.063 470.813)" fill="#fff" font-size="50" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">Team 2</tspan></text>
+    <text id="_1080_Points" data-name="1080 Points" transform="translate(63.173 589.431)" fill="#fff" font-size="65" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">1080 Points</tspan></text>
+    <rect id="Rectangle_55" data-name="Rectangle 55" width="483.771" height="27.853" transform="translate(6 23.466)" fill="#cecece"/>
+    <rect id="profile-icon-9" width="253.613" height="253.613" transform="translate(117.414 90.901)" opacity="0.71" fill="url(#pattern)"/>
+    <g id="Rectangle_56" data-name="Rectangle 56" transform="translate(865.06 49.854)" fill="#a43bec" stroke="#707070" stroke-width="1">
+      <rect width="483.771" height="625.97" stroke="none"/>
+      <rect x="0.5" y="0.5" width="482.771" height="624.97" fill="none"/>
+    </g>
+    <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(960.348 104.094)" fill="#fff" stroke="#707070" stroke-width="1">
+      <ellipse cx="146.597" cy="146.597" rx="146.597" ry="146.597" stroke="none"/>
+      <ellipse cx="146.597" cy="146.597" rx="146.097" ry="146.097" fill="none"/>
+    </g>
+    <text id="Team_3" data-name="Team 3" transform="translate(1013.123 470.813)" fill="#fff" font-size="50" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">Team 3</tspan></text>
+    <text id="_980_Points" data-name="980 Points" transform="translate(947.154 589.431)" fill="#fff" font-size="65" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">980 Points</tspan></text>
+    <rect id="Rectangle_57" data-name="Rectangle 57" width="483.771" height="27.853" transform="translate(865.06 23.466)" fill="#be6e1e"/>
+    <rect id="profile-icon-9-2" data-name="profile-icon-9" width="253.613" height="253.613" transform="translate(976.474 90.901)" opacity="0.71" fill="url(#pattern-2)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_52)">
+      <g id="Rectangle_52-2" data-name="Rectangle 52" transform="translate(432.6 1.48)" fill="#6300a7" stroke="#707070" stroke-width="1">
+        <rect width="483.771" height="625.97" stroke="none"/>
+        <rect x="0.5" y="0.5" width="482.771" height="624.97" fill="none"/>
+      </g>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(527.886 55.717)" fill="#fff" stroke="#707070" stroke-width="1">
+      <ellipse cx="146.597" cy="146.597" rx="146.597" ry="146.597" stroke="none"/>
+      <ellipse cx="146.597" cy="146.597" rx="146.097" ry="146.097" fill="none"/>
+    </g>
+    <text id="Team_1" data-name="Team 1" transform="translate(580.661 422.436)" fill="#fff" font-size="50" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">Team 1</tspan></text>
+    <text id="_1248_Points" data-name="1248 Points" transform="translate(489.771 541.053)" fill="#fff" font-size="65" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="0">1248 Points</tspan></text>
+    <image id="crown_2__309563" width="150.995" height="150.995" transform="translate(695.007 -5.854)" xlink:href="leaderboard-image2.png"/>
+    <rect id="profile-icon-9-3" data-name="profile-icon-9" width="253.613" height="253.613" transform="translate(544.012 42.524)" opacity="0.71" fill="url(#pattern-2)"/>
+  </g>
+</svg>
