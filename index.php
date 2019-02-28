@@ -7,9 +7,8 @@
 				<hr>
 				<form action="searchresults.php">
 					<div class="searchform">
-						<input id="search-colleague" type="text" name="search" placeholder="Search...">
+						<input id="search-colleague" type="text" name="search" placeholder="Search..." autocomplete="off">
 					</div>
-					<!-- <button class="btns-primary" type="button" name="find-colleague">Find</button> -->
 				</form>
 
 			</div>
@@ -17,11 +16,11 @@
 	</div>
 
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<div id="search-results"></div>
+		<div class="row history-wrap">
+			<div class="offset-md-3 offset-3 col-md-6 col-6">
+				<div class="row results" id="search-results"></div>
 			</div>
-		</div>		
+		</div>	
 	</div>
 
 	<img class="explosion-img" src="image/explosion-klein.png" alt="explosion">
