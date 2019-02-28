@@ -14,13 +14,13 @@
 				</div>
 			</form>
 				<!-- <h1>Greenhouse map</h1> -->
-				<div class=" groep1 mapblok">
+				<div id="groep1" class=" groep1 mapblok">
 				</div>
-				<div class="groep2 mapblok">
+				<div id="groep2" class="groep2 mapblok">
 				</div>
-				<div class="groep3 mapblok">
+				<div id="groep3" class="groep3 mapblok">
 				</div>
-				<div class="groep4 mapblok">
+				<div id="groep4" class="groep4 mapblok">
 				</div>
 				<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1115 534" style="enable-background:new 0 0 1115 534;" xml:space="preserve">
