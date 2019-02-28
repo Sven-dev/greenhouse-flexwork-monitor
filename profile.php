@@ -5,19 +5,19 @@
                 <div class="profiel">
                     <div class="status">
                     </div>
-                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture(input, preview)">
+                        <input class="uploadPicture" type="file" onchange="uploadProfilePicture()">
                     <div class="profilePicture">
                         <img src="" id="profilepicture">
                     </div>
                     
                     <div class="name">
-                        <h2>Alies van Hout</h2>
-                        <span>Media Design</span>
+                        <h2 id="username"></h2>
+                        <span id="usercraft"></span>
                     </div>
                     <div class="subSettings">
                         <ul>
-                            <li><div class="testIcon"></div><p>alies@greenhouse.com</p></li>
-                            <li><div class="testIcon"></div><p>064566798</p></li>
+                            <li><div class="testIcon"></div><p id="useremail"></p></li>
+                            <li><div class="testIcon"></div><p id="userphone"></p></li>
                         </ul>
                     </div>
                     <a href="#" class="button">Change password</a>
@@ -61,15 +61,9 @@
             </div>
         </div>
     </div>
-    
-    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-    <script src="backend/firebase_base.js"></script>
-    <script src="backend/firebase_database.js"></script>
-    <script src="backend/firebase_storage.js"></script>
-    <script src="backend/user.js"></script>
+
+    <script src="backend/profile.js"></script>
     <script>
-        var input = document.querySelector("input[type=file]"); 
-        var preview = document.getElementById("profilepicture"); 
         document.body.classList.add("bg-profilepage");
     </script>
 </body>

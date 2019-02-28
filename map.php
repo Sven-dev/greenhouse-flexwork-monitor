@@ -8,6 +8,11 @@
 	<div class="container map-wrap">
 		<div class="row">
 			<div class="col-md-12">
+			<form>
+				<div class="searchform text-center">
+					<input id="search-colleague" type="text" name="search" placeholder="Search colleague...">
+				</div>
+			</form>
 				<!-- <h1>Greenhouse map</h1> -->
 				<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1115 534" style="enable-background:new 0 0 1115 534;" xml:space="preserve">
@@ -51,20 +56,17 @@
 			<rect x="314.5" y="414.5" class="st0 rect22 rect" width="92" height="79" onclick="showTable()"/>
 			<rect x="424.5" y="414.5" class="st0 rect23 rect" width="85" height="79" onclick="showTable()"/>
 			</svg>
-
-
-
 			</div>
 		</div>
 	</div>
 
-
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script src="backend/custom.js"></script>
     <script src="backend/firebase_base.js"></script>
 	<script src="backend/firebase_database.js"></script>
 	<script src="backend/user.js"></script>
 	<script type="text/javascript">
-		document.body.classList.add("bg-searchresults");
+		document.body.classList.add("bg-map-page");
 	</script>
 </body>
 </html>

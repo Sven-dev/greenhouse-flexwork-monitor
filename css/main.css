@@ -22,6 +22,31 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transition: ease 0.5s;
     -o-transition: ease 0.5s;
     transition: ease 0.5s; }
+  .btns-primary.custom {
+    z-index: 60;
+    position: absolute;
+    width: 95%;
+    border-radius: 0px;
+    bottom: -54px;
+    left: 15px; }
+    @media only screen and (max-width: 1199px) {
+      .btns-primary.custom {
+        width: 94%; } }
+    @media only screen and (max-width: 991px) {
+      .btns-primary.custom {
+        width: 92%; } }
+    @media only screen and (max-width: 768px) {
+      .btns-primary.custom {
+        width: 89%; } }
+    @media only screen and (max-width: 500px) {
+      .btns-primary.custom {
+        width: 87%;
+        bottom: -78px; } }
+    .btns-primary.custom:hover {
+      text-decoration: none;
+      background-color: #8100da;
+      color: #FFF;
+      border: 3px solid #8100da; }
 
 .no-select {
   -moz-user-select: -moz-none;
@@ -142,82 +167,145 @@ label {
     .bg-createaccount .styledSelect input, .bg-createaccount .styledSelect button {
       width: 100%; }
 
-.bg-index {
-  overflow: hidden; }
-  .bg-index:before {
-    content: "";
+.bg-index .search-link {
+  width: 100%;
+  color: #000; }
+
+.bg-index:before {
+  content: "";
+  position: fixed;
+  background-image: url(../image/bg-4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -2; }
+
+.bg-index:after {
+  content: "";
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1; }
+
+.bg-index .search-wrap {
+  padding-top: 60px; }
+  .bg-index .search-wrap #search-colleague {
+    position: relative;
+    width: 50%;
+    margin-top: 30px;
+    height: 35px; }
+  .bg-index .search-wrap hr {
+    background: white;
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .bg-index .search-wrap h1 {
+    color: #FFF;
+    padding-bottom: 30px; }
+    @media only screen and (max-width: 768px) {
+      .bg-index .search-wrap h1 {
+        font-size: 26px; } }
+
+.bg-index form {
+  z-index: 15px; }
+  .bg-index form:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: inherit;
     position: absolute;
-    background-image: url(../image/bg-4.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -2; }
-  .bg-index:after {
-    content: "";
-    position: absolute;
-    background-color: #000;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -1; }
-  .bg-index .search-wrap {
-    padding-top: 220px; }
-    @media only screen and (max-width: 1199px) {
-      .bg-index .search-wrap {
-        padding-top: 180px; } }
-    .bg-index .search-wrap #search-colleague {
-      position: relative;
-      width: 50%;
-      margin-top: 30px;
-      height: 35px; }
-    .bg-index .search-wrap hr {
-      background: white;
-      width: 50%;
-      margin-top: 0px;
-      margin-bottom: 0px; }
-    .bg-index .search-wrap h1 {
-      color: #FFF;
-      padding-bottom: 30px; }
-      @media only screen and (max-width: 768px) {
-        .bg-index .search-wrap h1 {
-          font-size: 26px; } }
-  .bg-index form {
+    right: 305px;
+    bottom: 4px;
+    font-size: 18px;
     z-index: 15px; }
-    .bg-index form:after {
-      font-family: "Font Awesome 5 Free";
-      content: "\f002";
-      font-style: normal;
-      font-weight: 900;
-      text-decoration: inherit;
-      position: absolute;
-      right: 305px;
-      bottom: 4px;
-      font-size: 18px;
-      z-index: 15px; }
-      @media only screen and (max-width: 1199px) {
-        .bg-index form:after {
-          right: 260px; } }
-      @media only screen and (max-width: 991px) {
-        .bg-index form:after {
-          right: 200px; } }
+    @media only screen and (max-width: 1199px) {
+      .bg-index form:after {
+        right: 260px; } }
+    @media only screen and (max-width: 991px) {
+      .bg-index form:after {
+        right: 200px; } }
+    @media only screen and (max-width: 768px) {
+      .bg-index form:after {
+        right: 155px; } }
+    @media only screen and (max-width: 550px) {
+      .bg-index form:after {
+        display: none; } }
+
+.bg-index .search-block {
+  height: 100px;
+  background: #E6E6E6;
+  background-clip: content-box;
+  white-space: nowrap;
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25)); }
+  .bg-index .search-block:hover {
+    background: #cdcdcd;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .bg-index .search-block .profile-pn {
+    padding: 2px 30px;
+    -webkit-transform: translate(0%, 12%);
+    -ms-transform: translate(0%, 12%);
+    transform: translate(0%, 12%); }
+    @media only screen and (max-width: 768px) {
+      .bg-index .search-block .profile-pn {
+        padding: 2px 0px; } }
+    .bg-index .search-block .profile-pn .profile-pic {
+      display: inline-block;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%; }
       @media only screen and (max-width: 768px) {
-        .bg-index form:after {
-          right: 155px; } }
-      @media only screen and (max-width: 550px) {
-        .bg-index form:after {
+        .bg-index .search-block .profile-pn .profile-pic {
           display: none; } }
+    .bg-index .search-block .profile-pn .profile-name {
+      padding-left: 15px;
+      display: inline-block;
+      margin-bottom: 0px;
+      -webkit-transform: translate(0%, 30%);
+      -ms-transform: translate(0%, 30%);
+      transform: translate(0%, 30%);
+      width: 250px;
+      word-break: break-all;
+      white-space: normal; }
+    .bg-index .search-block .profile-pn i {
+      position: absolute;
+      right: 30px;
+      -webkit-transform: translate(0%, 260%);
+      -ms-transform: translate(0%, 260%);
+      transform: translate(0%, 260%);
+      color: #6300A7;
+      font-size: 18px; }
+      @media only screen and (max-width: 380px) {
+        .bg-index .search-block .profile-pn i {
+          padding-left: 30px; } }
+      @media only screen and (max-width: 340px) {
+        .bg-index .search-block .profile-pn i {
+          padding-left: 15px; } }
+
+.bg-index .results {
+  position: relative;
+  margin-top: -3px;
+  z-index: 30; }
 
 .explosion-img {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: 420px; }
+  width: 420px;
+  z-index: 15; }
   @media only screen and (max-width: 768px) {
     .explosion-img {
       display: none; } }
@@ -297,7 +385,7 @@ ul {
         -webkit-transform: translate(0%, 30%);
         -ms-transform: translate(0%, 30%);
         transform: translate(0%, 30%);
-        width: 150px;
+        width: 170px;
         word-break: break-all;
         white-space: normal; }
       .bg-searchresults .history-wrap .history-block .profile-pn i, .bg-searchresults .results-wrap .history-block .profile-pn i {
@@ -858,99 +946,142 @@ ul {
           -ms-transform: translate(60%, 60%);
           transform: translate(60%, 60%); }
 
-.map-wrap svg {
-  padding-bottom: 60px;
-  padding-top: 60px; }
-  .map-wrap svg .rect1:hover {
-    fill: #afceff !important;
-    cursor: pointer; }
-  .map-wrap svg .rect2:hover {
-    fill: #6ba4ff !important;
-    cursor: pointer; }
-  .map-wrap svg .rect3:hover {
-    fill: #5879ad !important;
-    cursor: pointer; }
-  .map-wrap svg .rect4:hover {
-    fill: #dbd67d !important;
-    cursor: pointer; }
-  .map-wrap svg .rect5:hover {
-    fill: #d6cd33 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect6:hover {
-    fill: #d37e3d !important;
-    cursor: pointer; }
-  .map-wrap svg .rect7:hover {
-    fill: #f2b587 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect8:hover {
-    fill: #db4b39 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect9:hover {
-    fill: #e57f72 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect10:hover {
-    fill: #93e297 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect11:hover {
-    fill: #3dcc44 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect12:hover {
-    fill: #1fa826 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect1:hover {
-    fill: #17afb2 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect13:hover {
-    fill: #81d9db !important;
-    cursor: pointer; }
-  .map-wrap svg .rect14:hover {
-    fill: #8199db !important;
-    cursor: pointer; }
-  .map-wrap svg .rect15:hover {
-    fill: #4f7bf2 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect16:hover {
-    fill: #a979d1 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect17:hover {
-    fill: #9a36ed !important;
-    cursor: pointer; }
-  .map-wrap svg .rect18:hover {
-    fill: #d48bd6 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect19:hover {
-    fill: #d827dd !important;
-    cursor: pointer; }
-  .map-wrap svg .rect20:hover {
-    fill: #e27ab0 !important;
-    cursor: pointer; }
-  .map-wrap svg .rect21:hover {
-    fill: #d61b7c !important;
-    cursor: pointer; }
-  .map-wrap svg .rect22:hover {
-    fill: #14ce8a !important;
-    cursor: pointer; }
-  .map-wrap svg .rect23:hover {
-    fill: #9ce2c9 !important;
-    cursor: pointer; }
+.bg-map-page .map-wrap {
+  padding-top: 50px; }
+  .bg-map-page .map-wrap form {
+    margin-top: 45px;
+    margin-bottom: 5px; }
+    .bg-map-page .map-wrap form:after {
+      font-family: "Font Awesome 5 Free";
+      content: "\f002";
+      font-style: normal;
+      font-weight: 900;
+      text-decoration: inherit;
+      position: absolute;
+      right: 305px;
+      top: 80px;
+      font-size: 18px;
+      z-index: 15px; }
+      @media only screen and (max-width: 1199px) {
+        .bg-map-page .map-wrap form:after {
+          right: 260px; } }
+      @media only screen and (max-width: 991px) {
+        .bg-map-page .map-wrap form:after {
+          right: 200px; } }
+      @media only screen and (max-width: 768px) {
+        .bg-map-page .map-wrap form:after {
+          right: 155px; } }
+      @media only screen and (max-width: 550px) {
+        .bg-map-page .map-wrap form:after {
+          display: none; } }
+  .bg-map-page .map-wrap input {
+    background: #FFF;
+    border: none;
+    -webkit-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 52px -13px rgba(0, 0, 0, 0.75); }
+  .bg-map-page .map-wrap #search-colleague {
+    position: relative;
+    width: 50%;
+    margin-top: 30px;
+    height: 35px; }
+  .bg-map-page .map-wrap .searchform {
+    margin-bottom: 0px;
+    margin-top: 15px; }
+  .bg-map-page .map-wrap svg {
+    padding-bottom: 60px;
+    padding-top: 60px; }
+    .bg-map-page .map-wrap svg .rect1:hover {
+      fill: #afceff !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect2:hover {
+      fill: #6ba4ff !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect3:hover {
+      fill: #5879ad !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect4:hover {
+      fill: #dbd67d !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect5:hover {
+      fill: #d6cd33 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect6:hover {
+      fill: #d37e3d !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect7:hover {
+      fill: #f2b587 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect8:hover {
+      fill: #db4b39 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect9:hover {
+      fill: #e57f72 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect10:hover {
+      fill: #93e297 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect11:hover {
+      fill: #3dcc44 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect12:hover {
+      fill: #1fa826 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect1:hover {
+      fill: #17afb2 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect13:hover {
+      fill: #81d9db !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect14:hover {
+      fill: #8199db !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect15:hover {
+      fill: #4f7bf2 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect16:hover {
+      fill: #a979d1 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect17:hover {
+      fill: #9a36ed !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect18:hover {
+      fill: #d48bd6 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect19:hover {
+      fill: #d827dd !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect20:hover {
+      fill: #e27ab0 !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect21:hover {
+      fill: #d61b7c !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect22:hover {
+      fill: #14ce8a !important;
+      cursor: pointer; }
+    .bg-map-page .map-wrap svg .rect23:hover {
+      fill: #9ce2c9 !important;
+      cursor: pointer; }
 
-.floor {
+.bg-map-page .floor {
   width: 100%;
   height: 62px;
   background: #444444;
-  padding-top: 78px; }
-  .floor h2 {
+  position: absolute;
+  top: 78px; }
+  .bg-map-page .floor h2 {
     color: white;
     line-height: 62px;
     vertical-align: middle;
     font-weight: 400; }
     @media only screen and (max-width: 450px) {
-      .floor h2 {
+      .bg-map-page .floor h2 {
         font-size: 26px; } }
-  .floor i {
+  .bg-map-page .floor i {
     color: white; }
     @media only screen and (max-width: 450px) {
-      .floor i {
+      .bg-map-page .floor i {
         font-size: 26px; } }
 
 #map-location-wrap {
@@ -1043,4 +1174,4 @@ ul {
 
 @media only screen and (max-width: 823px) {
   #map-location-wrap {
-    display: none; } }
+    display: none !important; } }

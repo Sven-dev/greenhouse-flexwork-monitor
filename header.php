@@ -12,9 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="backend/custom.js"></script>
-	
-
+		
     <title>header</title>
 </head>
 
@@ -23,7 +21,7 @@
 	<div class="navigation-bar">
 		<div class="profile-bar offset-10" onclick="myFunction()">
 
-			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Alies</a>
+			<a class="dropdown-toggle" href="#" id="dropdownMenuButton">Welcome</a>
 
 			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
@@ -37,23 +35,28 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul>
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Map</a></li>
+						<li class="active"><a href="index.php">Home</a></li>
+						<li><a href="map.php">Map</a></li>
 						<li><img src="image/logo-small.png" alt="Greenhouse Logo" width="50px" height="50px"></li>
-						<li><a href="#">Game</a></li>
-						<li><a href="#">People</a></li>
+						<li><a href="game.php">Game</a></li>
+						<li><a href="searchresults.php">People</a></li>
 					</ul>
 				</div>
 			</div>	
 		</div>
-
 	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+	<script src="backend/firebase_base.js"></script>
+	<script src="backend/firebase_database.js"></script>
+	<script src="backend/firebase_storage.js"></script>
+	<script src="backend/user.js"></script>
 	<script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
-}ever
+}
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
@@ -69,5 +72,3 @@ window.onclick = function(event) {
   }
 }
 </script>
-
-	

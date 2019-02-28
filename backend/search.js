@@ -3,9 +3,15 @@ backend/firebase_base.js
 basebackend/firebase_database.js
 */
 
+//Fields
 var previousQuery = "";
 var colleagues = [];
 
+//Elements
+var search_bar = document.getElementById('search-colleague');
+var search_results = document.getElementById('search-results');
+
+//Start
 getColleagues();
 
 //Gets all colleagues whose name starts with the given search term
@@ -30,7 +36,6 @@ window.setInterval(function()
   }
   else if (search != previousQuery)
   {
-    search_results.innerHTML = "";
     filter(search);
   }
 
@@ -42,6 +47,7 @@ function filter(search)
 {
   if (colleagues.length != 0)
   {  
+    var max = 0;
     colleagues.forEach(function(profile)
     {
       var lname = profile.Name.toLowerCase();
@@ -49,10 +55,42 @@ function filter(search)
       if (lname.includes(lsearch))
       {
         //profile picture  
-        search_results.innerHTML += "<div>" + profile.Name + ", " + profile.Craft + "</div>";
+        //search_results.innerHTML += "<div>" + profile.Name + ", " + profile.Craft + "</div>";
+        if(max < 3){
+          displayData(profile);
+          max++;
+        }
       }
     });
 
     //search_results.innerHTML += "</ul>";
+    search_results.innerHTML += 
+     '<a href="searchresults.php" class="btns-primary custom">Toon meer resultaten</a>';
   }
 }
+
+//Creates an HTML-element displaying the user data
+function displayData(profile)
+{
+    search_results.innerHTML = "";    
+    var index = 0;
+    storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
+    {
+        search_results.innerHTML += 
+        '<a class="search-link" href="searchresults.php">' +
+          '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 search-block">' +
+            '<div class="profile-pn">' + 
+              '<div class="row">' + 
+                  '<div class="col-md-3"><img class="profile-pic" src=' + url + '></div>' + 
+                  '<div class="col-md-9"><p class="profile-name">' + profile.Name + '<br>' + profile.Craft + '</p></div>' +
+              '</div>' + 
+              '</div>' + 
+          '</div>'+
+        '</a>';
+    }).catch(function(error) 
+    {
+        console.log(error.code + ": " +  error.message);
+    });
+}
+
+
