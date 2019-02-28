@@ -11,13 +11,13 @@
                     </div>
                     
                     <div class="name">
-                        <h2>Alies van Hout</h2>
-                        <span>Media Design</span>
+                        <h2 id="username"></h2>
+                        <span id="usercraft"></span>
                     </div>
                     <div class="subSettings">
                         <ul>
-                            <li><div class="testIcon"></div><p>alies@greenhouse.com</p></li>
-                            <li><div class="testIcon"></div><p>064566798</p></li>
+                            <li><div class="testIcon"></div><p id="useremail"></p></li>
+                            <li><div class="testIcon"></div><p id="userphone"></p></li>
                         </ul>
                     </div>
                     <a href="#" class="button">Change password</a>
