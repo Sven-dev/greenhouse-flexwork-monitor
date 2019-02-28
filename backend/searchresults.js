@@ -37,7 +37,7 @@ function updateSearchbar()
     if (search != previousQuery)
     {
       search_results.innerHTML = "";
-      if (search == "" || search == undefined)
+      if (search == "")
       {
         colleagues.forEach(function(profile)
         {
