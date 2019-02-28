@@ -95,77 +95,96 @@ label {
 #account-btn {
   margin-top: 15px; }
 
-.bg-createaccount {
-  overflow: hidden; }
-  @media only screen and (max-width: 1199px) {
-    .bg-createaccount {
-      overflow: unset; } }
-  .bg-createaccount:before {
-    content: "";
-    position: absolute;
-    background-image: url(../image/bg-1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -2; }
-  .bg-createaccount:after {
-    content: "";
-    position: absolute;
-    background-color: #000;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -1; }
-  .bg-createaccount .signup-card {
-    height: 100vh; }
-    .bg-createaccount .signup-card .bg-light {
-      width: 900px;
-      min-height: 100%;
-      background-color: #6300A7 !important; }
+@media only screen and (max-width: 1199px) {
+  .bg-createaccount {
+    overflow: unset; } }
+
+.bg-createaccount:before {
+  content: "";
+  position: fixed;
+  background-image: url(../image/bg-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -2; }
+
+.bg-createaccount:after {
+  content: "";
+  position: fixed;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1; }
+
+.bg-createaccount .signup-card {
+  height: 100vh; }
+  .bg-createaccount .signup-card .bg-light {
+    width: 900px;
+    min-height: 100vh;
+    background-color: #6300A7 !important; }
+    @media only screen and (max-width: 1199px) {
+      .bg-createaccount .signup-card .bg-light {
+        width: 900px; } }
+    @media only screen and (max-width: 991px) {
+      .bg-createaccount .signup-card .bg-light {
+        width: 900px; } }
+    @media only screen and (max-width: 768px) {
+      .bg-createaccount .signup-card .bg-light {
+        width: 500px; } }
+    @media only screen and (max-width: 550px) {
+      .bg-createaccount .signup-card .bg-light {
+        width: 400px;
+        padding: -30px; } }
+    .bg-createaccount .signup-card .bg-light h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      margin-top: 2em;
+      padding: 10px; }
       @media only screen and (max-width: 1199px) {
-        .bg-createaccount .signup-card .bg-light {
-          width: 900px; } }
-      @media only screen and (max-width: 991px) {
-        .bg-createaccount .signup-card .bg-light {
-          width: 900px; } }
-      @media only screen and (max-width: 768px) {
-        .bg-createaccount .signup-card .bg-light {
-          width: 500px; } }
+        .bg-createaccount .signup-card .bg-light h3 {
+          margin-bottom: 0em;
+          padding: 0px; } }
+    .bg-createaccount .signup-card .bg-light ul li a {
+      padding: 10px;
+      color: #6300A7 !important; }
       @media only screen and (max-width: 550px) {
-        .bg-createaccount .signup-card .bg-light {
-          width: 400px;
-          padding: -30px; } }
-      .bg-createaccount .signup-card .bg-light h3 {
-        font-size: 1.5em;
-        font-weight: 300;
-        margin-top: 2em;
-        padding: 10px; }
-        @media only screen and (max-width: 1199px) {
-          .bg-createaccount .signup-card .bg-light h3 {
-            margin-bottom: 0em;
-            padding: 0px; } }
-      .bg-createaccount .signup-card .bg-light label {
-        margin-top: 25px; }
-      .bg-createaccount .signup-card .bg-light .card-white {
-        background-color: #FFF;
-        height: 100vh; }
-      .bg-createaccount .signup-card .bg-light form {
-        padding: 2em; }
-        @media only screen and (max-width: 1199px) {
-          .bg-createaccount .signup-card .bg-light form {
-            padding: 1em;
-            margin-right: 30px; } }
-  .bg-createaccount .styledSelect {
-    width: 100%;
-    margin: 0 auto; }
-    .bg-createaccount .styledSelect input, .bg-createaccount .styledSelect button {
-      width: 100%; }
+        .bg-createaccount .signup-card .bg-light ul li a {
+          padding: 7px; } }
+    .bg-createaccount .signup-card .bg-light ul li a:hover {
+      text-decoration: none;
+      color: #000; }
+    .bg-createaccount .signup-card .bg-light label {
+      margin-top: 25px; }
+    .bg-createaccount .signup-card .bg-light .card-white {
+      background-color: #FFF;
+      min-height: 100vh; }
+    .bg-createaccount .signup-card .bg-light form {
+      padding-left: 2em;
+      padding-right: 2em; }
+      @media only screen and (max-width: 1199px) {
+        .bg-createaccount .signup-card .bg-light form {
+          padding: 1em;
+          margin-right: 30px; } }
+      .bg-createaccount .signup-card .bg-light form hr.login {
+        margin: 4em; }
+        @media only screen and (max-width: 550px) {
+          .bg-createaccount .signup-card .bg-light form hr.login {
+            margin: 2em; } }
+
+.bg-createaccount .styledSelect {
+  width: 100%;
+  margin: 0 auto; }
+  .bg-createaccount .styledSelect input, .bg-createaccount .styledSelect button {
+    width: 100%; }
+  .bg-createaccount .styledSelect button {
+    margin-bottom: 50px; }
 
 .bg-index .search-link {
   width: 100%;
@@ -491,11 +510,10 @@ ul {
   display: block; }
 
 .bg-loginpage {
-  overflow: hidden;
   /* When I remove background the icon goes back to that default size */ }
   .bg-loginpage:before {
     content: "";
-    position: absolute;
+    position: fixed;
     background-image: url(../image/bg-login.jpg);
     background-size: cover;
     background-position: center;
@@ -507,7 +525,7 @@ ul {
     z-index: -2; }
   .bg-loginpage:after {
     content: "";
-    position: absolute;
+    position: fixed;
     background-color: #000;
     opacity: 0.5;
     width: 100%;
@@ -549,7 +567,7 @@ ul {
         margin-top: 35px; }
       .bg-loginpage .login-card .bg-light .card-white {
         background-color: #FFF;
-        height: 100vh; }
+        min-height: 100vh; }
       .bg-loginpage .login-card .bg-light form {
         padding: 2em; }
         @media only screen and (max-width: 550px) {
