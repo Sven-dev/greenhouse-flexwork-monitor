@@ -25,10 +25,24 @@ function getColleagues()
       colleagues.push(profile.val());
     });
 
+    getUrlData();
     updateSearchbar();
   });
 }
 
+function getUrlData()
+{
+  var url = window.location.href;
+  var n = url.lastIndexOf('search=');
+  if (n != -1)
+  {
+    var result = url.substring(n + 7);
+    search_bar.value = result;
+  }
+}
+
+
+//Checks every half second if the value of the searchbar has changed
 function updateSearchbar()
 {
   window.setInterval(function() 
@@ -53,7 +67,7 @@ function updateSearchbar()
     }
   }, 500);
 }
-//Checks every second if the value of the searchbar has changed
+
 
 
 //Filters the colleagues by name with the search term
