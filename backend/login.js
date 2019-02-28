@@ -30,16 +30,15 @@ function createAccount(email, password, firstName, lastName, craft, proposition)
 //Creates a new profile in the database, and links it to the user
 function createProfile(user, firstName, lastName, craft, proposition)
 {
-    //user.displayName = firstName + " " + lastName;
-    //foto
-
     //Maak profiel aan, link het met user
     set('Profiles/' + user.uid, {
+        UID: user.uid,
         Name: firstName + " " + lastName,
         Craft: craft,
         Proposition: proposition,
         Current_Zone: null,
         Score: 0,
+        Location: 0,
         Achievements: {
             Achievement_1: 0,
             Achievement_2: 0,

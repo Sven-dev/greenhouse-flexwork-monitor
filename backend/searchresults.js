@@ -92,11 +92,10 @@ function displayData(profile)
 {
     storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
     {
-      var urlName = profile.Name.split(' ').join('-');;
-      console.log(urlName);      
+      var urlName = profile.Name.split(' ').join('-');   
       search_results.innerHTML +=    
       '<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 history-block">' +
-        '<a href=map.php?=' + urlName + '>' + 
+        '<a href=map.php?search=' + urlName + '>' + 
           '<div class="profile-pn">' + 
               '<img class="profile-pic" src=' + url + '>' + 
               '<p class="profile-name">' + profile.Name + '<br>' + profile.Craft + '</p>' +
