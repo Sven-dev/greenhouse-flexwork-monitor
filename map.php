@@ -14,6 +14,14 @@
 				</div>
 			</form>
 				<!-- <h1>Greenhouse map</h1> -->
+				<div class=" groep1 mapblok">
+				</div>
+				<div class="groep2 mapblok">
+				</div>
+				<div class="groep3 mapblok">
+				</div>
+				<div class="groep4 mapblok">
+				</div>
 				<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1115 534" style="enable-background:new 0 0 1115 534;" xml:space="preserve">
 			<style type="text/css">
@@ -57,7 +65,9 @@
 			<rect x="424.5" y="414.5" class="st0 rect23 rect" width="85" height="79" onclick="showTable()"/>
 			</svg>
 			</div>
+
 		</div>
+		
 	</div>
 
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
