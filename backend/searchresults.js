@@ -5,7 +5,7 @@ backend/firebase_storage.js
 */
 
 //Fields
-var previousQuery = "tsvnybssvrsnls";
+var previousQuery = "zgggfhdgkvds";
 var colleagues = [];
 
 //Elements
@@ -34,11 +34,10 @@ function updateSearchbar()
   window.setInterval(function() 
   {
     var search = search_bar.value;
-
-    (search != previousQuery)
+    if (search != previousQuery)
     {
       search_results.innerHTML = "";
-      if (search == "")
+      if (search == "" || search == undefined)
       {
         colleagues.forEach(function(profile)
         {
@@ -49,11 +48,9 @@ function updateSearchbar()
       { 
         filter(search);   
       }
-
+    
       previousQuery = search;
     }
-
-    console.log("Search: " + search  + ", previous search: " + previousQuery);
   }, 500);
 }
 //Checks every second if the value of the searchbar has changed
