@@ -1,19 +1,37 @@
+/* REQUIRES 
+backend/firebase_base.js
+backend/firebase_database.js
+*/
+
 //Fields
-var user;
+var currentUser;
 var profile;
+
+//Elements
+var headerName = document.getElementById("dropdownMenuButton");
+
+//Start
+logInCheck();
 
 //Checks if a user is logged in
 function logInCheck()
 {
-    //link to the currently logged in user
+    //Link to the currently logged in user
     firebase.auth().onAuthStateChanged(function(user) 
     {
         // User is signed in.          
         if (user) 
         {
             //Get the users profile
-            profile = get('Profiles/' + user.uid);
-        } 
+            currentUser = user;
+
+            dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
+            {
+                profile = snapshot.val();
+                var name = profile.Name.split(" ");
+                headerName.innerHTML = "Welcome " + name[0];
+            });
+        }
         // No user is signed in.        
         else 
         {

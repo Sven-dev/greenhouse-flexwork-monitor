@@ -1,17 +1,34 @@
 <?php include 'header.php'; ?>
 
-<body onLoad="logInCheck()">
-	<div class="container">
+	<div class="container pushDown search-wrap">
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1>Hello</h1>
-                <button class="btns-primary" onclick="logOut()">Log out</button>
+				<h1>Who are you looking for?</h1>
+				<hr>
+				<form action="searchresults.php">
+					<div class="searchform">
+						<input id="search-colleague" type="text" name="search" placeholder="Search...">
+					</div>
+					<!-- <button class="btns-primary" type="button" name="find-colleague">Find</button> -->
+				</form>
+
 			</div>
 		</div>		
 	</div>
 
-	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-    <script src="backend/db.js"></script>
-	<script src="backend/user.js"></script>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div id="search-results"></div>
+			</div>
+		</div>		
+	</div>
+
+	<img class="explosion-img" src="image/explosion-klein.png" alt="explosion">
+
+	<script src="backend/search.js"></script>
+	<script>
+		document.body.classList.add("bg-index");
+	</script>
 </body>
 </html>
