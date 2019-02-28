@@ -28,7 +28,8 @@ function logInCheck()
             dbroot.child('Profiles/' + user.uid).once('value').then(function(snapshot)
             {
                 profile = snapshot.val();
-                showHeaderData();
+                var name = profile.Name.split(" ");
+                headerName.innerHTML = "Welcome " + name[0];
             });
         }
         // No user is signed in.        
@@ -49,9 +50,4 @@ function logOut()
     {
         console.log(error.code + ": " +  error.message);
     });
-}
-
-function showHeaderData()
-{
-    headerName.innerHTML = "Welcome " + profile.Name;
 }

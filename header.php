@@ -21,7 +21,7 @@
 	<div class="navigation-bar">
 		<div class="profile-bar offset-10" onclick="myFunction()">
 
-			<a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</a>
+			<a class="dropdown-toggle" href="#" id="dropdownMenuButton">Welcome</a>
 
 			<div class="dropdown-menu" id="myDropdown">
 				<ul class="list-unstyled">
@@ -35,16 +35,15 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul>
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Map</a></li>
+						<li class="active"><a href="index.php">Home</a></li>
+						<li><a href="map.php">Map</a></li>
 						<li><img src="image/logo-small.png" alt="Greenhouse Logo" width="50px" height="50px"></li>
-						<li><a href="#">Game</a></li>
-						<li><a href="#">People</a></li>
+						<li><a href="game.php">Game</a></li>
+						<li><a href="searchresults.php">People</a></li>
 					</ul>
 				</div>
 			</div>	
 		</div>
-
 	</div>
 
 	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
