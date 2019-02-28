@@ -5,7 +5,7 @@ backend/firebase_storage.js
 */
 
 //Fields
-var previousQuery = "";
+var previousQuery = "tsvnybssvrsnls";
 var colleagues = [];
 
 //Elements
@@ -24,38 +24,40 @@ function getColleagues()
     {
       colleagues.push(profile.val());
     });
+
+    updateSearchbar();
   });
 }
 
-//Checks every second if the value of the searchbar has changed
-window.setInterval(function() 
+function updateSearchbar()
 {
-  var search = search_bar.value;
-
-  (search != previousQuery)
+  window.setInterval(function() 
   {
-    if (search == "")
+    var search = search_bar.value;
+
+    (search != previousQuery)
     {
-      colleagues.forEach(function(profile)
+      search_results.innerHTML = "";
+      if (search == "")
       {
-        displayData(profile);
-      });
+        colleagues.forEach(function(profile)
+        {
+          displayData(profile);
+        });
+      }
+      else
+      { 
+        filter(search);   
+      }
+
+      previousQuery = search;
     }
-    else
-    { 
-      filter(search);   
-      previousQuery = search;    
-    }
 
-    previousQuery = search;
-  }
+    console.log("Search: " + search  + ", previous search: " + previousQuery);
+  }, 500);
+}
+//Checks every second if the value of the searchbar has changed
 
-  /*
-  console.log(search);
-  console.log(previousQuery);
-  */
-
-}, 500);
 
 //Filters the colleagues by name with the search term
 function filter(search)
@@ -77,8 +79,6 @@ function filter(search)
 //Creates an HTML-element displaying the user data
 function displayData(profile)
 {
-    search_results.innerHTML = "";    
-    var index = 0;
     storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
     {
         search_results.innerHTML += 
