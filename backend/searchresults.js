@@ -31,24 +31,37 @@ function getColleagues()
 window.setInterval(function() 
 {
   var search = search_bar.value;
-  if (search == "")
+
+  (search != previousQuery)
   {
-    search_results.innerHTML = "";
-  }
-  else if (search != previousQuery)
-  {
-    
-    filter(search);
+    if (search == "")
+    {
+      colleagues.forEach(function(profile)
+      {
+        displayData(profile);
+      });
+    }
+    else
+    { 
+      filter(search);   
+      previousQuery = search;    
+    }
+
+    previousQuery = search;
   }
 
-  previousQuery = search;
+  /*
+  console.log(search);
+  console.log(previousQuery);
+  */
+
 }, 500);
 
 //Filters the colleagues by name with the search term
 function filter(search)
 {
-  if (colleagues.length != 0)
-  {  
+  if (search.length > 0)
+  {
     var lsearch = search.toLowerCase();    
     colleagues.forEach(function(profile)
     {
@@ -57,7 +70,7 @@ function filter(search)
       { 
         displayData(profile);
       }
-    });
+    });      
   }
 }
 
