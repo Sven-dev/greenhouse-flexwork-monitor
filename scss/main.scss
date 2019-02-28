@@ -27,6 +27,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.no-select{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.no-drag{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
 input, select{
     //display: block;
     padding: 0.7em;
@@ -823,6 +839,11 @@ ul{
         top: 0px;
         z-index: -1;
     } 
+    button:focus,button:active {
+        outline: none !important;
+        box-shadow: none;
+     }
+    
     .gameBtns{
         margin-top: 10%;
         .game-button{
@@ -834,7 +855,7 @@ ul{
             text-align: center;
             text-decoration: none;
             border-radius: 0px 60px 60px 0px;
-            
+            transition: 0.5s;
             &:hover{
                 background-color: #CC77CF;
                 color: $white;
@@ -846,57 +867,137 @@ ul{
     }
 }
 
-
-.modal-wrap{
+.modal-wrap{ 
+        .modal-content{
+            border-radius: 50px;
+            margin-top: 10%;
+         }
     .modal-colomn{
-        margin-top: 40px;
-
+        
             .modal-header{
                 background-color: $primary;
                 border-radius: 30px 30px 00px 00px;
-                height: 50px;
+                height: 70px;
 
                 h4{
                     color: $white;
                     padding-right: 50px;
+                    margin-top: 5px;
                 }
 
                 .tab{
-                    height: 34px;
+                    height: 53px;
                     width: 150px;
                     margin-right: 10px;
                     margin-left: 2px;
                     display: inline-block;
                 }
+                .tab2{
+                    height: 53px;
+                    width: 150px;
+                    margin-left: -290px;
+                    display: inline-block;
+                }
 
                 .tab-1{
                     background-color: $white;
+                    h3{
+                        margin-top: 15px;
+                        color: $primary;
+                        font-size: 1.2em;
+                        text-align: center;
+                    }
+                }
+                .tab-2{
+                    background-color: #cc77cf;
+                    h3{
+                        margin-top: 15px;
+                        color: $primary;
+                        font-size: 1.2em;
+                        text-align: center;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                #closeButton{
+                    color: $white;
+                    font-size: 1.8em;
+                    &:hover{
+                        color: #CC77CF;
+                        transition: 0.5s;
+                        cursor: pointer;
+                    }
                 }
             }
 
             .modal-inner{
                 background-color: #FFF;
-                height: 430px;
+                height: 600px;
                 margin: 0 auto;
                 border-radius: 0px 0px 30px 30px;
                 overflow: hidden;
                 margin-bottom: 20px;
+                .modal-information{
+                    height: auto;
+                    with: 100%;
+                    border-radius: 25px;
+                    margin: 30px 30px 0px 30px;
+                    background-color: $secondary;
+                    border: 1px solid #cecece;
+                    background-size: cover; 
+                        img{ 
+                            padding: 1.5em;
+                            width: 100%;
+                        }
+                }
+                    .modal-progression-leaderboard{
+                        height: 250px;
+                        border-radius: 25px;
+                        margin: 30px 30px 0px 30px;
+                        background-image: url("../image/achieve-bg.jpg");
+                        background-size: cover;
+                        img{
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            z-index: 1;
+                            width: 450px;
+                            margin-top: 110px;
+                            margin-left: 31%;
+                        }
+                    }
+
+              
 
                  .modal-progression{
                     height: 150px;
                     border-radius: 25px;
                     margin: 30px 30px 0px 30px;
                     background-image: url("../image/achieve-bg.jpg");
-                    background-size: cover;
+                    background-size: cover;   
 
+                    
                     .progress-bar-bg{
                         height: 130px;
                         transform: translate(28%, 8%);
                         border-radius: 25px;
-                        margin: 0px 130px 10px 130px;
+                        //margin: 0px 250px 10px 130px;
+                        max-width: 835px;
                         margin-top: 30px;
                         background-color: $white;
-
+                        // @media (max-width: 1199px){
+                        //     width: 835px;        
+                        // }
+                        // @media (min-width: 991px){
+                        //     width: 635px;        
+                        // }
+                        // @media (min-width: 768px){
+                        //     width: 435px;         
+                        // }
+                        // @media (min-width: 550px){
+                        //     width: 335px;          
+                        // }
                         p{
                             margin-bottom: -25px;
                             transform: translate(9%, 70%);
@@ -913,11 +1014,10 @@ ul{
 
                         .progress-circle{
                             width: 110px;
-                            transform: translate(230%, -25%);
+                           transform: translate(625%, -25%);
                             height: 110px;
                             border-radius: 50%;
                             background-color: #707070;
-
                             img{
                                  transform: translate(60%, 60%);
                             }

@@ -23,6 +23,21 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: ease 0.5s;
     transition: ease 0.5s; }
 
+.no-select {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.no-drag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none; }
+
 input, select {
   padding: 0.7em;
   width: 100%;
@@ -692,6 +707,10 @@ ul {
     left: 0px;
     top: 0px;
     z-index: -1; }
+  .bg-game button:focus, .bg-game button:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .bg-game .gameBtns {
     margin-top: 10%; }
     .bg-game .gameBtns .game-button {
@@ -702,7 +721,10 @@ ul {
       border: 3px solid #6300A7;
       text-align: center;
       text-decoration: none;
-      border-radius: 0px 60px 60px 0px; }
+      border-radius: 0px 60px 60px 0px;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
       .bg-game .gameBtns .game-button:hover {
         background-color: #CC77CF;
         color: #FFF;
@@ -712,71 +734,128 @@ ul {
         border: 3px solid #CC77CF;
         padding: 2.5em 7em; }
 
-.modal-wrap .modal-colomn {
-  margin-top: 40px; }
-  .modal-wrap .modal-colomn .modal-header {
-    background-color: #6300A7;
-    border-radius: 30px 30px 00px 00px;
-    height: 50px; }
-    .modal-wrap .modal-colomn .modal-header h4 {
-      color: #FFF;
-      padding-right: 50px; }
-    .modal-wrap .modal-colomn .modal-header .tab {
-      height: 34px;
-      width: 150px;
-      margin-right: 10px;
-      margin-left: 2px;
-      display: inline-block; }
-    .modal-wrap .modal-colomn .modal-header .tab-1 {
-      background-color: #FFF; }
-  .modal-wrap .modal-colomn .modal-inner {
-    background-color: #FFF;
-    height: 430px;
-    margin: 0 auto;
-    border-radius: 0px 0px 30px 30px;
-    overflow: hidden;
-    margin-bottom: 20px; }
-    .modal-wrap .modal-colomn .modal-inner .modal-progression {
-      height: 150px;
+.modal-wrap .modal-content {
+  border-radius: 50px;
+  margin-top: 10%; }
+
+.modal-wrap .modal-colomn .modal-header {
+  background-color: #6300A7;
+  border-radius: 30px 30px 00px 00px;
+  height: 70px; }
+  .modal-wrap .modal-colomn .modal-header h4 {
+    color: #FFF;
+    padding-right: 50px;
+    margin-top: 5px; }
+  .modal-wrap .modal-colomn .modal-header .tab {
+    height: 53px;
+    width: 150px;
+    margin-right: 10px;
+    margin-left: 2px;
+    display: inline-block; }
+  .modal-wrap .modal-colomn .modal-header .tab2 {
+    height: 53px;
+    width: 150px;
+    margin-left: -290px;
+    display: inline-block; }
+  .modal-wrap .modal-colomn .modal-header .tab-1 {
+    background-color: #FFF; }
+    .modal-wrap .modal-colomn .modal-header .tab-1 h3 {
+      margin-top: 15px;
+      color: #6300A7;
+      font-size: 1.2em;
+      text-align: center; }
+  .modal-wrap .modal-colomn .modal-header .tab-2 {
+    background-color: #cc77cf; }
+    .modal-wrap .modal-colomn .modal-header .tab-2 h3 {
+      margin-top: 15px;
+      color: #6300A7;
+      font-size: 1.2em;
+      text-align: center; }
+      .modal-wrap .modal-colomn .modal-header .tab-2 h3:hover {
+        cursor: pointer; }
+  .modal-wrap .modal-colomn .modal-header #closeButton {
+    color: #FFF;
+    font-size: 1.8em; }
+    .modal-wrap .modal-colomn .modal-header #closeButton:hover {
+      color: #CC77CF;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      cursor: pointer; }
+
+.modal-wrap .modal-colomn .modal-inner {
+  background-color: #FFF;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 0px 0px 30px 30px;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .modal-wrap .modal-colomn .modal-inner .modal-information {
+    height: auto;
+    with: 100%;
+    border-radius: 25px;
+    margin: 30px 30px 0px 30px;
+    background-color: #E6E6E6;
+    border: 1px solid #cecece;
+    background-size: cover; }
+    .modal-wrap .modal-colomn .modal-inner .modal-information img {
+      padding: 1.5em;
+      width: 100%; }
+  .modal-wrap .modal-colomn .modal-inner .modal-progression-leaderboard {
+    height: 250px;
+    border-radius: 25px;
+    margin: 30px 30px 0px 30px;
+    background-image: url("../image/achieve-bg.jpg");
+    background-size: cover; }
+    .modal-wrap .modal-colomn .modal-inner .modal-progression-leaderboard img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      width: 450px;
+      margin-top: 110px;
+      margin-left: 31%; }
+  .modal-wrap .modal-colomn .modal-inner .modal-progression {
+    height: 150px;
+    border-radius: 25px;
+    margin: 30px 30px 0px 30px;
+    background-image: url("../image/achieve-bg.jpg");
+    background-size: cover; }
+    .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg {
+      height: 130px;
+      -webkit-transform: translate(28%, 8%);
+      -ms-transform: translate(28%, 8%);
+      transform: translate(28%, 8%);
       border-radius: 25px;
-      margin: 30px 30px 0px 30px;
-      background-image: url("../image/achieve-bg.jpg");
-      background-size: cover; }
-      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg {
-        height: 130px;
-        -webkit-transform: translate(28%, 8%);
-        -ms-transform: translate(28%, 8%);
-        transform: translate(28%, 8%);
-        border-radius: 25px;
-        margin: 0px 130px 10px 130px;
-        margin-top: 30px;
-        background-color: #FFF; }
-        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg p {
-          margin-bottom: -25px;
-          -webkit-transform: translate(9%, 70%);
-          -ms-transform: translate(9%, 70%);
-          transform: translate(9%, 70%);
-          color: #707070; }
-        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-bar {
-          height: 30px;
-          -webkit-transform: translate(10%, 160%);
-          -ms-transform: translate(10%, 160%);
-          transform: translate(10%, 160%);
-          border-radius: 30px;
-          background-color: #707070;
-          margin: 0px 120px 10px 0px; }
-        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle {
-          width: 110px;
-          -webkit-transform: translate(230%, -25%);
-          -ms-transform: translate(230%, -25%);
-          transform: translate(230%, -25%);
-          height: 110px;
-          border-radius: 50%;
-          background-color: #707070; }
-          .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle img {
-            -webkit-transform: translate(60%, 60%);
-            -ms-transform: translate(60%, 60%);
-            transform: translate(60%, 60%); }
+      max-width: 835px;
+      margin-top: 30px;
+      background-color: #FFF; }
+      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg p {
+        margin-bottom: -25px;
+        -webkit-transform: translate(9%, 70%);
+        -ms-transform: translate(9%, 70%);
+        transform: translate(9%, 70%);
+        color: #707070; }
+      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-bar {
+        height: 30px;
+        -webkit-transform: translate(10%, 160%);
+        -ms-transform: translate(10%, 160%);
+        transform: translate(10%, 160%);
+        border-radius: 30px;
+        background-color: #707070;
+        margin: 0px 120px 10px 0px; }
+      .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle {
+        width: 110px;
+        -webkit-transform: translate(625%, -25%);
+        -ms-transform: translate(625%, -25%);
+        transform: translate(625%, -25%);
+        height: 110px;
+        border-radius: 50%;
+        background-color: #707070; }
+        .modal-wrap .modal-colomn .modal-inner .modal-progression .progress-bar-bg .progress-circle img {
+          -webkit-transform: translate(60%, 60%);
+          -ms-transform: translate(60%, 60%);
+          transform: translate(60%, 60%); }
 
 .map-wrap svg {
   padding-bottom: 60px;
