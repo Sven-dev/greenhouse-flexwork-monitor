@@ -60,11 +60,8 @@
 		</div>
 	</div>
 
-	<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
 	<script src="backend/custom.js"></script>
-    <script src="backend/firebase_base.js"></script>
-	<script src="backend/firebase_database.js"></script>
-	<script src="backend/user.js"></script>
+	<script src="backend/map.js"></script>
 	<script type="text/javascript">
 		document.body.classList.add("bg-map-page");
 	</script>
