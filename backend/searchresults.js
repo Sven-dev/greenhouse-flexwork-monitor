@@ -37,10 +37,10 @@ function getUrlData()
   if (n != -1)
   {
     var result = url.substring(n + 7);
+    result = result.split('-').join(' ');
     search_bar.value = result;
   }
 }
-
 
 //Checks every half second if the value of the searchbar has changed
 function updateSearchbar()

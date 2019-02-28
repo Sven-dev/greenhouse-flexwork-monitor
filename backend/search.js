@@ -54,18 +54,17 @@ function filter(search)
       var lsearch = search.toLowerCase();
       if (lname.includes(lsearch))
       {
-        //profile picture  
-        //search_results.innerHTML += "<div>" + profile.Name + ", " + profile.Craft + "</div>";
-        if(max < 3){
+        if(max < 3)
+        {
           displayData(profile);
           max++;
         }
       }
     });
 
-    //search_results.innerHTML += "</ul>";
+    var urlname = profile.Name.split(' ').join('-');
     search_results.innerHTML += 
-     '<a href="searchresults.php" class="btns-primary custom">Toon meer resultaten</a>';
+     '<a href="searchresults.php?search=' + urlname + '" class="btns-primary custom">Toon meer resultaten</a>';
   }
 }
 
@@ -76,8 +75,9 @@ function displayData(profile)
     var index = 0;
     storageroot.child(profile.ProfilePicture).getDownloadURL().then(function(url)
     {
+      var urlname = profile.Name.split(' ').join('-');
         search_results.innerHTML += 
-        '<a class="search-link" href="searchresults.php">' +
+        '<a class="search-link" href="map.php?search=' + urlname + '">' +
           '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 search-block">' +
             '<div class="profile-pn">' + 
               '<div class="row">' + 
