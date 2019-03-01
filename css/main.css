@@ -123,6 +123,11 @@ label {
   top: 0px;
   z-index: -1; }
 
+.bg-createaccount button:focus, .bg-createaccount button:active {
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
 .bg-createaccount .signup-card {
   height: 100vh; }
   .bg-createaccount .signup-card .bg-light {
@@ -533,6 +538,10 @@ ul {
     left: 0px;
     top: 0px;
     z-index: -1; }
+  .bg-loginpage button:focus, .bg-loginpage button:active {
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
   .bg-loginpage .greenhouse-logo {
     margin-top: 100px;
     height: 50px; }
