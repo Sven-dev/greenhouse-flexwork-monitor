@@ -62,7 +62,7 @@ function filter(search)
       }
     });
 
-    var urlname = profile.Name.split(' ').join('-');
+    var urlname = search.split(' ').join('-');
     search_results.innerHTML += 
      '<a href="searchresults.php?search=' + urlname + '" class="btns-primary custom">Toon meer resultaten</a>';
   }
