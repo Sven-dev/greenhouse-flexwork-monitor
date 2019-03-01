@@ -967,10 +967,12 @@ ul {
 .bg-map-page .map-wrap {
   padding-top: 50px; }
   .bg-map-page .map-wrap .mapblok {
-    width: 10%;
-    height: 15%;
-    background-color: red;
+    width: 100px;
+    height: 100px;
+    background-image: url(../image/map-marker.png);
     position: absolute;
+    background-position: center;
+    background-size: cover;
     display: none; }
   .bg-map-page .map-wrap .groep1 {
     left: 15%;
